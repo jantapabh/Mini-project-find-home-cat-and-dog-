@@ -4,7 +4,7 @@ import React from 'react'
 const ListItems = () => {
     return(
         <div>
-           List
+           List...
             </div>
     );
 }
