@@ -6,7 +6,6 @@ const ListItems = () => {
         <div>
            List
             </div>
-
     );
 }
 
