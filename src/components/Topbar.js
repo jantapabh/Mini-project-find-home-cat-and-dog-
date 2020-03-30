@@ -15,13 +15,13 @@ const Topbar = () => {
                 </a>       
             <div className="menu-list">
             <div className="topic">
-                    <a className="link" href="/ListItems">รายละเอียด</a>
+                    <a className="link" href="/ListItems">DETAILS</a>
                 </div>
                 <div className="topic">
-                    <a className="link" href="/FormInput">กรอกข้อมูล</a>
+                    <a className="link" href="/FormInput">INPUT DATA</a>
                 </div>
                 <div className="topic">
-                    <a className="link" href="/Register">ลงทะเบียน</a>
+                    <a className="link" href="/Register">REGISTER</a>
                 </div>
             </div>
         </div>
