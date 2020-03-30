@@ -5,7 +5,7 @@ const Register = () => {
 
     return (
         <div>
-            RegisterForm . .  .
+            RegisterForm
         </div>
     );
 }
