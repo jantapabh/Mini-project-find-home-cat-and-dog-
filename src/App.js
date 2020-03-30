@@ -14,8 +14,11 @@ import Register from './components/Resgister';
 const App = () => {
 
   return (
+
     <div>
-      <Topbar />
+      <div className="Topbar">
+        <Topbar />
+      </div>
       <div>
         <BrowserRouter>
           <Route exact path="/" />
