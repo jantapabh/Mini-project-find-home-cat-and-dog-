@@ -11,7 +11,7 @@ const Topbar = () => {
         <div className="main">
             <div>
                 <a href="/">
-                    <img src={logo} className="Images" />
+                    <img className="Images" src={logo} />
                 </a>
             </div>
             <div className="menu-list">
