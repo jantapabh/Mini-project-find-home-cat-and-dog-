@@ -8,20 +8,20 @@ import { Link } from 'react-router-dom'
 const Topbar = () => {
 
     return (
-        <div>
-            <div className="Images">
+        <div className="main">
+            <div>
                 <a href="/">
-                    <img src={logo} />
+                    <img src={logo} className="Images" />
                 </a>
             </div>
             <div className="menu-list">
-            <div>
-                    <a className="link" href="/ListItems">หน้าหลัก</a>
+            <div className="topic">
+                    <a className="link" href="/">รายละเอียด</a>
                 </div>
-                <div>
+                <div className="topic">
                     <a className="link" href="/FormInput">กรอกข้อมูล</a>
                 </div>
-                <div>
+                <div className="topic">
                     <a className="link" href="/Register">ลงทะเบียน</a>
                 </div>
             </div>

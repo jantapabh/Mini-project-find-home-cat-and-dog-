@@ -13,22 +13,21 @@ import Register from './components/Resgister';
 
 const App = () => {
 
-return(
-  <div>
-  <Topbar />
-  <div>
-    <BrowserRouter>
-      <Route exact path="/" />
-      <Route path="/FormInput" component={FormInput} />
-      <Route path="/ListItems" component={ListItems} />
-      <Route path="/Register" component={Register} />
-      <Route path="/login" component={Login} />
-     
-    </BrowserRouter>
-  </div>
-</div>
+  return (
+    <div>
+      <Topbar />
+      <div>
+        <BrowserRouter>
+          <Route exact path="/" />
+          <Route path="/FormInput" component={FormInput} />
+          <Route path="/ListItems" component={ListItems} />
+          <Route path="/Register" component={Register} />
+          <Route path="/login" component={Login} />
+        </BrowserRouter>
+      </div>
+    </div>
 
-);
+  );
 
 }
 
