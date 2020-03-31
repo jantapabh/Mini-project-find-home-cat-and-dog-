@@ -47,6 +47,8 @@ body {
 
     margin: 15px;
     padding: 15px;
+    transition-duration: 0.4s;
+    border: 2px solid #e7e7e7;
 }
 
 .link {
@@ -54,4 +56,6 @@ body {
     color: black;
     font-size: 2em;
     font-family: inherit;
+    text-decoration: none;
+
 }
