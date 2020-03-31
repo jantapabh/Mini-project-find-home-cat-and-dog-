@@ -54,5 +54,23 @@
 
 .Main {
   
-  margin-top: -400px;
+  margin-top: -30px;
+}
+.btn {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 1em;
+  padding: 16px 30px;
+  border: 2px solid #e7e7e7;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  width: 250px;
+  height: 80px;
 }

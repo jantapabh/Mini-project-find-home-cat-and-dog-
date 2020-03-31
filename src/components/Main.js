@@ -13,12 +13,6 @@ const Main = () => {
                         <a href="/login" className="link">LOGIN THIS</a>
                     </button>
                 </div>
-                <div className="Footer">
-                    
-                </div>
-                {/* <div className="Footer2">
-                    <p>Hiiiii</p>
-                </div> */}
             </div>
         </div>
     )

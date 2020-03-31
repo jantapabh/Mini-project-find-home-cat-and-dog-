@@ -1,4 +1,6 @@
 
+
+
 body {
     
     margin: 0;
@@ -23,11 +25,9 @@ body {
     /* box-shadow: rgba(1, 1,1, 0.5) 0px 0px 0px; */
     align-items: center;
     width: 2020px;
-    /* background-color: lightblue; */
-    opacity: 0.9;
     filter: alpha(opacity=90); 
     /* border: 1px solid #ddd; */
-  
+    
    
 }
 
@@ -38,7 +38,7 @@ body {
     margin: 10px;
     padding: 10px;
     cursor: pointer;
-    scrollbar-highlight-color: tomato;
+    scrollbar-highlight-color: darkblue;
     
 
 }
@@ -48,14 +48,16 @@ body {
     margin: 15px;
     padding: 15px;
     transition-duration: 0.4s;
-    border: 2px solid #e7e7e7;
+    border: 2px solid black;
+    font-size: 1.5em;
+    
 }
 
 .link {
 
-    color: black;
-    font-size: 2em;
-    font-family: inherit;
-    text-decoration: none;
+  
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 0px solid black;
 
 }
+
