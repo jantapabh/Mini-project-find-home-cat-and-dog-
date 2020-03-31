@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect } from 'react'
+import './Form.css'
 
 
 class Register extends Component {
@@ -135,6 +136,9 @@ class Register extends Component {
 
     render() {
         return (
+            <div>
+                <div className="Footer"> 
+                    </div>
             <div className="row">
                 <div className="col-sm-3 mt-5"></div>
                 <div className="col-sm-6 mt-5 card">
@@ -213,6 +217,7 @@ class Register extends Component {
                     </div>
                 </div>
                 <div className="col-sm-3 mt-5"></div>
+            </div>
             </div>
         )
     }
