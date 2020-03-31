@@ -101,14 +101,6 @@ const FormInput = () => {
                 id="username"
              />       
         </div>
-        <div className="form-group">
-            <label htmlFor="username">Contact : ส่วนติดต่อ</label>
-            <input type="text"
-                name="username"
-                className="form-control"
-                id="username"
-             />       
-        </div>
         <div className="text-center">
             <button className="btn btn-primary my-1" type="submit">ADD</button>
         </div>

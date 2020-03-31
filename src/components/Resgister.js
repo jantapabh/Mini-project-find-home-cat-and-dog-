@@ -150,6 +150,15 @@ class Register extends Component {
                                 <div className="valid-feedback">{this.getErrorMessage('username')}</div>
                             </div>
                             <div className="form-group">
+                                <label htmlFor="password">PASSWORD</label>
+                                <input type="password"
+                                    name="password"
+                                    className={this.getInputClass('password')}
+                                    id="password"
+                                    onChange={this.onFormChange} />
+                                <div className="invalid-feedback">{this.getErrorMessage('password')}}</div>
+                            </div>
+                            <div className="form-group">
                                 <label htmlFor="email">Email*</label>
                                 <input type="email"
                                     name="email"
@@ -159,13 +168,22 @@ class Register extends Component {
                                 <div className="invalid-feedback">{this.getErrorMessage('email')}}</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="password">PASSWORD</label>
-                                <input type="password"
-                                    name="password"
-                                    className={this.getInputClass('password')}
-                                    id="password"
+                                <label htmlFor="email">Contact</label>
+                                <input type="email"
+                                    name="email"
+                                    className={this.getInputClass('email')}
+                                    id="email"
                                     onChange={this.onFormChange} />
-                                <div className="invalid-feedback">{this.getErrorMessage('password')}}</div>
+                                <div className="invalid-feedback">{this.getErrorMessage('email')}}</div>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Telephone</label>
+                                <input type="email"
+                                    name="email"
+                                    className={this.getInputClass('email')}
+                                    id="email"
+                                    onChange={this.onFormChange} />
+                                <div className="invalid-feedback">{this.getErrorMessage('email')}}</div>
                             </div>
                             <div className="text-center">
                                 <button
