@@ -70,8 +70,8 @@
 .Param {
 
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 40%;
+  left: 40%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   color: black;
@@ -87,8 +87,8 @@
 .Param2 {
 
   position: absolute;
-  top:40%;
-  left: 70%;
+  top:50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   color: black;
@@ -97,5 +97,12 @@
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+
+}
+
+.content {
+  background-color: ghostwhite;
+  font: 1em sans-serif;
+  border: 2px solid black;
 
 }
