@@ -10,12 +10,12 @@ const Topbar = () => {
 
     return (
 
-        <div className="main">    
-                <a href="/">
-                    <img className="Images" src={logo1} />
-                </a>       
+        <div className="main">
+            <a href="/">
+                <img className="Images" src={logo1} />
+            </a>
             <div className="menu-list">
-            <div className="topic">
+                <div className="topic">
                     <a className="link" href="/ListItems">DETAILS</a>
                 </div>
                 <div className="topic">
@@ -24,6 +24,7 @@ const Topbar = () => {
                 <div className="topic">
                     <a className="link" href="/Register">REGISTER</a>
                 </div>
+               
             </div>
         </div>
 

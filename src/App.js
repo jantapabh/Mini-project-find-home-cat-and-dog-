@@ -16,16 +16,18 @@ import Main from './components/Main';
 const App = () => {
 
   return (
-
     <div>
       <div className="Topbar">
         <Topbar />
       </div>
       <div className="Footer">
-        </div>
+       <div>
+     content
+         </div>
+      </div>
       <div>
         <BrowserRouter>
-          <Route exact path="/" component={Main}/>
+          <Route exact path="/" component={Main} />
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/Register" component={Register} />

@@ -1,16 +1,24 @@
 
 .img {
 
-    width: 2040px;
+    width: 2020px;
     height: 800px;
     opacity: 0.4;
       filter: alpha(opacity=60); 
+      border-radius: 20px;
   
   }
   
   .Footer {
   
-    width: 2040px;
+    width: 2020px;
+    height: 100px;
+    background-color: white;
+  }
+
+  .Footer {
+
+    width: 2020px;
     height: 100px;
     background-color: white;
   }

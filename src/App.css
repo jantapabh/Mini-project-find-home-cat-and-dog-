@@ -48,19 +48,8 @@
   height: 800px;
   opacity: 0.4;
     filter: alpha(opacity=60); 
+    border: 1px solid #ddd;
 
-}
-
-.Footer {
-
-  width: 2040px;
-  height: 100px;
-  background-color: white;
-}
-.show {
- 
-  padding: 5px;
- 
 }
 
 .Main {
