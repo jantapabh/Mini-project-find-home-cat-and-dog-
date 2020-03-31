@@ -1,4 +1,10 @@
+.h {
+   
+    background-color: slategrey;
+    width: 2030px;
+    height: 50px;
 
+}
 .img {
 
     width: 2030px;
@@ -102,5 +108,5 @@
 }
 
 .show {
-  margin-top: -5x;
+  margin-top: -10px;
 }

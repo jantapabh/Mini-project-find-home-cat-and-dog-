@@ -6,6 +6,8 @@ const Main = () => {
 
     return (
         <div>
+            <div className="h">
+                </div>
             <div className="Main">
                 <div className="show">
                     <img className="img" src="https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg" />
