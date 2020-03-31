@@ -2,11 +2,11 @@ import React from 'react'
 
 
 const ListItems = () => {
+
     return (
         <div>
-            <div>
+            <div className="Footer">
             </div>
-
         </div>
     );
 }
