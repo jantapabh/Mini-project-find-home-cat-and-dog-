@@ -16,13 +16,13 @@ const Topbar = () => {
             </a>
             <div className="menu-list">
                 <div className="topic">
-                    <a className="link" href="/ListItems">DETAILS</a>
+                    <a className="link" href="/ListItems">OBSERVATION ROOM</a>
                 </div>
                 <div className="topic">
-                    <a className="link" href="/FormInput">INPUT DATA</a>
+                    <a className="link" href="/FormInput">COMPLETE HISTORY</a>
                 </div>
                 <div className="topic">
-                    <a className="link" href="/Register">REGISTER</a>
+                    <a className="link" href="/Register">CHECKPOINT</a>
                 </div>
                
             </div>
