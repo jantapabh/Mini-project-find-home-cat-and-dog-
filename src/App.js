@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Topbar from './components/Topbar';
 import { BrowserRouter, Route, Link, Router, Redirect } from 'react-router-dom';
@@ -18,6 +17,9 @@ const App = () => {
     <div>
       <div className="Topbar">
         <Topbar />
+      </div>
+      <div>
+       
       </div>
       <div>
         <BrowserRouter>
