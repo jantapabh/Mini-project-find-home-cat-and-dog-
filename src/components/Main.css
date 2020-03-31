@@ -25,19 +25,37 @@
     margin: 5px;
   }
   .btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: #f1f1f1;
     color: black;
-    font-size: 16px;
+    font-size: 1.5em;
     padding: 16px 30px;
-    border: none;
+    border: 2px solid #e7e7e7;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
     width: 250px;
     height: 80px;
   }
+
+  .topic {
+
+    margin: 15px;
+    padding: 15px;
+    transition-duration: 0.4s;
+    border: 2px solid #e7e7e7;
+}
+
+.link {
+
+    color: black;
+    font-size: 2em;
+    font-family: inherit;
+    text-decoration: none;
+
+}

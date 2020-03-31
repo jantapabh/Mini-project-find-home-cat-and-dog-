@@ -9,10 +9,12 @@ const Main = () => {
             <div className="Main">
                 <div className="show">
                     <img className="img" src="https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg" />
-                    <button class="btn">Button</button>
+                    <button class="btn">
+                        <a href="/login" className="link">LOGIN THIS</a>
+                    </button>
                 </div>
                 <div className="Footer">
-                    <p>Hiiiii</p>
+                    
                 </div>
                 {/* <div className="Footer2">
                     <p>Hiiiii</p>
