@@ -41,16 +41,19 @@
   /* padding-top: -20px; */
   margin-top: -25px;
 }
+
 .img {
-  width: 2050px;
+
+  width: 2020px;
   height: 800px;
   opacity: 0.4;
-    filter: alpha(opacity=40); 
+    filter: alpha(opacity=60); 
+
 }
 
 .Footer {
 
-  width: 2050px;
+  width: 2020px;
   height: 100px;
   background-color: white;
 }
