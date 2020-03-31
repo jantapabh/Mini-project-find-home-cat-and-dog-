@@ -42,7 +42,7 @@
   margin-top: -25px;
 }
 .img {
-  width: 2100px;
+  width: 2000px;
   height: 800px;
   opacity: 0.4;
     filter: alpha(opacity=40); 
@@ -50,7 +50,11 @@
 
 .Footer {
 
-  width: 2100px;
+  width: 2000px;
   height: 100px;
-  background-color: lightgoldenrodyellow;
+  background-color: white;
+}
+.show {
+
+  margin: 10px;
 }

@@ -20,7 +20,7 @@ const App = () => {
       <div className="Topbar">
         <Topbar />
       </div>
-      <div>
+      <div className="show">
        <img className="img" src="https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg" />
       </div>
       <div className="Footer">
