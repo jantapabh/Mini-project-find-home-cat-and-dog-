@@ -5,8 +5,7 @@
     height: 800px;
     opacity: 0.4;
       filter: alpha(opacity=60); 
-      border-radius: 20px;
-    
+  
   
   }
   
@@ -44,7 +43,7 @@
   padding: 16px 30px;
   border: 2px solid black;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 25px;
   text-align: center;
   width: 250px;
   height: 80px;

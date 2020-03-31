@@ -185,6 +185,24 @@ class Register extends Component {
                                     onChange={this.onFormChange} />
                                 <div className="invalid-feedback">{this.getErrorMessage('email')}}</div>
                             </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Facebook</label>
+                                <input type="email"
+                                    name="email"
+                                    className={this.getInputClass('email')}
+                                    id="email"
+                                    onChange={this.onFormChange} />
+                                <div className="invalid-feedback">{this.getErrorMessage('email')}}</div>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Line</label>
+                                <input type="email"
+                                    name="email"
+                                    className={this.getInputClass('email')}
+                                    id="email"
+                                    onChange={this.onFormChange} />
+                                <div className="invalid-feedback">{this.getErrorMessage('email')}}</div>
+                            </div>
                             <div className="text-center">
                                 <button
                                     className="btn btn-primary"
