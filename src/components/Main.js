@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div>
             <div className="h">
-                </div>
+            </div>
             <div className="Main">
                 <div className="show">
                     <img className="img" src="https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg" />
@@ -21,6 +21,9 @@ const Main = () => {
                     <button class="btnForm">
                         <a href="/login" className="link">LOGIN THIS</a>
                     </button>
+                    <div className="hh">
+                        COntent
+                    </div>
                 </div>
             </div>
         </div>
