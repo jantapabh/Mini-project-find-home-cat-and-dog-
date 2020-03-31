@@ -9,6 +9,7 @@ import ListItems from './components/ListItems';
 import Login from './components/Login';
 import Register from './components/Resgister';
 import pic6 from './static/images/pic6.jpg'
+import Main from './components/Main';
 
 
 
@@ -20,15 +21,11 @@ const App = () => {
       <div className="Topbar">
         <Topbar />
       </div>
-      <div className="show">
-       <img className="img" src="https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg" />
-      </div>
       <div className="Footer">
-       
         </div>
       <div>
         <BrowserRouter>
-          <Route exact path="/" />
+          <Route exact path="/" component={Main}/>
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/Register" component={Register} />
