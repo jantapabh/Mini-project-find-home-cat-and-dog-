@@ -14,9 +14,9 @@ const Main = () => {
                         <p className="Param2">Don't let them do it alone "</p>  <br />
                     </div>
                     <div>
-                        <h1 className="Param3">. . . Giving Haome Equal Life . . .</h1>
+                        <h1 className="Param3">. . . Giving Home Equal Life . . .</h1>
                     </div>
-                    <button class="btn">
+                    <button class="btnForm">
                         <a href="/login" className="link">LOGIN THIS</a>
                     </button>
                 </div>

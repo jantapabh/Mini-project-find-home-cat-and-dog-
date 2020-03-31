@@ -1,0 +1,8 @@
+.Topic {
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
