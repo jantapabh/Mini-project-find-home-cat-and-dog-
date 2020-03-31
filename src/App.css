@@ -41,3 +41,16 @@
   /* padding-top: -20px; */
   margin-top: -25px;
 }
+.img {
+  width: 2100px;
+  height: 800px;
+  opacity: 0.4;
+    filter: alpha(opacity=40); 
+}
+
+.Footer {
+
+  width: 2100px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+}

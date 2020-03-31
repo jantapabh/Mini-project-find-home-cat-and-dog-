@@ -11,6 +11,7 @@ import Register from './components/Resgister';
 import pic6 from './static/images/pic6.jpg'
 
 
+
 const App = () => {
 
   return (
@@ -20,8 +21,11 @@ const App = () => {
         <Topbar />
       </div>
       <div>
-       <img src={pic6} />
+       <img className="img" src="https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_1280.jpg" />
       </div>
+      <div className="Footer">
+       
+        </div>
       <div>
         <BrowserRouter>
           <Route exact path="/" />
