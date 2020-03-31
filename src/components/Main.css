@@ -25,7 +25,7 @@
     margin: 5px;
   }
   .btn {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     position: absolute;
     top: 90%;
     left: 50%;
@@ -64,5 +64,38 @@
     font-family: inherit;
     text-decoration: none;
 
+
+}
+
+.Param {
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: black;
+  font-size: 2em;
+  padding: 16px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+
+.Param2 {
+
+  position: absolute;
+  top:40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: black;
+  font-size: 2em;
+  padding: 16px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
 
 }
