@@ -54,7 +54,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
+  background-color: white;
   color: black;
   font-size: 1em;
   padding: 16px 30px;
@@ -116,4 +116,8 @@
   text-align: center;
  
 
+}
+
+.show {
+  margin-top: 5px;
 }
