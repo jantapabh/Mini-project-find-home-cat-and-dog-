@@ -8,6 +8,7 @@ import FormInput from './components/FormInput';
 import ListItems from './components/ListItems';
 import Login from './components/Login';
 import Register from './components/Resgister';
+import pic6 from './static/images/pic6.jpg'
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
         <Topbar />
       </div>
       <div>
-       
+       <img src={pic6} />
       </div>
       <div>
         <BrowserRouter>
