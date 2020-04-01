@@ -12,14 +12,14 @@ const Login = () => {
                 <div className="card-body">
                     <h2 className="Topic">Login</h2>
                 </div>
-                <form onSubmit={this.onLoginSubmit}>
+                <form>
                     <div className="form-group">
                         <label htmlFor="username">USER NAME</label>
                         <input type="text"
                             name="username"
                             className="form-control is-valid"
                             id="username"
-                            onChange={this.onInputChange} />
+                             />
                         <div className="valid-feedback">พบชื่อผู้ใช้</div>
                     </div>
                     <div className="form-group">
@@ -28,7 +28,7 @@ const Login = () => {
                             name="password"
                             className="form-control is-invalid"
                             id="password"
-                            onChange={this.onInputChange} />
+                             />
                         <div className="invalid-feedback"></div>
                     </div>
                     <div className="text-center">
@@ -41,4 +41,4 @@ const Login = () => {
 }
 
 
-export default Login
+export default Login;
