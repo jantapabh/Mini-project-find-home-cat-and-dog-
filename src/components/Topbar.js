@@ -4,7 +4,9 @@ import logo1 from '../static/images/logo1.png'
 import './Topbar.css'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner } from 'react-bootstrap';
+import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon} from 'react-bootstrap';
+import { ArrowRight } from 'react-bootstrap-icons';
+import { MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
 
 
 
@@ -31,12 +33,13 @@ const Topbar = () => {
                         <NavDropdown title="ABOUT" style={{ fontSize: 20}} id="basic-nav-dropdown">
                             <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGIN</NavDropdown.Item>
                             <NavDropdown.Item href="/Register" style={{ fontSize: 15}}>REGISTER</NavDropdown.Item>
-                            <NavDropdown.Item href="/Logout" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
+                            <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>
+                    
                     <Form inline>
-                        <Spinner animation="grow" />
+                    <MDBBtn outline rounded size="sm" color="warning" ><MDBIcon icon="user" className="mr-2" />Button</MDBBtn>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
