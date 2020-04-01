@@ -24,7 +24,6 @@ const App = () => {
       <div className="Topbar">
         <Topbar />
       </div>
-     
         <BrowserRouter>
           <Route exact path="/" component={Main} />
           <Route path="/FormInput" component={FormInput} />
