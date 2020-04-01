@@ -85,3 +85,15 @@ const animalReducer = (animals = [], action) => {
 
     return animals;
 }
+
+
+const reducers = combineReducers({
+
+    animal: animalReducer,
+    form: formReducer
+
+})
+
+
+//เรียกใช้ redux-thunk
+export const store = createStore(reducers, applyMiddleware(logger, thunk));
