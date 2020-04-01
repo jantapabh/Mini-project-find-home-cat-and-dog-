@@ -79,5 +79,27 @@ router.route('/animals/:animal_id')
 
     let id = req.params.animal_id
     let index = animals.findIndex(animal => (animal.id === +id))
+    animals[index].imgUrl = req.body.imgUrl;
+    animals[index].strain = req.body.strain;
+    animals[index].name = req.body.name;
+    animals[index].old = req.body.old;
+    animals[index].habits = req.body.habits;
+    animals[index].because = req.body.because;
+    res.json({ message: 'Animal Update !' + req.params.animal_id});
 
 })
+
+.delete((req, res) => {
+
+    let id = req.params.animal_id
+    let index = animals.findIndex(animal => animal_id === +id)
+    animals.splice(index, 1)
+    res.json({ message: 'Animal Delete : ' + req.params.animal_id });
+})
+
+
+app.use("*", (req, res) => res.status(404).send('404 Not found'));
+
+app.listen(8000, () => { console.log('server is running PORT 8000') })
+
+
