@@ -1,14 +1,49 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './List.css'
+import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux'
+import FormInput from './FormInput'
+import { bindActionCreators } from 'redux';
+import { animalActions } from '../redux/store'
+import AnimalCard from './AnimalCard'
 
+//แสดงรายการที่เพิ่มของหมาและแมว
 
-const ListItems = () => {
+const ListItems = props => {
+
+    const animals = useSelector(state => state.animal)
+    const actionsAnimal = bindActionCreators(animalActions, useDispatch());
+
+    useEffect(() => {
+
+        actionsAnimal.getAnimals()
+    }, [])
+
+    if (!animals || !animals.length)
+
+        return (
+            <h1>Not Animals Now </h1>
+        )
 
     return (
+
         <div>
             <div className="Footer">
             </div>
+            <div>
+                {
+                    animals.map((animal, index) => {
+                        
+                        <div key={index} style={{ margin: 5 }}>
+                            <AnimalCard {...animal} />
+                        </div>
+
+                    })
+                }
+
+            </div>
         </div>
+
     );
 }
 
