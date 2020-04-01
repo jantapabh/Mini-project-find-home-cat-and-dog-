@@ -30,7 +30,8 @@ let animals = [
         name: 'Malee',
         old: 3,
         habits: 'alone',
-        because: 'ไม่สะดวกเลี้ยง'
+        because: 'ไม่สะดวกเลี้ยง',
+        status: 'have'
     },
     {
         id: 2,
@@ -39,7 +40,8 @@ let animals = [
         name: 'Malee',
         old: 3,
         habits: 'alone',
-        because: 'ไม่สะดวกเลี้ยง'
+        because: 'ไม่สะดวกเลี้ยง',
+        status: 'have'
     },
     {
         id: 3,
@@ -48,7 +50,8 @@ let animals = [
         name: 'Malee',
         old: 3,
         habits: 'alone',
-        because: 'ไม่สะดวกเลี้ยง'
+        because: 'ไม่สะดวกเลี้ยง',
+        status: 'have'
     }
 ];
 
@@ -65,6 +68,7 @@ router.route('/animals')
     animal.old = req.body.old;
     animal.habits = req.body.habits;
     animal.because = req.body.because;
+    animal.status = req.body.status;
     animals.push(animal);
     res.json({ message: 'Animals created!' })
     
@@ -89,6 +93,7 @@ router.route('/animals/:animal_id')
     animals[index].old = req.body.old;
     animals[index].habits = req.body.habits;
     animals[index].because = req.body.because;
+    animal[index].status = req.body.status;
     res.json({ message: 'Animal Update !' + req.params.animal_id});
 
 })

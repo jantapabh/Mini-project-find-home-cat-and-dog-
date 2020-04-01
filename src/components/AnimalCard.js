@@ -24,8 +24,9 @@ const AnimalCard = props => {
     }
 
     return (
+
         <div className="main">
-            <button className="Button2">STATUS : ได้บ้านแล้ว</button>
+            <button className="Button2">STATUS : {props.status}</button>
             <div className="blog">
               <img src={props.imgUrl} style={{ width: 200, height: 150}} /> <br />
                 STRAIN : {props.strain} <br />
