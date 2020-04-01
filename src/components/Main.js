@@ -1,11 +1,18 @@
 import React from 'react'
 import './Main.css';
 import pic6 from '../static/images/pic6.jpg'
+import { useMediaQuery } from 'react-responsive'
 
 const Main = () => {
 
+    const Desktop = ({ children }) => {
+        const isDesktop = useMediaQuery({ minWidth: 992 })
+        return isDesktop ? children : null
+      }
+
     return (
         <div>
+            <Desktop>
             <div className="h">
             </div>
             <div className="Main">
@@ -26,6 +33,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+           </Desktop>
         </div>
     )
 }
