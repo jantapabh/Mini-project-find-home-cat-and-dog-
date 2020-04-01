@@ -4,6 +4,8 @@ import './AnimalCard.css';
 import { animalActions } from '../redux/store'
 import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Form, Col, roundedCircle } from 'react-bootstrap';
 
 
 const AnimalCard = props => {
@@ -27,8 +29,8 @@ const AnimalCard = props => {
 
         <div className="main">
             <button className="Button2">STATUS : {props.status}</button>
-            <div className="blog">
-              <img src={props.imgUrl} style={{ width: 200, height: 150}} /> <br />
+            <div className="blog"> 
+                    <img src={props.imgUrl} style={{ width: 200, height: 150 }} /> <br />
                 STRAIN : {props.strain} <br />
                 NAME : {props.name} <br />
                 OLD: {props.old} <br />
