@@ -32,13 +32,12 @@ const ListItems = props => {
             </div>
             <div>
                 {
-                    animals.map((animal, index) => {
-                        
+                    animals.map((animal, index) => (
                         <div key={index} style={{ margin: 5 }}>
                             <AnimalCard {...animal} />
                         </div>
 
-                    })
+                    ))
                 }
 
             </div>

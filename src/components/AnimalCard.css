@@ -1,0 +1,30 @@
+
+.main {
+
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.Button {
+
+    font-size: 1em;
+    padding: 16px 30px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
+    width: 250px;
+    height: 80px;
+
+}
+.image {
+    width: 100px;
+    height: 100px;
+}
+.blog {
+
+    border-bottom: darkblue;
+    border-radius: 10px;
+    
+
+}

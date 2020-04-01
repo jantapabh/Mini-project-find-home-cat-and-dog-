@@ -24,9 +24,10 @@ const AnimalCard = props => {
     }
 
     return (
-        <div>
+        <div className="main">
             <button className="Button">STATUS : ได้บ้านแล้ว</button>
-            <div>
+            <div className="blog">
+              <img src={props.imgUrl} style={{ width: 150, height: 120}} /> <br />
                 STRAIN : {props.strain} <br />
                 NAME : {props.name} <br />
                 OLD: {props.old} <br />
@@ -34,8 +35,8 @@ const AnimalCard = props => {
                 BECAUSE : {props.because} <br />
             </div>
             <div>
-                <button className="Button">DETAILS</button>
-                <button className="Button">CONTACT</button>
+                <button className="Button" >CONTACT</button>
+                <button className="Button" onClick={deleteAnimal} >DELETE</button>
             </div>
 
         </div>
