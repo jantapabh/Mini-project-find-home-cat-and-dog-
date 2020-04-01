@@ -124,7 +124,8 @@ const initialForm = {
     name: '',
     old: 0,
     habits: '',
-    because: ''
+    because: '',
+    status: ''
 
 }
 
@@ -157,7 +158,12 @@ export const formActions = {
     changeBecause: (because) => ({
         type: 'CHANGE_BECAUSE',
         because: because
+    }),
+    changeStatus: (status) => ({
+        type: 'CHANGE_STAUTUS',
+        status: status
     })
+
 
 }
 
@@ -185,6 +191,9 @@ const formReducer = (data = initialForm, action) => {
 
         case 'CHANGE_BECAUSE':
             return { ...data, because: action.because }
+        
+        case 'CHANGE_STATUS':
+            return {...data, status: action.status}
 
         default: return data;
     }

@@ -86,6 +86,15 @@ const FormInput = props => {
                             onChange={(e) => actionForm.changeBecause(e.target.value)}
                         />
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="imgUrl">Status : สถานะ</label>
+                        <input type="text"
+                            name="status"
+                            className="form-control"
+                            id="status"
+                            onChange={(e) => actionForm.changeStatus(e.target.value)}
+                        />
+                    </div>
                     <div className="text-center">
                         <button className="btn btn-primary my-1" type="submit" onClick={addAnimal}>ADD</button>
                     </div>
