@@ -2,6 +2,10 @@ let express = require('express')
 let bodyParser = require('body-parser');
 const session = require('express-session')
 let cors = require('cors')
+const FB = require('./fb')
+var request = require('request');
+let authRoutes = require('./routes/auth');
+let fbRoutes = require('./routes/fb');
 let app = express()
 let router = express.Router()
 
@@ -98,6 +102,18 @@ router.route('/animals/:animal_id')
 })
 
 
+
+router.route('/auth')
+.get(authRoutes.index);
+
+router.route('/auth/logout')
+.get(authRoutes.logout);
+
+router.route('/auth/facebook')
+.get(fbRoutes.loginUrl);
+
+router.route('/auth/facebook/login/callback')
+.get(fbRoutes.loginCallback);
 
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
