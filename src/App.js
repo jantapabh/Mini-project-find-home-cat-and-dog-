@@ -11,6 +11,7 @@ import Register from './components/Resgister';
 import pic6 from './static/images/pic6.jpg'
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
+import Logout from './components/Logout';
 
 
 
@@ -28,6 +29,8 @@ const App = () => {
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/Register" component={Register} />
+          <Route path="/login" component={Login} />
+          <Route path="/logout" component={Logout} />
           <Route path="/login" component={Login} />
         </BrowserRouter>
       

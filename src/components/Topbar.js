@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon} from 'react-bootstrap';
 import { ArrowRight } from 'react-bootstrap-icons';
-import { MDBRow, MDBCol, MDBIcon, MDBBtn } from "mdbreact";
+import { MDBRow, MDBCol, MDBIcon, MDBBtn,MDBListGroupItem } from "mdbreact";
 
 
 
@@ -37,9 +37,8 @@ const Topbar = () => {
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>
-                    
                     <Form inline>
-                    <MDBBtn outline rounded size="sm" color="warning" ><MDBIcon icon="user" className="mr-2" />Button</MDBBtn>
+                    <MDBListGroupItem> <MDBIcon icon="user" className="mr-3" size="2x" />JANJOA</MDBListGroupItem>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
