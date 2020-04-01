@@ -32,52 +32,58 @@ const FormInput = props => {
                 </div>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="username">Image : รูปภาพ</label>
+                        <label htmlFor="imgUrl">Image : รูปภาพ</label>
                         <input type="file"
-                            name="username"
+                            name="imgUrl"
                             className="form-control"
-                            id="username"
+                            id="imgUrl"
+                            onChange={(e) => actionForm.changeImgurl(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="username">Strain : สายพันธ์</label>
+                        <label htmlFor="strain">Strain : สายพันธ์</label>
                         <input type="text"
-                            name="username"
+                            name="strain"
                             className="form-control"
-                            id="username"
+                            id="strain"
+                            onChange={(e) => actionForm.changeStrain(e.target.value)}
                         />
 
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Name : ชื่อ</label>
-                        <input type="password"
-                            name="password"
+                        <label htmlFor="name">Name : ชื่อ</label>
+                        <input type="text"
+                            name="name"
                             className="form-control"
-                            id="password"
+                            id="name"
+                            onChange={(e) => actionForm.changeName(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="username">Old : อายุ</label>
-                        <input type="text"
-                            name="username"
+                        <label htmlFor="old">Old : อายุ</label>
+                        <input type="number"
+                            name="old"
                             className="form-control"
-                            id="username"
+                            id="old"
+                            onChange={(e) => actionForm.changeOld(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="username">Habits : นิสัย</label>
+                        <label htmlFor="habit">Habits : นิสัย</label>
                         <input type="text"
-                            name="username"
+                            name="habit"
                             className="form-control"
-                            id="username"
+                            id="habit"
+                            onChange={(e) => actionForm.changeHabit(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="username">Because : เหตุผลที่หาบ้านใหม่</label>
+                        <label htmlFor="because">Because : เหตุผลที่หาบ้านใหม่</label>
                         <input type="text"
-                            name="username"
+                            name="because"
                             className="form-control"
-                            id="username"
+                            id="because"
+                            onChange={(e) => actionForm.changeBecause(e.target.value)}
                         />
                     </div>
                     <div className="text-center">
