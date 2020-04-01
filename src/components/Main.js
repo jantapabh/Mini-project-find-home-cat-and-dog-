@@ -2,6 +2,7 @@ import React from 'react'
 import './Main.css';
 import pic6 from '../static/images/pic6.jpg'
 import { useMediaQuery } from 'react-responsive'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Main = () => {
 
@@ -12,7 +13,7 @@ const Main = () => {
 
     return (
         <div>
-            <Desktop>
+            {/* <Desktop>
             <div className="h">
             </div>
             <div className="Main">
@@ -33,7 +34,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-           </Desktop>
+           </Desktop> */}
         </div>
     )
 }
