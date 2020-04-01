@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect }from 'react'
 import './Form.css'
+import { formActions } from '../redux/store'
+import { useSelector, useDispatch } from 'react-redux'
+import { animalActions } from '../redux/store'
+import { bindActionCreators } from 'redux';
+import axios from 'axios'
 
 
-const FormInput = () => {
+const FormInput = props => {
+
+    const actionsAnimal = bindActionCreators(animalActions, useDispatch())
+    const actionForm = bindActionCreators(formActions, useDispatch())
+    const form = useSelector(state => state.form)
+    const animals = useSelector(state => state.animal)
+
+    const addAnimal = async () => {
+
+        await axios.post(`http://localhost:8000/api/animals`, form)
+
+        actionsAnimal.addAnimal(animals, form)
+    }
 
     return (
         <div>
@@ -64,7 +81,7 @@ const FormInput = () => {
                         />
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary my-1" type="submit">ADD</button>
+                        <button className="btn btn-primary my-1" type="submit" onClick={addAnimal}>ADD</button>
                     </div>
                 </form>
             </div>

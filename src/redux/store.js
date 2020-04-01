@@ -206,7 +206,7 @@ const animalReducer = (animals = [], action) => {
 
         case 'UPDATE_ANIMAL':
             return animals.map((animal, index) => {
-                if (+animalid === +action.id) {
+                if (+animal.id === +action.id) {
                     return action.animal;
                 }
                 else {
