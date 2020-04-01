@@ -4,7 +4,7 @@ import logo1 from '../static/images/logo1.png'
 import './Topbar.css'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Nav, NavDropdown, Navbar, FormControl } from 'react-bootstrap';
+import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner } from 'react-bootstrap';
 
 
 
@@ -27,17 +27,16 @@ const Topbar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="/ListItems" style={{ fontSize: 20}}>OBSERVATION ROOM</Nav.Link>
-                        <Nav.Link href="/ListItems" style={{ fontSize: 20}}>CONTACT</Nav.Link>
+                        <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
                         <NavDropdown title="ABOUT" style={{ fontSize: 20}} id="basic-nav-dropdown">
                             <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGIN</NavDropdown.Item>
                             <NavDropdown.Item href="/Register" style={{ fontSize: 15}}>REGISTER</NavDropdown.Item>
-                            <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
+                            <NavDropdown.Item href="/Logout" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>
                     <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-success">Search</Button>
+                        <Spinner animation="grow" />
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
