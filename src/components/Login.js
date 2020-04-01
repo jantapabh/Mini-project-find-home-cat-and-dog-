@@ -6,30 +6,30 @@ class Login extends Component {
 
 
 
-    state = {
+    // state = {
 
-        username: '',
-        password: ''
+    //     username: '',
+    //     password: ''
 
-    }
+    // }
 
-    onInputChange = (event) => {
+    // onInputChange = (event) => {
 
-        this.setState({
+    //     this.setState({
 
-            [event.target.name]: event.target.value
+    //         [event.target.name]: event.target.value
 
-        })
+    //     })
 
-        console.log(this.state);
+    //     console.log(this.state);
 
-    }
+    // }
 
-    onLoginSubmit = (event) => {
+    // onLoginSubmit = (event) => {
 
-        event.preventDefault();  //กำหนดให้ไม่มีการโหลดหน้า pages ใหม่เมื่อมีการกดปุ๋มส่งฟอร์ม
-        console.log(this.state);
-    }
+    //     event.preventDefault();  //กำหนดให้ไม่มีการโหลดหน้า pages ใหม่เมื่อมีการกดปุ๋มส่งฟอร์ม
+    //     console.log(this.state);
+    // }
 
     render() {
         return (
