@@ -57,6 +57,27 @@ router.route('/animals')
     animal.id = animals[animals.length - 1].id + 1
     animal.imgUrl = req.body.imgUrl;
     animal.strain = req.body.strain;
+    animal.name = req.body.name;
+    animal.old = req.body.old;
+    animal.habits = req.body.habits;
+    animal.because = req.body.because;
+    animals.push(animal);
+    res.json({ message: 'Animals created!' })
     
+})
+
+router.route('/animals/:animal_id')
+.get((req, res) => {
+    let id = req.params.animal_id
+    let index = animals.findIndex(animal => (animal.id === +id))
+    res.json(animals[index])
+})
+
+.put((req, res) => {
+
+    //update Animals
+
+    let id = req.params.animal_id
+    let index = animals.findIndex(animal => (animal.id === +id))
 
 })
