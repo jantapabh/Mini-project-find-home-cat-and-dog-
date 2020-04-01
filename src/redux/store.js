@@ -1,7 +1,16 @@
 import { createStore, combineReducers, applyMiddleware } from "../../node_modules/redux";
 import logger from 'redux-logger';
 import axios from 'axios'
+import thunk from 'redux-thunk';
 
+axios.defaults.withCredentials = true
+
+const initAuthData = {
+
+    accessToken: null,
+    psuInfo: null
+
+}
 
 const initialForm = {
 
@@ -12,6 +21,11 @@ const initialForm = {
     old: 0,
     habits: '',
     because: ''
+
+}
+
+export const formActions = {
+
 
 }
 
@@ -26,6 +40,48 @@ const formReducer = (data = initialForm, action) => {
             return { ...data, imgUrl: action.imgUrl }
 
         case 'CHANGE_STRAIN':
-            return {...data, strain: action.strain }
+            return { ...data, strain: action.strain }
+
+        case 'CHANGE_NAME':
+            return { ...data, name: action.name }
+
+        case 'CHANGE_OLD':
+            return { ...data, old: action.old }
+
+        case 'CHANGE_HABIT':
+            return { ...data, habits: action.habits }
+
+        case 'CHANGE_BECAUSE':
+            return { ...data, because: action.because }
+
+        default: return data;
     }
+}
+
+
+const animalReducer = (animals = [], action) => {
+
+    switch (action.type) {
+
+        case 'GET_ANIMALS':
+            return action.animals;
+
+        case 'ADD_ANIMAL':
+            return [...animals, action.animals]
+
+        case 'DELETE_ANIMAL':
+            return animals.filter((animal, index) => +animal.id !== +action.id)
+
+        case 'UPDATE_ANIMAL':
+            return animals.map((animal, index) => {
+                if(+animalid === +action.id){
+                    return action.animal;
+                }
+                else{
+                    return animal;
+                } 
+            })
+    }
+
+    return animals;
 }
