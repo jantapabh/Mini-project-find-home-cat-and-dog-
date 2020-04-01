@@ -3,7 +3,7 @@ import './Main.css';
 import pic6 from '../static/images/pic6.jpg'
 import { useMediaQuery } from 'react-responsive'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Nav, NavDropdown, Navbar, FormControl } from 'react-bootstrap';
+import { Button, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 
 const Main = () => {
 
@@ -14,7 +14,7 @@ const Main = () => {
 
     return (
         <div>
-           
+            
         </div>
     )
 }

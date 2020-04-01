@@ -11,21 +11,18 @@ import { Button, Form, Nav, NavDropdown, Navbar, FormControl } from 'react-boots
 const Topbar = () => {
 
     return (
-
         <div>
         <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar.Brand href="/">CHUAY NONG HAA BAAN</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <Nav.Link href="/ListItems">OBSERVATION ROOM</Nav.Link>
+                    <NavDropdown title="ABOUT" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">LOGIN</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">REGISTER</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">LOGOUT</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 <Form inline>
