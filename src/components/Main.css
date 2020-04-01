@@ -8,13 +8,13 @@
 .hh {
    
   background-color: white;
-  width: 2030px;
+  width: 1000px;
   height: 300px;
 
 }
 .img {
 
-    width: 2030px;
+    width: 1000px;
     height: 800px;
     opacity: 0.4;
       filter: alpha(opacity=60); 
