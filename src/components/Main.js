@@ -22,8 +22,8 @@ const Main = () => {
                        
                     />
                     <Carousel.Caption>
-                        <h3>Giving home equal Life</h3>
-                        <p>Be one of the homeless animals. Don't let them live Alone.</p>
+                        <h1>Giving home equal Life</h1>
+                        <h2>Be one of the homeless animals. Don't let them live Alone.</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

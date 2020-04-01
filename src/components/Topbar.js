@@ -12,12 +12,12 @@ const Topbar = () => {
 
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="white" expand="lg">
 
                 <Navbar.Brand href="/">
                     <img
                         src={logo1}
-                        width="130"
+                        width="100"
                         height="80"
                         className="d-inline-block align-top"
                         alt="CAHAUY NONG HAA BAAN"
