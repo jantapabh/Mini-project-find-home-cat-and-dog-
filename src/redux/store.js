@@ -5,12 +5,116 @@ import thunk from 'redux-thunk';
 
 axios.defaults.withCredentials = true
 
+//ส่วนการยืนยันตัวตน
+
 const initAuthData = {
 
     accessToken: null,
-    psuInfo: null
 
 }
+
+//ค้าง
+
+export const AuthActions = {
+
+    getLoginStatus: () => async (dispatch) => {
+        const res = await axios.get(`http://localhost/api/auth`)
+        dispatch({ type: 'GET_LOGIN_STATUS', payload: res.data });
+    },
+    loginPSU: (username, password) => async (dispatch) => {
+        const name = username + ''
+        const pass = password + ''
+        if (name.length === 10 && pass.length > 6 && username == '6035512034') {
+            const res = await axios.post('http://localhost/api/auth/psu', { username, password })
+            const { stdId, firstname, lastname, id, type } = res.data;
+
+            if (type == ' ') {
+                return alert('username or password incorrect');
+                // alert('username or password incorrect');
+            }
+            else {
+                dispatch({ type: 'LOGIN_PSU', payload: res.data })
+            }
+        }
+    },
+    logout: () => async (dispatch) => {
+        const res = await axios.get(`http://localhost/api/auth/logout`)
+        dispatch({ type: 'LOGOUT' })
+    }
+}
+
+const AuthReducer = (data = initAuthData, action) => {
+    switch (action.type) {
+        case 'GET_LOGIN_STATUS': return action.payload;
+        case 'LOGIN_PSU': return { ...data, psuInfo: action.payload };
+        case 'LOGOUT': return initAuthData
+        default: return data
+    }
+}
+// ทำต่อ
+
+export const animalActions = {
+
+    getAnimalsSuccess: animals => ({
+
+        type: 'GET_ANIMALS_SUCCESS', animals
+    }),
+
+    getAnimalsFailed: () => ({
+        type: 'GET_ANIMALS_FAILED'
+    }),
+
+    getAnimals: () => async (dispatch) => {
+
+        try {
+
+            console.log('Get Animal New')
+            const respone = await axios.get(`http://localhost:8000/api/animals`)
+            const responeBody = await respone.data;
+            console.log(responeBody)
+            dispatch({
+                type: 'GET_ANIMALS_FAILED', animals: responeBody
+            });
+
+        }
+
+        catch (error) {
+
+            console.log(error);
+
+            dispatch({
+
+                type: 'GET_ANIMALS_FAILED'
+
+            });
+        }
+    },
+
+    addAnimal: (animals, form) => ({
+        type: 'ADD_ANIMAL', animals: {
+
+            id: animals.length > 0 ? animals[animals.length - 1].id + 1 : 0,
+            ...form
+        }
+    }),
+
+    deleteAnimal: (id) => ({
+
+        type: 'DELETE_ANIMAL',
+        id: id
+    }),
+    updateAnimal: (id, form) => ({
+
+        type: 'UPDATE_ANIMAL',
+        id: id,
+        animals: {
+            ...form, id: id
+        }
+
+    })
+}
+
+//ส่วนแบบฟอร์ม
 
 const initialForm = {
 
@@ -102,13 +206,22 @@ const animalReducer = (animals = [], action) => {
 
         case 'UPDATE_ANIMAL':
             return animals.map((animal, index) => {
-                if(+animalid === +action.id){
+                if (+animalid === +action.id) {
                     return action.animal;
                 }
-                else{
+                else {
                     return animal;
-                } 
+                }
             })
+
+            case 'GET_ANIMALS_SUCCESS':
+                console.log('action: ', action.animals)
+                return action.animals
+
+            case 'GET_ANIMALS_FAILED':
+                console.log('action Failed !')
+                return action.animals
+
     }
 
     return animals;
@@ -118,7 +231,8 @@ const animalReducer = (animals = [], action) => {
 const reducers = combineReducers({
 
     animal: animalReducer,
-    form: formReducer
+    form: formReducer,
+    Auth: AuthReducer
 
 })
 
