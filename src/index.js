@@ -5,10 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Router, Route, Link} from 'react-router-dom'
 import {browserHistory} from 'react-router'
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 render(
   <BrowserRouter>
+  <Provider store={store}>
     <App />
+    </Provider>
   </BrowserRouter>,
   document.querySelector('#root')
 )
