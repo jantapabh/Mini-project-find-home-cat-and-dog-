@@ -33,7 +33,7 @@ const Topbar = () => {
                         <NavDropdown title="ABOUT" style={{ fontSize: 20}} id="basic-nav-dropdown">
                             <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGIN</NavDropdown.Item>
                             <NavDropdown.Item href="/Register" style={{ fontSize: 15}}>REGISTER</NavDropdown.Item>
-                            <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
+                            <NavDropdown.Item href="/Logout" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>
