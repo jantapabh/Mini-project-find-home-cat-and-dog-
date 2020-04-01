@@ -5,7 +5,6 @@ import './Form.css'
 const Register = () => {
 
     return (
-
         <div>
             <div className="Footer">
             </div>
