@@ -17,7 +17,7 @@ const Topbar = () => {
                 <Navbar.Brand href="/">
                     <img
                         src={logo1}
-                        width="100"
+                        width="130"
                         height="80"
                         className="d-inline-block align-top"
                         alt="CAHAUY NONG HAA BAAN"
@@ -26,11 +26,12 @@ const Topbar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/ListItems" style={{ fontSize: 30}}>OBSERVATION ROOM</Nav.Link>
-                        <NavDropdown title="ABOUT" style={{ fontSize: 30}} id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/Login" style={{ fontSize: 20}}>LOGIN</NavDropdown.Item>
-                            <NavDropdown.Item href="/Register" style={{ fontSize: 20}}>REGISTER</NavDropdown.Item>
-                            <NavDropdown.Item href="/logout" style={{ fontSize: 20}}>LOGOUT</NavDropdown.Item>
+                        <Nav.Link href="/ListItems" style={{ fontSize: 20}}>OBSERVATION ROOM</Nav.Link>
+                        <Nav.Link href="/ListItems" style={{ fontSize: 20}}>CONTACT</Nav.Link>
+                        <NavDropdown title="ABOUT" style={{ fontSize: 20}} id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGIN</NavDropdown.Item>
+                            <NavDropdown.Item href="/Register" style={{ fontSize: 15}}>REGISTER</NavDropdown.Item>
+                            <NavDropdown.Item href="/Login" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>
