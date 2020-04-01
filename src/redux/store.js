@@ -26,6 +26,34 @@ const initialForm = {
 
 export const formActions = {
 
+    changeId: (id) => ({
+        type: 'CHANGE_ID',
+        id: id
+    }),
+    changeImgurl: (imgUrl) => ({
+        type: 'CHANGE_IMGURL',
+        imgUrl: imgUrl
+    }),
+    changeStrain: (strain) => ({
+        type: 'CHANGE_STRAIN',
+        strain: strain
+    }),
+    changeName: (name) => ({
+        type: 'CHANGE_NAME',
+        name: name
+    }),
+    changeOld: (old) => ({
+        type: 'CHANGE_OLD',
+        old: old
+    }),
+    changeHabit: (habits) => ({
+        type: 'CHANGE_HABIT',
+        habits: habits
+    }),
+    changeBecause: (because) => ({
+        type: 'CHANGE_BECAUSE',
+        because: because
+    })
 
 }
 
