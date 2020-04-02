@@ -25,8 +25,7 @@ const FormInput = props => {
         <div>
             <div className="col-6 mt-5 mx-auto card">
                 <div className="card-body">
-                    <h1 className="Topic">ADD CAT OR DOG</h1>
-                    <h2 className="Topic">" Please enter the truth "</h2>
+                    <h1 className="Topic">" ADD CAT OR DOG "</h1>
                 </div>
                 <form>
                     <div className="form-group">

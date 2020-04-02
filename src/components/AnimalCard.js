@@ -28,22 +28,8 @@ const AnimalCard = props => {
 
     return (
 
-        <div className="main">
-            {/* <button className="Button2">STATUS : {props.status}</button>
-            <div className="blog"> 
-                    <img src={props.imgUrl} style={{ width: 200, height: 150 }} /> <br />
-                STRAIN : {props.strain} <br />
-                NAME : {props.name} <br />
-                OLD: {props.old} <br />
-                HABIT : {props.habits} <br />
-                BECAUSE : {props.because} <br />
-            </div>
-            <div>
-                <button className="Button" >CONTACT</button>
-                <button className="Button" onClick={deleteAnimal} >DELETE</button>
-            </div> */}
-
-            <MDBCard className="my-5 px-5 pb-5" inline>
+        <div>
+            <MDBCard className="my-5 px-5 pb-5" >
                 <MDBCardBody>
                     <MDBRow>
                             <MDBCol lg="5">
@@ -75,16 +61,12 @@ const AnimalCard = props => {
                                     BECAUSE : {props.because} <br />
                                 </p>
 
-                                <MDBBtn color="success" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> Read more </MDBBtn>
-                                <MDBBtn color="success" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> Read more </MDBBtn>
+                                <MDBBtn color="success" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DETAILS </MDBBtn>
+                                <MDBBtn color="success" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> CONTACT </MDBBtn>
                             </MDBCol>
                         </MDBRow>
-                   
                 </MDBCardBody>
             </MDBCard>
-
-
-
         </div>
     )
 }
