@@ -17,7 +17,7 @@ const Login = () => {
                         <label htmlFor="username">USER NAME</label>
                         <input type="text"
                             name="username"
-                            className="form-control is-valid"
+                            className="form-control"
                             id="username"
                              />
                         <div className="valid-feedback">พบชื่อผู้ใช้</div>
@@ -26,7 +26,7 @@ const Login = () => {
                         <label htmlFor="password">PASSWORD</label>
                         <input type="password"
                             name="password"
-                            className="form-control is-invalid"
+                            className="form-control"
                             id="password"
                              />
                         <div className="invalid-feedback"></div>
