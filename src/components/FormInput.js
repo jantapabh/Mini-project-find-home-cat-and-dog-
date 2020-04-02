@@ -23,8 +23,6 @@ const FormInput = props => {
 
     return (
         <div>
-            <div className="Footer">
-            </div>
             <div className="col-6 mt-5 mx-auto card">
                 <div className="card-body">
                     <h1 className="Topic">ADD CAT OR DOG</h1>

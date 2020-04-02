@@ -8,8 +8,6 @@ const Register = () => {
 
     return (
         <div>
-            <div className="Footer">
-            </div>
             <div className="row">
                 <div className="col-sm-3 mt-5"></div>
                 <div className="col-sm-6 mt-5 card">

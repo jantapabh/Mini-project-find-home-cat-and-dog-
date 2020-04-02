@@ -18,6 +18,19 @@ const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
+    const getFacebookLink = async () => {
+
+        const res = await axios.get(`http://localhost/api/auth/facebook`);
+        setFacebookLink(res.data);
+    }
+
+    useEffect(() => {
+
+        getFacebookLink()
+
+    }, []);
+
     return (
         <div>
             <div className="Footer">
@@ -48,6 +61,7 @@ const Login = (props) => {
                         <button className="btn btn-primary my-1" type="submit">Login</button>
                     </div>
                 </form>
+                <Button href={facebookLink}>LOGIN</Button>
             </div>
         </div>
     )
