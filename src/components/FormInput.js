@@ -31,7 +31,7 @@ const FormInput = props => {
                 <form>
                     <div className="form-group">
                         <label htmlFor="imgUrl">Image : รูปภาพ</label>
-                        <input type="file"
+                        <input type="text"
                             name="imgUrl"
                             className="form-control"
                             id="imgUrl"

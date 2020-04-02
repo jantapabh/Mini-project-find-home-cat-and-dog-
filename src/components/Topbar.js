@@ -28,6 +28,7 @@ const Topbar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
+                    <Nav.Link href="/FormInput" style={{ fontSize: 20}}>COMPLETE HISTORY</Nav.Link>
                         <Nav.Link href="/ListItems" style={{ fontSize: 20}}>OBSERVATION ROOM</Nav.Link>
                         <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
                         <NavDropdown title="ABOUT" style={{ fontSize: 20}} id="basic-nav-dropdown">
