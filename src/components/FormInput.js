@@ -20,6 +20,7 @@ const FormInput = props => {
 
         actionsAnimal.addAnimal(animals, form)
     }
+    
 
     return (
         <div>
