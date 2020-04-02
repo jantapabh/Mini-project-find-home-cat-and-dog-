@@ -1,8 +1,22 @@
 import React, { Component, useState, useEffect } from 'react'
 import './Login.css'
+import axios from 'axios';
 import './Form.css'
+import FacebookLogin from 'react-facebook-login';
+import { AuthActions } from '../redux/store';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { Button, Form, Card } from 'react-bootstrap';
 
-const Login = () => {
+
+
+
+const Login = (props) => {
+
+    const actions = bindActionCreators({ ...AuthActions }, useDispatch())
+    const [facebookLink, setFacebookLink] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     return (
         <div>
@@ -20,7 +34,6 @@ const Login = () => {
                             className="form-control"
                             id="username"
                              />
-                        <div className="valid-feedback">พบชื่อผู้ใช้</div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">PASSWORD</label>
