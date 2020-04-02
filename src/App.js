@@ -33,7 +33,6 @@ const App = () => {
           <Route path="/Logout" component={Logout} />
           <Route path="/Contact" component={Contact} />
         </BrowserRouter>
-      
     </div>
 
   );

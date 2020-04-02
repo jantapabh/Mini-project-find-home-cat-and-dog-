@@ -28,8 +28,6 @@ const ListItems = props => {
     return (
 
         <div>
-            <div className="Footer">
-            </div>
             <div>
                 {
                     animals.map((animal, index) => (
