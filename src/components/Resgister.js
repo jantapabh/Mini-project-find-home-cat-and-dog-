@@ -37,14 +37,6 @@ const Register = () => {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="email">Contact</label>
-                                <input type="email"
-                                    name="email"
-                                    className="form-control"
-                                    id="email"
-                                />
-                            </div>
-                            <div className="form-group">
                                 <label htmlFor="email">Telephone</label>
                                 <input type="email"
                                     name="email"

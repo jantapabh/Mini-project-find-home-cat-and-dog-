@@ -31,10 +31,18 @@ const Login = (props) => {
 
     }, []);
 
+    
+    const LoginForm = (e) => {
+
+        //ในส่วนของ login นั้นจะเข้าได้เฉพาะ  username = 6035512034 แต่รหัสเป็นอะไรก็ได้มากกว่า 6 ตักอักษร 
+        //กำหนดเงื่อนไขไว้ให้เช็คในส่วน username
+
+        e.preventDefault();
+        actions.loginForm(username, password)
+    }
+
     return (
         <div>
-            <div className="Footer">
-            </div>
             <div className="col-6 mt-5 mx-auto card">
                 <div className="card-body">
                     <h2 className="Topic">Login</h2>
@@ -61,7 +69,6 @@ const Login = (props) => {
                         <button className="btn btn-primary my-1" type="submit">Login</button>
                     </div>
                 </form>
-                <Button href={facebookLink}>LOGIN</Button>
             </div>
         </div>
     )
