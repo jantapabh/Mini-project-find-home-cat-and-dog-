@@ -21,3 +21,11 @@ app.use('/api', bodyParser.urlencoded({
     extended: false
 
 }), router);
+
+let users = [
+
+    {
+        id: 1,
+        imgUrl: ''
+    }
+]

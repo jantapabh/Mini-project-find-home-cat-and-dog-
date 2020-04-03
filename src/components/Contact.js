@@ -8,14 +8,16 @@ const Contact = () => {
     return (
         <div>
             <MDBRow center>
-                <MDBCol md='6'>
+                <MDBCol md='4'>
                     <MDBCard>
                         <MDBCardImage
                             hover
                             overlay='white-light'
                             className='card-img-top'
-                            src='https://mdbootstrap.com/img/Photos/Others/men.jpg'
-                            alt='man'
+                            src='https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.0-9/32089429_1813031982097084_7269104841354379264_o.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=Bi4H4vO5YVoAX_NW-fg&_nc_ht=scontent.fhdy2-1.fna&oh=805262156374d2b4381c9c535fb9518f&oe=5EAAF717'
+                            alt='woman'
+                            style={{ width: 500, height: 450}}
+
                         />
 
                         <MDBCardBody cascade className='text-center'>
