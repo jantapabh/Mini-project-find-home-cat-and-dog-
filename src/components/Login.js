@@ -39,6 +39,7 @@ const Login = (props) => {
 
         e.preventDefault();
         actions.loginForm(username, password)
+
     }
 
     return (
@@ -54,6 +55,7 @@ const Login = (props) => {
                             name="username"
                             className="form-control"
                             id="username"
+                            onChange={(e)=>setUsername(e.target.value)}
                              />
                     </div>
                     <div className="form-group">
@@ -62,11 +64,12 @@ const Login = (props) => {
                             name="password"
                             className="form-control"
                             id="password"
+                            onChange={(e)=>setPassword(e.target.value)}
                              />
                         <div className="invalid-feedback"></div>
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary my-1" type="submit">Login</button>
+                        <button className="btn btn-primary my-1" type="submit" onClick={LoginForm}>Login</button>
                     </div>
                 </form>
             </div>
