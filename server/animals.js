@@ -59,6 +59,7 @@ let animals = [
 router.route('/animals')
 
 .get((req, res) => res.json(animals))
+
 .post((req, res) => {
 
     let animal = {}
@@ -76,7 +77,9 @@ router.route('/animals')
 })
 
 router.route('/animals/:animal_id')
+
 .get((req, res) => {
+
     let id = req.params.animal_id
     let index = animals.findIndex(animal => (animal.id === +id))
     res.json(animals[index])
@@ -94,15 +97,15 @@ router.route('/animals/:animal_id')
     animals[index].old = req.body.old;
     animals[index].habits = req.body.habits;
     animals[index].because = req.body.because;
-    animal[index].status = req.body.status;
+    animals[index].status = req.body.status;
     res.json({ message: 'Animal Update !' + req.params.animal_id});
 
 })
 
 .delete((req, res) => {
 
-    let id = req.params.animal_id
-    let index = animals.findIndex(animal => animal_id === +id)
+     let id = req.params.animal_id
+    let index = animals.findIndex( animal =>(animal.id === +id))
     animals.splice(index, 1)
     res.json({ message: 'Animal Delete : ' + req.params.animal_id });
 })

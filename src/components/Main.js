@@ -79,9 +79,8 @@ const Main = () => {
                                 This project to help children find homes provides a way to help homeless animals, which is an intermediary between people who want to find homes for animals and those who want to help homeless animals.
                             </p>
                             <Card border="primary" style={{ width: '40rem' }}>
-                                <Card.Header>Header</Card.Header>
+                                <Card.Header>Giving Home Equal Life</Card.Header>
                                 <Card.Body>
-                                    <Card.Title>Secondary Card Title</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk
                                         of the card's content.</Card.Text>
