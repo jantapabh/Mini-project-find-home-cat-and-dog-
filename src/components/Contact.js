@@ -1,13 +1,14 @@
 import React from 'react'
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+import { findByLabelText } from '@testing-library/react';
 
 
 const Contact = () => {
 
     return (
         <div>
-            <MDBRow>
-                <MDBCol md='4'>
+            <MDBRow center>
+                <MDBCol md='6'>
                     <MDBCard>
                         <MDBCardImage
                             hover
