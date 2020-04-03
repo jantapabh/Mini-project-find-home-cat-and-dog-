@@ -6,7 +6,7 @@ const FB = require('./fb')
 var request = require('request');
 let authRoutes = require('./routes/auth');
 let fbRoutes = require('./routes/fb');
-let fbRoutes = require('./routes/psu');
+let psuRoutes = require('./routes/psu');
 let app = express()
 let router = express.Router()
 
