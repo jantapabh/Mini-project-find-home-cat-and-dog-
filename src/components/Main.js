@@ -70,11 +70,11 @@ const Main = () => {
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
                                     <MDBIcon icon="utensils" className="pr-2" />
-                Food
+                Animal
               </h6>
                             </a>
                             <h3 className="font-weight-bold mb-3 p-0">
-                                <strong>Title of the news</strong>
+                                <strong>CHAUY NONG HAA BAAN</strong>
                             </h3>
                             <p>
                                 Nam libero tempore, cum soluta nobis est eligendi optio cumque
