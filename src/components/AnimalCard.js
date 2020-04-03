@@ -38,7 +38,7 @@ const AnimalCard = props => {
 
         return (
             <div>
-                <MDBContainer>
+                {/* <MDBContainer>
                     <MDBModal>
                         <MDBModalHeader>MDBModal title</MDBModalHeader>
                         <MDBModalBody>
@@ -46,7 +46,7 @@ const AnimalCard = props => {
                         <MDBModalFooter>
                         </MDBModalFooter>
                     </MDBModal>
-                </MDBContainer>
+                </MDBContainer> */}
             </div>
 
         );
