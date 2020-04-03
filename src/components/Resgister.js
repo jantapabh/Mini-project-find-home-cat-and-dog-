@@ -2,9 +2,15 @@ import React, { Component, useState, useEffect } from 'react'
 import './Form.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Col } from 'react-bootstrap';
+import Axios from 'axios';
 
 
 const Register = () => {
+
+    const addUSer = async () => {
+
+        await Axios.post()
+    }
 
     return (
         <div>

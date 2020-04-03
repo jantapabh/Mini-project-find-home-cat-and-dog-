@@ -20,7 +20,7 @@ const Contact = () => {
 
                         <MDBCardBody cascade className='text-center'>
                             <MDBCardTitle className='card-title'>
-                                <strong>Billy Coleman</strong>
+                                <strong>JANTAPA  BINHEEM</strong>
                             </MDBCardTitle>
 
                             <p className='font-weight-bold blue-text'>Wev developer</p>

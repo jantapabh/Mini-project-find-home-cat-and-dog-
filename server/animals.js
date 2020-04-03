@@ -11,7 +11,7 @@ let app = express()
 let router = express.Router()
 
 
-app.use(cors({origin: ['http://localhost:3000'], methods: ['GET', 'POST'], credentials: true}));
+app.use(cors({origin: ['http://localhost:3000'], methods: ['GET', 'POST', 'PUT','DELETE'], credentials: true}));
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 },
 resave : false, saveUninitialized: false }))
 
