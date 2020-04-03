@@ -25,11 +25,14 @@ const Contact = () => {
                                 <strong>JANTAPA  BINHEEM</strong>
                             </MDBCardTitle>
 
-                            <p className='font-weight-bold blue-text'>Wev developer</p>
+                            <p className='font-weight-bold blue-text'>Web Developer</p>
 
                             <MDBCardText>
-                                Sed ut perspiciatis unde omnis iste natus sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.{' '}
+                               แรงบันดาลใจในการส้รางเว็บไซต์นี้เพื่อช่วยเหลือสัตว์ไร้บ้าน.{' '}
+                            </MDBCardText>
+                            
+                            <MDBCardText>
+                               <h4>THANK YOU</h4>
                             </MDBCardText>
 
                             <MDBCol md='12' className='d-flex justify-content-center'>
