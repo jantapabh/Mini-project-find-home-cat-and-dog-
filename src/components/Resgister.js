@@ -74,7 +74,7 @@ const Register = () => {
                                 />
                             </div>
                             <Form.Group controlId="formGridAddress2">
-                                <Form.Label>Address 2</Form.Label>
+                                <Form.Label>Address</Form.Label>
                                 <Form.Control placeholder="Apartment, studio, or floor" />
                             </Form.Group>
 
@@ -86,13 +86,11 @@ const Register = () => {
 
                                 <Form.Group as={Col} controlId="formGridState">
                                     <Form.Label>State</Form.Label>
-                                    <Form.Control as="select" value="Choose...">
-                                        <option>Choose...</option>
-                                        <option>...</option>
+                                    <Form.Control>
                                     </Form.Control>
                                 </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridZip">
+                                <Form.Group  controlId="formGridZip">
                                     <Form.Label>Zip</Form.Label>
                                     <Form.Control />
                                 </Form.Group>
