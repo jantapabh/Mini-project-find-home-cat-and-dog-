@@ -69,9 +69,8 @@ const Main = () => {
                         <MDBCol lg="7">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
-                                    <MDBIcon icon="utensils" className="pr-2" />
-                Animal
-              </h6>
+                                    <MDBIcon icon="utensils" className="pr-2" /> Animal
+ </h6>
                             </a>
                             <h3 className="font-weight-bold mb-3 p-0">
                                 <strong>CHAUY NONG HAA BAAN</strong>
@@ -82,16 +81,6 @@ const Main = () => {
                                 omnis voluptas assumenda est, omnis dolor repellendus et aut
                                 officiis debitis.
             </p>
-                            <p>
-                                by
-              <a href="#!">
-                                    <strong>Carine Fox</strong>
-                                </a>
-              , 19/08/2018
-            </p>
-                            <MDBBtn color="success" size="md" className="waves-light ">
-                                Read more
-            </MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
