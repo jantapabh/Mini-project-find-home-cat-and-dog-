@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon, MDBLink } from 'mdbreact';
 import { findByLabelText } from '@testing-library/react';
 
 
@@ -37,7 +37,8 @@ const Contact = () => {
 
                             <MDBCol md='12' className='d-flex justify-content-center'>
                                 <MDBBtn rounded floating color='fb'>
-                                    <MDBIcon size='lg' fab icon='facebook-f'></MDBIcon>
+                                 <MDBIcon size='lg' fab icon='facebook-f' /> 
+                             
                                 </MDBBtn>
 
                                 <MDBBtn rounded floating color='tw'>
