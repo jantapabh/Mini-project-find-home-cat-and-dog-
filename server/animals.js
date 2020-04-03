@@ -122,8 +122,6 @@ router.route('/auth/facebook/login/callback')
 .get(fbRoutes.loginCallback);
 
 
-router.route('/auth/psu')
-.post(psuRoutes.login);
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
 

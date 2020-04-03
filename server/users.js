@@ -103,6 +103,26 @@ router.route('/users/:user_id')
     res.json({ message: 'USer Delete : ' + req.params.user_id });
 })
 
+
+
+router.route('/auth')
+.get(authRoutes.index);
+
+router.route('/auth/logout')
+.get(authRoutes.logout);
+
+router.route('/auth/facebook')
+.get(fbRoutes.loginUrl);
+
+router.route('/auth/facebook/login/callback')
+.get(fbRoutes.loginCallback);
+
+
+router.route('/auth/psu')
+.post(psuRoutes.login);
+
+
+
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
 
 app.listen(8000, () => { console.log('server is running PORT 8000') })
