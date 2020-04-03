@@ -13,7 +13,7 @@ const AnimalCard = props => {
 
     const form = useSelector(state => state.form)
     const actions = bindActionCreators(animalActions, useDispatch())
-
+    const dispatch = useDispatch();
 
     const deleteAnimal = async () => {
 
@@ -63,8 +63,8 @@ const AnimalCard = props => {
 
                                 <MDBBtn color="primary" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DETAILS </MDBBtn>
                                 <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> CONTACT </MDBBtn>
-                                <MDBBtn color="info" size="md" className="waves-light " style={{ padding: 5, margin: 5}} onClick={deleteAnimal}> DELETE</MDBBtn>
-                                <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5}} onClick={updateAnimal}> UPDATE</MDBBtn>
+                                <Button style={{ padding: 5, margin: 5}} onClick={deleteAnimal}> DELETE</Button>
+                                <Button color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5}} onClick={updateAnimal}> UPDATE</Button>
                             </MDBCol>
                         </MDBRow>
                 </MDBCardBody>
