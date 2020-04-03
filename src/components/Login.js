@@ -33,15 +33,15 @@ const Login = (props) => {
     }, []);
 
     
-    const LoginForm = (e) => {
+    // const LoginForm = (e) => {
 
-        //ในส่วนของ login นั้นจะเข้าได้เฉพาะ  username = 6035512034 แต่รหัสเป็นอะไรก็ได้มากกว่า 6 ตักอักษร 
-        //กำหนดเงื่อนไขไว้ให้เช็คในส่วน username
+    //     //ในส่วนของ login นั้นจะเข้าได้เฉพาะ  username = 6035512034 แต่รหัสเป็นอะไรก็ได้มากกว่า 6 ตักอักษร 
+    //     //กำหนดเงื่อนไขไว้ให้เช็คในส่วน username
 
-        e.preventDefault();
-        actions.loginForm(username, password)
+    //     e.preventDefault();
+    //     actions.loginForm(username, password)
 
-    }
+    // }
 
     return (
         <div>
@@ -70,7 +70,7 @@ const Login = (props) => {
                         <div className="invalid-feedback"></div>
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary my-1" type="submit" onClick={LoginForm}>Login</button>
+                        <button className="btn btn-primary my-1" type="submit" >Login</button>
                     </div>
                 </form>
             </div>
