@@ -61,8 +61,10 @@ const AnimalCard = props => {
                                     BECAUSE : {props.because} <br />
                                 </p>
 
-                                <MDBBtn color="success" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DETAILS </MDBBtn>
-                                <MDBBtn color="success" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> CONTACT </MDBBtn>
+                                <MDBBtn color="primary" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DETAILS </MDBBtn>
+                                <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> CONTACT </MDBBtn>
+                                <MDBBtn color="info" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DELETE</MDBBtn>
+                                <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> UPDATE</MDBBtn>
                             </MDBCol>
                         </MDBRow>
                 </MDBCardBody>
