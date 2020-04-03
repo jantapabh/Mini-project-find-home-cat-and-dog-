@@ -3,7 +3,7 @@ import './Main.css';
 import pic6 from '../static/images/pic6.jpg'
 import { useMediaQuery } from 'react-responsive'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 
 const Main = () => {
@@ -69,18 +69,26 @@ const Main = () => {
                         <MDBCol lg="7">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
-                                    <MDBIcon icon="utensils" className="pr-2" /> Animal
+                                    <MDBIcon icon="dog" className="pr-2" /> Animal
  </h6>
                             </a>
                             <h3 className="font-weight-bold mb-3 p-0">
                                 <strong>CHAUY NONG HAA BAAN</strong>
                             </h3>
                             <p>
-                                Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                                nihil impedit quo minus id quod maxime placeat facere possimus,
-                                omnis voluptas assumenda est, omnis dolor repellendus et aut
-                                officiis debitis.
-            </p>
+                                This project to help children find homes provides a way to help homeless animals, which is an intermediary between people who want to find homes for animals and those who want to help homeless animals.
+                            </p>
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                    <Card.Text>
+                                    โครงการช่วยน้องหาบ้านนี้จัดทำเป็นช่องทางในการช่วยเหลือสัตว์ไร้บ้านโดยถือเป็นตัวกลางระหว่างคนที่ต้องการหาบ้านให้สัตว์และคนที่ต้องการช่วยเหลือสัตว์ไร้บ้าน </Card.Text>
+                                    <Card.Link href="#">Card Link</Card.Link>
+                                    <Card.Link href="#">Another Link</Card.Link>
+                                </Card.Body>
+                            </Card>
+
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
