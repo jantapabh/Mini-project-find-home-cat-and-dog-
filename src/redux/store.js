@@ -10,6 +10,7 @@ axios.defaults.withCredentials = true
 const initAuthData = {
 
     accessToken: null,
+    psuInfo: null
 
 }
 
@@ -53,7 +54,7 @@ const AuthReducer = (data = initAuthData, action) => {
     switch (action.type) {
         
         case 'GET_LOGIN_STATUS': return action.payload;
-        case 'LOGIN_FORM': return action.payload
+        case 'LOGIN_FORM': return  { ...data, psuInfo: action.payload };
         case 'LOGOUT': return initAuthData
         default: return data
     }

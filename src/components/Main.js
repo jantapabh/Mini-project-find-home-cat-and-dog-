@@ -78,14 +78,10 @@ const Main = () => {
                             <p>
                                 This project to help children find homes provides a way to help homeless animals, which is an intermediary between people who want to find homes for animals and those who want to help homeless animals.
                             </p>
-                            <Card style={{ width: '18rem' }}>
+                            <Card style={{ width: '50rem' }}>
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
                                     <Card.Text>
                                     โครงการช่วยน้องหาบ้านนี้จัดทำเป็นช่องทางในการช่วยเหลือสัตว์ไร้บ้านโดยถือเป็นตัวกลางระหว่างคนที่ต้องการหาบ้านให้สัตว์และคนที่ต้องการช่วยเหลือสัตว์ไร้บ้าน </Card.Text>
-                                    <Card.Link href="#">Card Link</Card.Link>
-                                    <Card.Link href="#">Another Link</Card.Link>
                                 </Card.Body>
                             </Card>
 
