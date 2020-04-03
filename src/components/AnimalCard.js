@@ -48,7 +48,7 @@ const AnimalCard = props => {
                             <MDBCol lg="7">
                                 <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-1">
-                                        <MDBIcon icon="utensils" className="pr-2" /> Animal </h6>
+                                        <MDBIcon icon="dog" className="pr-2" /> Animal </h6>
                                 </a>
                                 <h3 className="font-weight-bold mb-1 p-0">
                                     <strong>  STRAIN : {props.strain} <br /> 
@@ -63,8 +63,8 @@ const AnimalCard = props => {
 
                                 <MDBBtn color="primary" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DETAILS </MDBBtn>
                                 <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> CONTACT </MDBBtn>
-                                <MDBBtn color="info" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> DELETE</MDBBtn>
-                                <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5}}> UPDATE</MDBBtn>
+                                <MDBBtn color="info" size="md" className="waves-light " style={{ padding: 5, margin: 5}} onClick={deleteAnimal}> DELETE</MDBBtn>
+                                <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5}} onClick={updateAnimal}> UPDATE</MDBBtn>
                             </MDBCol>
                         </MDBRow>
                 </MDBCardBody>
