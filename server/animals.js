@@ -6,6 +6,7 @@ const FB = require('./fb')
 var request = require('request');
 let authRoutes = require('./routes/auth');
 let fbRoutes = require('./routes/fb');
+let fbRoutes = require('./routes/psu');
 let app = express()
 let router = express.Router()
 
@@ -121,7 +122,8 @@ router.route('/auth/facebook/login/callback')
 .get(fbRoutes.loginCallback);
 
 
-
+router.route('/auth/psu')
+.post(psuRoutes.login);
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
 

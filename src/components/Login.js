@@ -21,8 +21,9 @@ const Login = (props) => {
     //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
     const getFacebookLink = async () => {
 
-        const res = await axios.get(`http://localhost/api/auth/facebook`);
+        const res = await axios.get(`http://localhost:8000/api/auth/facebook`);
         setFacebookLink(res.data);
+
     }
 
     useEffect(() => {

@@ -28,7 +28,7 @@ export const AuthActions = {
 
         if (name.length === 10 && pass.length > 6 && username == '6035512034') {
 
-            const res = await axios.post('http://localhost/api/auth', { username, password })
+            const res = await axios.post('http://localhost/api/auth/psu', { username, password })
 
             const { stdId, firstname, lastname, id, type } = res.data;
             if (type == ' ') {
