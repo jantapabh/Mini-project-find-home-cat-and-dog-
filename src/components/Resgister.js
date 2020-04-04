@@ -26,8 +26,6 @@ const Register = () => {
         actionUser.addUser(users, formUser)
 
     }
-        
-    
 
     return (
         <div>

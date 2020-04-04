@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './List.css'
-import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
-import FormInput from './FormInput'
 import { bindActionCreators } from 'redux';
 import { animalActions } from '../redux/store'
 import AnimalCard from './AnimalCard'

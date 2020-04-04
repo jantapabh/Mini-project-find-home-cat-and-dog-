@@ -11,10 +11,22 @@ import { bindActionCreators } from 'redux';
 import axios from 'axios'
 import { AuthActions } from '../redux/store'
 import { useSelector, useDispatch, Provider } from 'react-redux'
+import Avatar from '@material-ui/core/Avatar';
+import { userActions } from '../redux/store'
 
 axios.defaults.withCredentials = true
 
-const Topbar = () => {
+const Topbar = props => {
+
+    const users = useSelector(state => state.user)
+    const actionsUser = bindActionCreators(userActions, useDispatch());
+
+    useEffect(() => {
+
+        actionsUser.getUsers()
+        console.log(actionsUser.getUsers())
+        
+    }, [])
 
     const auth = useSelector(state => state.Auth);
     const actions = bindActionCreators(AuthActions, useDispatch())
@@ -41,7 +53,7 @@ const Topbar = () => {
                            <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
                     </Nav>
                     <Form inline>
-                   <MDBIcon icon="user" className="mr-2" size="2x" />
+                    <Avatar alt={props.name} src={props.imgUrl} />
                     <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5}} id="basic-nav-dropdown">
                             <NavDropdown.Item  style={{ fontSize: 15}} onClick={() => actions.logout()}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />

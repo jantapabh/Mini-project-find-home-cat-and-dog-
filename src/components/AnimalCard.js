@@ -27,7 +27,7 @@ const AnimalCard = props => {
     }
 
 
-      
+
     return (
 
         <div>
@@ -59,7 +59,7 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                    HABIT : {props.habits} <br />
+                                HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} > CONTACT </MDBBtn>
