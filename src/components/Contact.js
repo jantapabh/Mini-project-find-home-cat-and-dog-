@@ -16,7 +16,7 @@ const Contact = () => {
                             className='card-img-top'
                             src='https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.0-9/32089429_1813031982097084_7269104841354379264_o.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=Bi4H4vO5YVoAX_NW-fg&_nc_ht=scontent.fhdy2-1.fna&oh=805262156374d2b4381c9c535fb9518f&oe=5EAAF717'
                             alt='woman'
-                            style={{ width: 500, height: 450}}
+                            style={{ width: 500, height: 450 }}
 
                         />
 
@@ -28,26 +28,20 @@ const Contact = () => {
                             <p className='font-weight-bold blue-text'>Web Developer</p>
 
                             <MDBCardText>
-                               แรงบันดาลใจในการส้รางเว็บไซต์นี้เพื่อช่วยเหลือสัตว์ไร้บ้าน.{' '}
+                                แรงบันดาลใจในการส้รางเว็บไซต์นี้เพื่อช่วยเหลือสัตว์ไร้บ้าน.{' '}
                             </MDBCardText>
-                            
+
                             <MDBCardText>
-                               <h4>THANK YOU</h4>
+                                <h4>THANK YOU</h4>
                             </MDBCardText>
 
                             <MDBCol md='12' className='d-flex justify-content-center'>
-                                <MDBBtn rounded floating color='fb'>
-                                 <MDBIcon size='lg' fab icon='facebook-f' /> 
-                             
-                                </MDBBtn>
-
-                                <MDBBtn rounded floating color='tw'>
-                                    <MDBIcon size='lg' fab icon='twitter'></MDBIcon>
-                                </MDBBtn>
-
-                                <MDBBtn rounded floating color='dribbble'>
-                                    <MDBIcon size='lg' fab icon='dribbble'></MDBIcon>
-                                </MDBBtn>
+                            <MDBBtn social="fb" href="https://www.facebook.com/Joajannnnnn">
+                                <MDBIcon fab icon="facebook-f" className="pr-1" /> Facebook </MDBBtn>
+                                <MDBBtn social="email" href="https://mail.google.com/mail/u/0/#inbox">
+                                    <MDBIcon icon="envelope" className="pr-1" /> Email</MDBBtn>
+                                <MDBBtn social="git" href="https://github.com/jantapabh/">
+                                    <MDBIcon fab icon="github" className="pr-1" /> Github </MDBBtn>
                             </MDBCol>
                         </MDBCardBody>
                     </MDBCard>

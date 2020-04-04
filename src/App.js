@@ -42,12 +42,12 @@ const App = () => {
 
       <div>
        <Topbar />
-        <Login />
+        <Login /> 
       </div>
-
+     
     )
   }
-
+ 
   return (
 
     <div>
