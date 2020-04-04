@@ -34,6 +34,7 @@ const Register = () => {
                 <div className="col-sm-6 mt-5 card">
                     <div className="card-body ml-3 mr-3 mt-5 mb-1">
                         <form>
+                        <h1 className="Topic">ADD YOUR DATA</h1>
                         <div className="form-group">
                                 <label htmlFor="username">IMAGE</label>
                                 <input type="text"
