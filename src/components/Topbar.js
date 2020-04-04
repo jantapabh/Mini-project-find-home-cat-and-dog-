@@ -34,20 +34,18 @@ const Topbar = () => {
                     <Nav.Link href="/FormInput" style={{ fontSize: 20}}>COMPLETE HISTORY</Nav.Link>
                         <Nav.Link href="/ListItems" style={{ fontSize: 20}}>OBSERVATION ROOM</Nav.Link>
                         <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
-                        <NavDropdown title="ABOUT" style={{ fontSize: 20}} id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/Register" style={{ fontSize: 15}}>REGISTER</NavDropdown.Item>
+                    </Nav>
+                    <Form inline>
+                   <MDBIcon icon="user" className="mr-2" size="2x" />
+                    <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5}} id="basic-nav-dropdown">
                             <NavDropdown.Item href="/Logout" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
-                    </Nav>
-                    <Form inline>
-                    <MDBListGroupItem> <MDBIcon icon="user" className="mr-3" size="2x" />USER</MDBListGroupItem>
                     </Form>
                 </Navbar.Collapse>
-            </Navbar>
+           </Navbar>
         </div>
-
-
+    
     );
 }
 export default Topbar;
