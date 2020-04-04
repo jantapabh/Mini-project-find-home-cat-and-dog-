@@ -41,14 +41,16 @@ const Register = () => {
                                 <input type="text"
                                     name="imgUrl"
                                     className="form-control"
-                                    id="imgUrl" />
+                                    id="imgUrl"
+                                    onChange={(e) => actionFormUser.changeIdUser(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="username">USER NAME</label>
                                 <input type="text"
                                     name="username"
                                     className="form-control"
-                                    id="username" />
+                                    id="username"
+                                    onChange={(e) => actionFormUser.changeImgurlUser(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">PASSWORD</label>
@@ -56,6 +58,7 @@ const Register = () => {
                                     name="password"
                                     className="form-control"
                                     id="password"
+                                    onChange={(e) => actionFormUser.changeNameUser(e.target.value)}
                                 />
                             </div>
                             <div className="form-group">
@@ -64,6 +67,7 @@ const Register = () => {
                                     name="email"
                                     className="form-control"
                                     id="email"
+                                    onChange={(e) => actionFormUser.changePasswordUser(e.target.value)}
                                 />
                             </div>
                             <div className="form-group">
@@ -72,6 +76,7 @@ const Register = () => {
                                     name="email"
                                     className="form-control"
                                     id="email"
+                                    onChange={(e) => actionFormUser.changeTelephoneUser(e.target.value)}
                                 />
                             </div>
                             <div className="form-group">
@@ -80,6 +85,7 @@ const Register = () => {
                                     name="email"
                                     className="form-control"
                                     id="email"
+                                    onChange={(e) => actionFormUser.changeFacebookUser(e.target.value)}
                                 />
                             </div>
                             <div className="form-group">
@@ -88,31 +94,30 @@ const Register = () => {
                                     name="email"
                                     className="form-control"
                                     id="email"
+                                    onChange={(e) => actionFormUser.changeLineUser(e.target.value)}
                                 />
                             </div>
                             <Form.Group controlId="formGridAddress2">
                                 <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Apartment, studio, or floor" />
+                                <Form.Control placeholder="Apartment, studio, or floor"  onChange={(e) => actionFormUser.changeAddressUser(e.target.value)}/>
                             </Form.Group>
 
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridCity">
                                     <Form.Label>City</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control  onChange={(e) => actionFormUser.changeCityUser(e.target.value)}/>
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridState">
                                     <Form.Label>State</Form.Label>
-                                    <Form.Control>
-                                    </Form.Control>
+                                    <Form.Control   onChange={(e) => actionFormUser.changeStateUser(e.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group  controlId="formGridZip">
                                     <Form.Label>Zip</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control   onChange={(e) => actionFormUser.changeZipUser(e.target.value)} />
                                 </Form.Group>
                             </Form.Row>
-
                             <Form.Group id="formGridCheckbox">
                                 <Form.Check type="checkbox" label="Check me out" />
                             </Form.Group>
@@ -120,6 +125,7 @@ const Register = () => {
                                 <button
                                     className="btn btn-primary"
                                     type="submit"
+                                    onClick={addUser}
                                 >Register</button>
                             </div>
                         </form>
