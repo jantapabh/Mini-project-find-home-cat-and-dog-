@@ -9,11 +9,15 @@ import { ArrowRight } from 'react-bootstrap-icons';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn,MDBListGroupItem } from "mdbreact";
 import { bindActionCreators } from 'redux';
 import axios from 'axios'
+import { AuthActions } from '../redux/store'
 import { useSelector, useDispatch, Provider } from 'react-redux'
 
 axios.defaults.withCredentials = true
 
 const Topbar = () => {
+
+    const auth = useSelector(state => state.Auth);
+    const actions = bindActionCreators(AuthActions, useDispatch())
 
     return (
         <div>
@@ -38,7 +42,7 @@ const Topbar = () => {
                     <Form inline>
                    <MDBIcon icon="user" className="mr-2" size="2x" />
                     <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5}} id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/Logout" style={{ fontSize: 15}}>LOGOUT</NavDropdown.Item>
+                            <NavDropdown.Item  style={{ fontSize: 15}} onClick={() => actions.logout()}>LOGOUT</NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Form>

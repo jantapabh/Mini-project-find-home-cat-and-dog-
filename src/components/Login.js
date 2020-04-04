@@ -70,7 +70,7 @@ const Login = props => {
                     <div className="text-center">
                         <button className="btn btn-primary my-1" type="submit" onClick={LoginPSU}>Login</button>
                         <div className="row my-3 d-flex justify-content-center">
-                        <MDBBtn color="success" href="/Register">Register</MDBBtn>
+                       
                         </div>
                     </div>
                 </form>
