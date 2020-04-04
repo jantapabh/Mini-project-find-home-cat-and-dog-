@@ -7,41 +7,56 @@ import { AuthActions } from '../redux/store';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { Button, Form, Card } from 'react-bootstrap';
+import { render } from '@testing-library/react';
+
+
+const actions = bindActionCreators({ ...AuthActions }, useDispatch())
+const [facebookLink, setFacebookLink] = useState('');
+const [username, setUsername] = useState('');
+const [password, setPassword] = useState('');
+
+//ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
+const getFacebookLink = async () => {
+
+    const res = await axios.get(`http://localhost/api/auth/facebook`);
+    setFacebookLink(res.data);
+
+}
+
+useEffect(() => {
+
+    getFacebookLink()
+
+}, []);
 
 
 
 
-const Login = (props) => {
+class Login extends Component {
 
-    const actions = bindActionCreators({ ...AuthActions }, useDispatch())
-    const [facebookLink, setFacebookLink] = useState('');
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  constructor(props){
 
-    //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
-    const getFacebookLink = async () => {
+    super(props);
 
-        const res = await axios.get(`http://localhost/api/auth/facebook`);
-        setFacebookLink(res.data);
-
+    this.state = {
+        
+        email: '',
+        password: ''
     }
 
-    useEffect(() => {
+  }
 
-        getFacebookLink()
+  handleChange(e) {
+      this.setState({
 
-    }, []);
+          [e.target.name] : e.target.value
 
-    
-    // const LoginForm = (e) => {
+      });
+  }
 
-    //     //ในส่วนของ login นั้นจะเข้าได้เฉพาะ  username = 6035512034 แต่รหัสเป็นอะไรก็ได้มากกว่า 6 ตักอักษร 
-    //     //กำหนดเงื่อนไขไว้ให้เช็คในส่วน username
 
-    //     e.preventDefault();
-    //     actions.loginForm(username, password)
 
-    // }
+    render(){
 
     return (
         <div>
@@ -51,23 +66,27 @@ const Login = (props) => {
                 </div>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="username">USER NAME</label>
-                        <input type="text"
-                            name="username"
+                        <label for="exampleInputEmail">Email</label>
+                        <input type="email"
+                            name="email"
                             className="form-control"
-                            id="username"
-                            onChange={(e)=>setUsername(e.target.value)}
+                            id="email"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                            placeholder="Input Your Email"
                              />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">PASSWORD</label>
+                        <label for="exampleInputPassword">PASSWORD</label>
                         <input type="password"
                             name="password"
                             className="form-control"
                             id="password"
-                            onChange={(e)=>setPassword(e.target.value)}
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                            placeholder="Input Your Password"
                              />
-                        <div className="invalid-feedback"></div>
+                    
                     </div>
                     <div className="text-center">
                         <button className="btn btn-primary my-1" type="submit" >Login</button>
@@ -76,6 +95,7 @@ const Login = (props) => {
             </div>
         </div>
     )
+}
 }
 
 
