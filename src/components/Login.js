@@ -8,69 +8,32 @@ import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { Button, Form, Card } from 'react-bootstrap';
 import { render } from '@testing-library/react';
-import fire from '../config/fire';
-
-
-// const actions = bindActionCreators({ ...AuthActions }, useDispatch())
-// const [facebookLink, setFacebookLink] = useState('');
-// const [username, setUsername] = useState('');
-// const [password, setPassword] = useState('');
-
-// //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
-// const getFacebookLink = async () => {
-
-//     const res = await axios.get(`http://localhost/api/auth/facebook`);
-//     setFacebookLink(res.data);
-
-// }
-
-// useEffect(() => {
-
-//     getFacebookLink()
-
-// }, []);
 
 
 
+const Login = () => {
 
-class Login extends Component {
+const actions = bindActionCreators({ ...AuthActions }, useDispatch())
+const [facebookLink, setFacebookLink] = useState('');
+const [username, setUsername] = useState('');
+const [password, setPassword] = useState('');
 
-  constructor(props){
+//ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
+const getFacebookLink = async () => {
 
-    super(props);
-    this.login = this.login.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = {
+    const res = await axios.get(`http://localhost/api/auth/facebook`);
+    setFacebookLink(res.data);
 
-        email: '',
-        password: ''
-    }
+}
 
-  }
+useEffect(() => {
 
-  login(e){
+    getFacebookLink()
 
-      e.preventDefault();
-      fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-
-      }).catch((erroe) => {
-          console.log(erroe)
-      })
-  }
-
-  handleChange(e) {
-      this.setState({
-
-          [e.target.name] : e.target.value
-
-      });
-  }
-
-
-
-    render(){
+}, []);
 
     return (
+
         <div>
             <div className="col-6 mt-5 mx-auto card">
                 <div className="card-body">
@@ -101,14 +64,14 @@ class Login extends Component {
                     
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
+                        <button className="btn btn-primary my-1" type="submit" >Login</button>
                     </div>
                 </form>
             </div>
         </div>
     )
 }
-}
+
 
 
 export default Login;
