@@ -2,14 +2,20 @@ import React, { Component, useState, useEffect } from 'react'
 import './Form.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Col } from 'react-bootstrap';
-import Axios from 'axios';
+import axios from 'axios';
+import { formActions } from '../redux/store'
+import { useSelector, useDispatch } from 'react-redux'
+import { animalActions } from '../redux/store'
+import { bindActionCreators } from 'redux';
+
 
 
 const Register = () => {
 
-    const addUSer = async () => {
+    const addUser = async () => {
 
-        await Axios.post()
+        await axios.post(`http://localhost:8000/api/users`, form)
+        actio
     }
 
     return (
