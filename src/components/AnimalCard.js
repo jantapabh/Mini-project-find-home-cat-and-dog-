@@ -75,7 +75,6 @@ const AnimalCard = props => {
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={openModal}> CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
-                            <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={updateAnimal}> UPDATE</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
