@@ -16,7 +16,7 @@ const FormInput = props => {
 
     const addAnimal = async () => {
 
-        await axios.post(`http://localhost:8000/api/animals`, form)
+        await axios.post(`http://localhost:80/api/animals`, form)
 
         actionsAnimal.addAnimal(animals, form)
     }

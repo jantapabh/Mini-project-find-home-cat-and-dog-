@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import './App.css';
 import Topbar from './components/Topbar';
 import { BrowserRouter, Route, Link, Router, Redirect } from 'react-router-dom';
 import { Switch } from 'antd';
+import { store } from './redux/store'
+import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import FormInput from './components/FormInput';
 import ListItems from './components/ListItems';
@@ -13,16 +15,41 @@ import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
 import Contact from './components/Contact';
+import { AuthActions } from './redux/store'
+import { bindActionCreators } from 'redux';
+import { useSelector, useDispatch, Provider } from 'react-redux'
 
 
+axios.defaults.withCredentials = true
 
+const App = () => {
 
-class App extends Component {
+  const [loading, setLoading] = useState(false)
+  const auth = useSelector(state => state.Auth);
+  const actions = bindActionCreators(AuthActions, useDispatch())
 
- 
-render(){
+  useEffect(() => {
+
+    actions.getLoginStatus().then(res => setLoading(false))
+
+  }, []);
+
+  if (loading) {
+    return "Loading ..."
+  }
+  if (!auth.accessToken && !auth.psuInfo) {
+
+    return (
+
+      <div>
+        <Login />
+      </div>
+
+    )
+  }
 
   return (
+
     <div>
       <div className="Topbar">
         <Topbar />
@@ -41,6 +68,6 @@ render(){
   );
 
 }
-}
+
 
 export default App;

@@ -52,8 +52,7 @@ const LoginPSU = (e) => {
                             name="email"
                             className="form-control"
                             id="email"
-                            value={this.state.email}
-                            onChange={this.handleChange}
+                            onChange={(e) => setUsername(e.target.value)}
                             placeholder="Input Your Email"
                              />
                     </div>
@@ -63,11 +62,9 @@ const LoginPSU = (e) => {
                             name="password"
                             className="form-control"
                             id="password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder="Input Your Password"
                              />
-                    
                     </div>
                     <div className="text-center">
                         <button className="btn btn-primary my-1" type="submit" onClick={LoginPSU}>Login</button>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo1 from '../static/images/logo1.png'
 import './Topbar.css'
@@ -7,10 +7,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon} from 'react-bootstrap';
 import { ArrowRight } from 'react-bootstrap-icons';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn,MDBListGroupItem } from "mdbreact";
+import { bindActionCreators } from 'redux';
+import axios from 'axios'
+import { useSelector, useDispatch, Provider } from 'react-redux'
 
-
+axios.defaults.withCredentials = true
 
 const Topbar = () => {
+
+//     const [loading, setLoading] = useState(false)
+//     const auth = useSelector(state => state.Auth);
+//     const actions = bindActionCreators(AuthActions, useDispatch())
+
+//   useEffect(() => {
+
+//     actions.getLoginStatus().then(res => setLoading(false))
+
+//   }, []);
 
     return (
         <div>
