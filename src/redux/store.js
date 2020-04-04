@@ -77,7 +77,7 @@ export const animalActions = {
         try {
 
             console.log('Get Animal New')
-            const respone = await axios.get(`http://localhost:8000/api/animals`)
+            const respone = await axios.get(`http://localhost:80/api/animals`)
             const responeBody = await respone.data;
             console.log(responeBody)
             dispatch({
