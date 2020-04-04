@@ -38,7 +38,8 @@ class Login extends Component {
   constructor(props){
 
     super(props);
-
+    this.login = this.login.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
 
         email: '',
@@ -48,6 +49,7 @@ class Login extends Component {
   }
 
   login(e){
+
       e.preventDefault();
       fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
 
