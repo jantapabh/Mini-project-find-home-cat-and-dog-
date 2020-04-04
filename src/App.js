@@ -38,10 +38,10 @@ const App = () => {
     return "Loading ..."
   }
   if (!auth.accessToken && !auth.psuInfo) {
-
     return (
 
       <div>
+       <Topbar />
         <Login />
       </div>
 
@@ -53,9 +53,10 @@ const App = () => {
     <div>
       <div className="Topbar">
         <Topbar />
+        <Main />
       </div>
         <BrowserRouter>
-          <Route exact path="/" component={Main} />
+          <Route path="/Main" component={Main} />
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/Register" component={Register} />
