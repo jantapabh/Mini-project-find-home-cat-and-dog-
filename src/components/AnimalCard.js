@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Col, roundedCircle } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
+import ModalShow from './ModalShow'
 
 
 const AnimalCard = props => {
@@ -25,6 +26,16 @@ const AnimalCard = props => {
         const result = await axios.put(`http://localhost:80/api/animals/${props.id}`, form)
         actions.updateAnimal(props.id, form)
     }
+
+    const openModal = async () => {
+
+        return (
+            <div>
+              <ModalShow />
+            </div>
+        )
+    }
+
 
 
 
@@ -62,7 +73,7 @@ const AnimalCard = props => {
                                 HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} > CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={openModal}> CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                             <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={updateAnimal}> UPDATE</MDBBtn>
                         </MDBCol>
