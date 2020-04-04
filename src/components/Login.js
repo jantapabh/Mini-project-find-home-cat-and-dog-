@@ -11,7 +11,7 @@ import { render } from '@testing-library/react';
 
 
 
-const Login = () => {
+const Login = props => {
 
 const actions = bindActionCreators({ ...AuthActions }, useDispatch())
 const [facebookLink, setFacebookLink] = useState('');
@@ -32,8 +32,14 @@ useEffect(() => {
 
 }, []);
 
-    return (
+const LoginPSU = (e) => {
 
+
+    e.preventDefault();
+    actions.loginPSU(username, password)
+}
+
+    return (
         <div>
             <div className="col-6 mt-5 mx-auto card">
                 <div className="card-body">
@@ -64,7 +70,7 @@ useEffect(() => {
                     
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary my-1" type="submit" >Login</button>
+                        <button className="btn btn-primary my-1" type="submit" onClick={LoginPSU}>Login</button>
                     </div>
                 </form>
             </div>
