@@ -3,7 +3,7 @@ import './Form.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Col } from 'react-bootstrap';
 import axios from 'axios';
-import { formActions } from '../redux/store'
+import { formActionsUser } from '../redux/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { animalActions } from '../redux/store'
 import { bindActionCreators } from 'redux';
@@ -12,10 +12,12 @@ import { bindActionCreators } from 'redux';
 
 const Register = () => {
 
+    const form = b
+
     const addUser = async () => {
 
         await axios.post(`http://localhost:8000/api/users`, form)
-        actio
+        
     }
 
     return (

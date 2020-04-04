@@ -477,7 +477,10 @@ const reducers = combineReducers({
 
     animal: animalReducer,
     form: formReducer,
-    Auth: AuthReducer
+    Auth: AuthReducer,
+    formUser: formReducerUser,
+    user: userReducer,
+    
 
 })
 
