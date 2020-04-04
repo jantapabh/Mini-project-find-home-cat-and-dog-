@@ -21,9 +21,9 @@ const Register = () => {
 
     const addUser = async () => {
 
-        await axios.post(`http://localhost:8000/api/users`, form)
+        await axios.post(`http://localhost:8000/api/users`, formUser)
 
-        actionUser.addUser(users, form)
+        actionUser.addUser(users, formUser)
 
     }
         
