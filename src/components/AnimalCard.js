@@ -59,15 +59,12 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                HABIT : {props.habits} <br />
+                                    HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-
-                            
-                            <MDBBtn style={{ padding: 5, margin: 5 }} > CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} > CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                             <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={updateAnimal}> UPDATE</MDBBtn>
-                            
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
