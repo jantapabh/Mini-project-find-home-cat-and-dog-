@@ -22,28 +22,28 @@ export const AuthActions = {
         const res = await axios.get(`http://localhost/api/auth`)
         dispatch({ type: 'GET_LOGIN_STATUS', payload: res.data });
     },
-    // loginForm: (username, password) => async (dispatch) => {
+    loginPSU: (username, password) => async (dispatch) => {
 
-    //     const name = username + ''
-    //     const pass = password + ''
+        const name = username + ''
+        const pass = password + ''
 
-    //     if (name.length === 10 && pass.length > 6 && username == '6035512034') {
+        if (name.length === 10 && pass.length > 6 ) {
 
-    //         const res = await axios.post('http://localhost/api/auth/psu', { username, password })
+            const res = await axios.post('http://localhost/api/auth/psu', { username, password })
 
-    //         const { stdId, firstname, lastname, id, type } = res.data;
-    //         if (type == ' ') {
+            const { stdId, firstname, lastname, id, type } = res.data;
+            if (type == ' ') {
 
-    //             return alert('username or password incorrect');
-    //             // alert('username or password incorrect');
+                return alert('username or password incorrect');
+                // alert('username or password incorrect');
 
-    //         }
-    //         else {
+            }
+            else {
                 
-    //             dispatch({ type: 'LOGIN_FORM', payload: res.data })
-    //         }
-    //     }
-    // },
+                dispatch({ type: 'LOGIN_PSU', payload: res.data })
+            }
+        }
+    },
     logout: () => async (dispatch) => {
         const res = await axios.get(`http://localhost/api/auth/logout`)
         dispatch({ type: 'LOGOUT' })
@@ -54,7 +54,7 @@ const AuthReducer = (data = initAuthData, action) => {
     switch (action.type) {
         
         case 'GET_LOGIN_STATUS': return action.payload;
-        case 'LOGIN_FORM': return  { ...data, psuInfo: action.payload };
+        case 'LOGIN_PSU': return  { ...data, psuInfo: action.payload };
         case 'LOGOUT': return initAuthData
         default: return data
     }
