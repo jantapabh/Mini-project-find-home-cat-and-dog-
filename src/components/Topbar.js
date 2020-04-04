@@ -15,16 +15,6 @@ axios.defaults.withCredentials = true
 
 const Topbar = () => {
 
-//     const [loading, setLoading] = useState(false)
-//     const auth = useSelector(state => state.Auth);
-//     const actions = bindActionCreators(AuthActions, useDispatch())
-
-//   useEffect(() => {
-
-//     actions.getLoginStatus().then(res => setLoading(false))
-
-//   }, []);
-
     return (
         <div>
             <Navbar bg="white" expand="lg">
@@ -52,7 +42,7 @@ const Topbar = () => {
                         </NavDropdown>
                     </Nav>
                     <Form inline>
-                    <MDBListGroupItem> <MDBIcon icon="user" className="mr-3" size="2x" />JANJOA</MDBListGroupItem>
+                    <MDBListGroupItem> <MDBIcon icon="user" className="mr-3" size="2x" />USER</MDBListGroupItem>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
