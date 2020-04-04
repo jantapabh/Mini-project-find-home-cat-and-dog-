@@ -8,26 +8,27 @@ import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { Button, Form, Card } from 'react-bootstrap';
 import { render } from '@testing-library/react';
+import fire from '../config/fire';
 
 
-const actions = bindActionCreators({ ...AuthActions }, useDispatch())
-const [facebookLink, setFacebookLink] = useState('');
-const [username, setUsername] = useState('');
-const [password, setPassword] = useState('');
+// const actions = bindActionCreators({ ...AuthActions }, useDispatch())
+// const [facebookLink, setFacebookLink] = useState('');
+// const [username, setUsername] = useState('');
+// const [password, setPassword] = useState('');
 
-//ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
-const getFacebookLink = async () => {
+// //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
+// const getFacebookLink = async () => {
 
-    const res = await axios.get(`http://localhost/api/auth/facebook`);
-    setFacebookLink(res.data);
+//     const res = await axios.get(`http://localhost/api/auth/facebook`);
+//     setFacebookLink(res.data);
 
-}
+// }
 
-useEffect(() => {
+// useEffect(() => {
 
-    getFacebookLink()
+//     getFacebookLink()
 
-}, []);
+// }, []);
 
 
 
@@ -39,11 +40,20 @@ class Login extends Component {
     super(props);
 
     this.state = {
-        
+
         email: '',
         password: ''
     }
 
+  }
+
+  login(e){
+      e.preventDefault();
+      fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+
+      }).catch((erroe) => {
+          console.log(erroe)
+      })
   }
 
   handleChange(e) {
@@ -89,7 +99,7 @@ class Login extends Component {
                     
                     </div>
                     <div className="text-center">
-                        <button className="btn btn-primary my-1" type="submit" >Login</button>
+                        <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
                     </div>
                 </form>
             </div>
