@@ -6,8 +6,6 @@ import thunk from 'redux-thunk';
 axios.defaults.withCredentials = true
 
 
-
-
 export const userActions = {
 
 getUSersSuccess: users => ({

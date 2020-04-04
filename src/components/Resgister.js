@@ -125,8 +125,7 @@ const Register = () => {
                                 <button
                                     className="btn btn-primary"
                                     type="submit"
-                                    onClick={addUser}
-                                >Register</button>
+                                    onClick={addUser} >Register</button>
                             </div>
                         </form>
                     </div>
