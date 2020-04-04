@@ -71,29 +71,29 @@ const Register = () => {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="email">Telephone</label>
-                                <input type="email"
-                                    name="email"
+                                <label htmlFor="text">Telephone</label>
+                                <input type="text"
+                                    name="telephone"
                                     className="form-control"
-                                    id="email"
+                                    id="telephone"
                                     onChange={(e) => actionFormUser.changeTelephoneUser(e.target.value)}
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="email">Facebook</label>
-                                <input type="email"
-                                    name="email"
+                                <label htmlFor="text">Facebook</label>
+                                <input type="text"
+                                    name="facebook"
                                     className="form-control"
-                                    id="email"
+                                    id="facebook"
                                     onChange={(e) => actionFormUser.changeFacebookUser(e.target.value)}
                                 />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="email">Line</label>
-                                <input type="email"
-                                    name="email"
+                                <input type="text"
+                                    name="line"
                                     className="form-control"
-                                    id="email"
+                                    id="line"
                                     onChange={(e) => actionFormUser.changeLineUser(e.target.value)}
                                 />
                             </div>
@@ -133,9 +133,6 @@ const Register = () => {
                 </div>
                 <div className="col-sm-3 mt-5"></div>
             </div>
-
-
-
         </div>
     )
 }
