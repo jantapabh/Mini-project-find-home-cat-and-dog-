@@ -72,7 +72,7 @@ const Login = props => {
             height: '100vh',
         },
         image: {
-            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundImage: 'url(https://cdn.pixabay.com/photo/2017/06/16/20/51/dog-2410332_1280.jpg)',
             backgroundRepeat: 'no-repeat',
             backgroundColor:
                 theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
