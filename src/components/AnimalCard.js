@@ -27,31 +27,7 @@ const AnimalCard = props => {
     }
 
 
-    const [modal, setModal] = useState(false)
-
-    const contactUSer = async () => {
-
-        
-    const toggle = () => {
-        setModal(true);
-      }
-
-        return (
-            <div>
-                {/* <MDBContainer>
-                    <MDBModal>
-                        <MDBModalHeader>MDBModal title</MDBModalHeader>
-                        <MDBModalBody>
-                            (...) </MDBModalBody>
-                        <MDBModalFooter>
-                        </MDBModalFooter>
-                    </MDBModal>
-                </MDBContainer> */}
-            </div>
-
-        );
-    }
-
+      
     return (
 
         <div>
@@ -87,10 +63,11 @@ const AnimalCard = props => {
                                     BECAUSE : {props.because} <br />
                             </p>
 
-                            <MDBBtn color="primary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={contactUSer}> DETAILS </MDBBtn>
+                            
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }}> CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                             <MDBBtn color="warning" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={updateAnimal}> UPDATE</MDBBtn>
+                            
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>

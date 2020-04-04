@@ -37,7 +37,8 @@ const Topbar = () => {
                     <Nav className="mr-auto">
                     <Nav.Link href="/FormInput" style={{ fontSize: 20}}>COMPLETE HISTORY</Nav.Link>
                         <Nav.Link href="/ListItems" style={{ fontSize: 20}}>OBSERVATION ROOM</Nav.Link>
-                        <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
+                        <Nav.Link href="/Register" style={{ fontSize: 20}}>REGISTER</Nav.Link>
+                           <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
                     </Nav>
                     <Form inline>
                    <MDBIcon icon="user" className="mr-2" size="2x" />
