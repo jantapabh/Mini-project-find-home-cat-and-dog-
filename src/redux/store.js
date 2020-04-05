@@ -140,14 +140,14 @@ const initialForm = {
     status: '',
     imgUrlUser: '',
     nameUser: '',
-    emailUser: '',
-    telephoneUser: '',
-    facebookUser: '',
-    lineUser: '',
-    addressUser: '',
-    cityUser: '',
-    stateUser: '',
-    zipUser: 0
+    email: '',
+    telephone: '',
+    facebook: '',
+    line: '',
+    address: '',
+    city: '',
+    state: '',
+    zip: 0
 
 
 }
@@ -204,45 +204,45 @@ export const formActions = {
         type: 'CHANGE_NAME_USER',
         nameUser: nameUser
     }),
-    changeEmailUser: (emailUser) => ({
+    changeEmailUser: (email) => ({
 
         type: 'CHANGE_EMAIL_USER',
-        emailUser: emailUser
+        email: email
     }),
-    changeTelephoneUser: (telephoneUser) => ({
+    changeTelephoneUser: (telephone) => ({
 
         type: 'CHANGE_TELEPHONE_USER',
-        telephoneUser: telephoneUser
+        telephone: telephone
     }),
-    changeFacebookUser: (facebookUser) => ({
+    changeFacebookUser: (facebook) => ({
 
         type: 'CHANGE_FACEBOOK_USER',
-        facebookUser: facebookUser
+        facebook: facebook
     }),
-    changeLineUser: (lineUser) => ({
+    changeLineUser: (line) => ({
 
         type: 'CHANGE_LINE_USER',
-        lineUser: lineUser
+        line: line
     }),
-    changeAddressUser: (addressUser) => ({
+    changeAddressUser: (address) => ({
 
         type: 'CHANGE_ADDRESS_USER',
-        addressUser: addressUser
+        address: address
     }),
-    changeCityUser: (cityUser) => ({
+    changeCityUser: (city) => ({
 
         type: 'CHANGE_CITY_USER',
-        cityUser: cityUser
+        city: city
     }),
-    changeStateUser: (stateUser) => ({
+    changeStateUser: (state) => ({
 
         type: 'CHANGE_STATE_USER',
-        stateUser: stateUser
+        state: state
     }),
-    changeZipUser: (zipUser) => ({
+    changeZipUser: (zip) => ({
 
         type: 'CHANGE_ZIP_USER',
-        zipUser: zipUser
+        zip: zip
 
     }),
 
@@ -291,28 +291,28 @@ const formReducer = (data = initialForm, action) => {
             return { ...data, nameUser: action.nameUser }
 
         case 'CHANGE_EMAIL_USER':
-            return { ...data, emailUser: action.emailUser }
+            return { ...data, email: action.email }
 
         case 'CHANGE_TELEPHONE_USER':
-            return { ...data, telephoneUser: action.telephoneUser }
+            return { ...data, telephone: action.telephone }
 
         case 'CHANGE_FACEBOOK_USER':
-            return { ...data, facebookUser: action.facebookUser }
+            return { ...data, facebook: action.facebook }
 
         case 'CHANGE_LINE_USER':
-            return { ...data, lineUser: action.lineUser }
+            return { ...data, line: action.line}
 
         case 'CHANGE_ADDRESS_USER':
-            return { ...date, addressUser: action.addressUser }
+            return { ...data, address: action.address }
 
         case 'CHANGE_CITY_USER':
-            return { ...data, cityUser: action.cityUser }
+            return { ...data, city: action.city }
 
-        case 'CHANGE_STATE_USER':
-            return { ...data, stateUser: action.stateUser }
+        case 'CHANGE_STATE_USER'
+            return { ...data, state: action.state }
 
         case 'CHANGE_ZIP_USER':
-            return { ...data, zipUser: action.zipUser }
+            return { ...data, zip: action.zip }
 
         default: return data;
     }

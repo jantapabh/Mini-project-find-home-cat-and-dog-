@@ -97,7 +97,7 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                HABIT : {props.habits} <br />
+                                     HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
@@ -121,14 +121,15 @@ const AnimalCard = props => {
                         </div>
                         <MDBMask overlay="white-slight" />
                     </MDBView>
-                    <ListGroup className="d-flex justify-content-center">
-                        <ListGroup.Item>NAME : {props.nameUser}</ListGroup.Item>
-                        <ListGroup.Item>EMAIL : {props.email}</ListGroup.Item>
-                        <ListGroup.Item>TELEPHONE : {props.telephone}</ListGroup.Item>
-                        <ListGroup.Item>FACEBOOK : {props.facebook}</ListGroup.Item>
-                        <ListGroup.Item>LINE : {props.line}</ListGroup.Item>
-                        <ListGroup.Item>ADDRESS: {props.address} {props.city} {props.state} {props.zip}</ListGroup.Item>
-                    </ListGroup>
+                    <h3 className="font-weight-bold mb-1 p-0">
+                                <strong>
+                                    NAME: {props.nameUser} <br />
+                                    FACEBOOK : {props.facebook} <br />
+                                    LINE : {props.line} <br />
+                                    TELEPHONE : {props.telephone} <br />
+                                    ADDRESS : {props.address}   {props.city}  {props.state}  {props.zip}<br />
+                                    </strong>
+                            </h3>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={handleClose}>
