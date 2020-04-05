@@ -5,7 +5,7 @@ import { animalActions } from '../redux/store'
 import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, ListGroup } from 'react-bootstrap';
+import { Button, ListGroup, Carousel} from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -58,15 +58,30 @@ const AnimalCard = props => {
                     <MDBRow>
                         <MDBCol lg="5">
                             <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                                <img
-                                    className="img-fluid"
-                                    src={props.imgUrl}
-                                    alt=""
-                                    style={{ width: 250, height: 180 }}
-                                />
-
+                                <Carousel>
+                                    <Carousel.Item>
+                                        <img
+                                            className="d-block w-100"
+                                            src={props.img1}
+                                            style={{ height: 280, width: 330 }}
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img
+                                            className="d-block w-100"
+                                            src={props.img2}
+                                            style={{ height: 280, width: 330 }}
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img
+                                            className="d-block w-100"
+                                            src="https://cdn.pixabay.com/photo/2017/06/16/20/51/dog-2410332_1280.jpg"
+                                            style={props.img3}
+                                        />
+                                    </Carousel.Item>
+                                </Carousel>
                                 <MDBMask overlay="white-slight" />
-
                             </MDBView>
                         </MDBCol>
                         <MDBCol lg="7">
@@ -97,13 +112,13 @@ const AnimalCard = props => {
                 </Modal.Header>
                 <Modal.Body>
                     <MDBView className="rounded z-depth-2 mb-lg-0 mb-4 " hover waves>
-                    <div class="d-flex justify-content-center mb-5">
-                        <img
-                            className="img-fluid"
-                            src={props.imgUrlUser}
-                            alt=""
-                            style={{ width: 250, height: 180 }}
-                        />
+                        <div class="d-flex justify-content-center mb-5">
+                            <img
+                                className="img-fluid"
+                                src={props.imgUrlUser}
+                                alt=""
+                                style={{ width: 250, height: 180 }}
+                            />
                         </div>
                         <MDBMask overlay="white-slight" />
                     </MDBView>

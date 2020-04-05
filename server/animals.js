@@ -28,7 +28,9 @@ let animals = [
 
     {
         id: 1,
-        imgUrl: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.0-9/90357810_1080609382307203_9018453696849117184_n.jpg?_nc_cat=107&_nc_sid=666b5a&_nc_eui2=AeHLMSr1d6B4pOCjHyx08EIFkvoZFdlydREK9wdsi4cJRGbkw1K2xLzeqEuNIGPGCvSWfEWhKXisTz0tKAq0_T4eYXshmAuhwi7pYRwjyXlGIA&_nc_ohc=RbxPPh73VK8AX80ab2f&_nc_ht=scontent.fbkk8-2.fna&oh=e2e37e4d1760f067755b5116036efe9d&oe=5EA8D419',
+        imgUrl1: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.0-9/90357810_1080609382307203_9018453696849117184_n.jpg?_nc_cat=107&_nc_sid=666b5a&_nc_eui2=AeHLMSr1d6B4pOCjHyx08EIFkvoZFdlydREK9wdsi4cJRGbkw1K2xLzeqEuNIGPGCvSWfEWhKXisTz0tKAq0_T4eYXshmAuhwi7pYRwjyXlGIA&_nc_ohc=RbxPPh73VK8AX80ab2f&_nc_ht=scontent.fbkk8-2.fna&oh=e2e37e4d1760f067755b5116036efe9d&oe=5EA8D419',
+        imgUrl2: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.0-9/90357810_1080609382307203_9018453696849117184_n.jpg?_nc_cat=107&_nc_sid=666b5a&_nc_eui2=AeHLMSr1d6B4pOCjHyx08EIFkvoZFdlydREK9wdsi4cJRGbkw1K2xLzeqEuNIGPGCvSWfEWhKXisTz0tKAq0_T4eYXshmAuhwi7pYRwjyXlGIA&_nc_ohc=RbxPPh73VK8AX80ab2f&_nc_ht=scontent.fbkk8-2.fna&oh=e2e37e4d1760f067755b5116036efe9d&oe=5EA8D419',
+        imgUrl3: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.0-9/90357810_1080609382307203_9018453696849117184_n.jpg?_nc_cat=107&_nc_sid=666b5a&_nc_eui2=AeHLMSr1d6B4pOCjHyx08EIFkvoZFdlydREK9wdsi4cJRGbkw1K2xLzeqEuNIGPGCvSWfEWhKXisTz0tKAq0_T4eYXshmAuhwi7pYRwjyXlGIA&_nc_ohc=RbxPPh73VK8AX80ab2f&_nc_ht=scontent.fbkk8-2.fna&oh=e2e37e4d1760f067755b5116036efe9d&oe=5EA8D419',
         strain: 'Normal',
         name: 'Malee',
         old: 3,
@@ -56,7 +58,9 @@ router.route('/animals')
 
     let animal = {}
     animal.id = animals[animals.length - 1].id + 1
-    animal.imgUrl = req.body.imgUrl;
+    animal.imgUrl1 = req.body.imgUrl1;
+    animal.imgUrl2 = req.body.imgUrl2;
+    animal.imgUrl3 = req.body.imgUrl3;
     animal.strain = req.body.strain;
     animal.name = req.body.name;
     animal.old = req.body.old;
@@ -93,7 +97,9 @@ router.route('/animals/:animal_id')
 
     let id = req.params.animal_id
     let index = animals.findIndex(animal => (animal.id === +id))
-    animals[index].imgUrl = req.body.imgUrl;
+    animals[index].imgUrl1 = req.body.imgUrl1;
+    animals[index].imgUrl2 = req.body.imgUrl2;
+    animals[index].imgUrl3 = req.body.imgUrl3;
     animals[index].strain = req.body.strain;
     animals[index].name = req.body.name;
     animals[index].old = req.body.old;

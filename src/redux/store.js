@@ -129,7 +129,9 @@ export const animalActions = {
 const initialForm = {
 
     id: 0,
-    imgUrl: '',
+    imgUrl1: '',
+    imgUrl2: '',
+    imgUrl3: '',
     strain: '',
     name: '',
     old: 0,
@@ -156,9 +158,17 @@ export const formActions = {
         type: 'CHANGE_ID',
         id: id
     }),
-    changeImgurl: (imgUrl) => ({
-        type: 'CHANGE_IMGURL',
-        imgUrl: imgUrl
+    changeImgurl1: (imgUrl1) => ({
+        type: 'CHANGE_IMGURL1',
+        imgUrl1: imgUrl1
+    }),
+    changeImgurl2: (imgUrl2) => ({
+        type: 'CHANGE_IMGURL2',
+        imgUrl2: imgUrl2
+    }),
+    changeImgurl3: (imgUrl3) => ({
+        type: 'CHANGE_IMGURL3',
+        imgUrl3: imgUrl3
     }),
     changeStrain: (strain) => ({
         type: 'CHANGE_STRAIN',
@@ -245,8 +255,16 @@ const formReducer = (data = initialForm, action) => {
         case 'CHANGE_ID':
             return { ...data, id: action.id }
 
-        case 'CHANGE_IMGURL':
-            return { ...data, imgUrl: action.imgUrl }
+        case 'CHANGE_IMGURL1':
+            return { ...data, imgUrl1: action.imgUrl1 }
+
+        case 'CHANGE_IMGURL2':
+            return { ...data, imgUrl2: action.imgUrl2 }
+
+
+        case 'CHANGE_IMGURL3':
+            return { ...data, imgUrl3: action.imgUrl3 }
+
 
         case 'CHANGE_STRAIN':
             return { ...data, strain: action.strain }
@@ -265,7 +283,7 @@ const formReducer = (data = initialForm, action) => {
 
         case 'CHANGE_STATUS':
             return { ...data, status: action.status }
-            
+
         case 'CHANGE_IMGURL_USER':
             return { ...data, imgUrlUser: action.imgUrlUser }
 

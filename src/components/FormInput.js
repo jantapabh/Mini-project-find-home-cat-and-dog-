@@ -31,12 +31,30 @@ const FormInput = props => {
                 </div>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="imgUrl">Image : รูปภาพ</label>
+                        <label htmlFor="imgUrl">Image 1 : รูปภาพ</label>
                         <input type="text"
                             name="imgUrl"
                             className="form-control"
                             id="imgUrl"
-                            onChange={(e) => actionForm.changeImgurl(e.target.value)}
+                            onChange={(e) => actionForm.changeImgurl1(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="imgUrl">Image 2 : รูปภาพ</label>
+                        <input type="text"
+                            name="imgUrl"
+                            className="form-control"
+                            id="imgUrl"
+                            onChange={(e) => actionForm.changeImgurl2(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="imgUrl">Image 3  : รูปภาพ</label>
+                        <input type="text"
+                            name="imgUrl"
+                            className="form-control"
+                            id="imgUrl"
+                            onChange={(e) => actionForm.changeImgurl3(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
