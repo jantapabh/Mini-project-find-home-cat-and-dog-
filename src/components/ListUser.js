@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import './List.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux';
-import UserCard from './UserCard'
 import { userActions } from '../redux/store'
+import UserCard from './UserCard';
 
 //แสดงรายการที่เพิ่มของหมาและแมว
 

@@ -14,10 +14,10 @@ import pic6 from './static/images/pic6.jpg'
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
-import Contact from './components/Contact';
 import { AuthActions } from './redux/store'
 import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch, Provider } from 'react-redux'
+import ListUser from './components/ListUser';
 
 
 axios.defaults.withCredentials = true
@@ -63,7 +63,7 @@ const App = () => {
           <Route path="/Register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/Logout" component={Logout} />
-          <Route path="/Contact" component={Contact} />
+          <Route path="/Contact" component={ListUser} />
         </BrowserRouter>
     </div>
 

@@ -79,25 +79,12 @@ const AnimalCard = props => {
                                     HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={showModal}> CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} href="/Contact"> CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
             </MDBCard>
-            <Modal show={isOpen} onHide={hideModal}>
-                <Modal.Header>
-                <div class="d-flex justify-content-center">
-                    <Modal.Title>CONTACT THIS USER</Modal.Title>
-                    </div>
-                </Modal.Header>
-                <Modal.Body>
-                    <ListUser />
-                </Modal.Body>
-                <Modal.Footer>
-                    <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={hideModal}>OK </MDBBtn>
-                </Modal.Footer>
-            </Modal>
         </div>
     )
 }
