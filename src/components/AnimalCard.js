@@ -7,7 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Col, roundedCircle } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
-import ModalShow from './ModalShow'
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const AnimalCard = props => {
@@ -27,16 +28,15 @@ const AnimalCard = props => {
         actions.updateAnimal(props.id, form)
     }
 
-    const openModal = async () => {
 
-        return (
-            <div>
-              <ModalShow />
-            </div>
-        )
-    }
+    const [isOpen, setIsOpen] = useState(false);
 
-
+    const showModal = () => {
+        setIsOpen(true);
+    };
+    const hideModal = () => {
+        setIsOpen(false);
+    };
 
 
     return (
@@ -70,15 +70,26 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                HABIT : {props.habits} <br />
+                                    HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={openModal} href="/ModalShow"> CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} > CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
             </MDBCard>
+            <button onClick={showModal}>Display Modal</button>
+            <Modal show={isOpen} onHide={hideModal}>
+                <Modal.Header>
+                    <Modal.Title>Hi</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>The body</Modal.Body>
+                <Modal.Footer>
+                    <button onClick={hideModal}>Cancel</button>
+                    <button>Save</button>
+                </Modal.Footer>
+            </Modal>
         </div>
     )
 }
