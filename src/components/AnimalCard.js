@@ -9,11 +9,16 @@ import { Button, Form, Col, roundedCircle } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { userActions } from '../redux/store'
 
 
 const AnimalCard = props => {
 
     const [users, setUsers] = useState({});
+    const [id, setId] = useState(0)
+    const [imgUrl, setImgurl] = useState('')
+    const [name, setName] = useState('')
+
 
     const form = useSelector(state => state.form)
     const actions = bindActionCreators(animalActions, useDispatch())
@@ -21,16 +26,17 @@ const AnimalCard = props => {
 
     useEffect(() => {
 
-        //     getBear();
-        //     console.log('UseEffect is running');
-        
-    })
+        getUser();
+        console.log('UseEffect is running');
+
+    }, [])
 
     const getUser = async () => {
 
         const result = await axios.get(`http://localhost:8000/api/users`)
         console.log(result);
         setUsers(result.data)
+
 
     }
 
@@ -87,10 +93,10 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                    HABIT : {props.habits} <br />
+                                HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }}  onClick={showModal}> CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={showModal}> CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                         </MDBCol>
                     </MDBRow>
@@ -100,10 +106,11 @@ const AnimalCard = props => {
                 <Modal.Header>
                     <Modal.Title>CONTACT THIS</Modal.Title>
                 </Modal.Header>
-    <Modal.Body>{props.nameUser}</Modal.Body>
+                <Modal.Body>
+                
+                </Modal.Body>
                 <Modal.Footer>
-                    <button onClick={hideModal}>Cancel</button>
-                    <button>OK</button>
+                    <button onClick={hideModal}>OK</button>
                 </Modal.Footer>
             </Modal>
         </div>
