@@ -79,11 +79,18 @@ const Main = () => {
                                 This project to help children find homes provides a way to help homeless animals, which is an intermediary between people who want to find homes for animals and those who want to help homeless animals.
                             </p>
                             <Card border="primary" style={{ width: '40rem' }}>
-                                <Card.Header>Giving Home Equal Life</Card.Header>
+                                <Card.Header> เลี้ยงพวกเขาแล้ว . . . อย่าทิ้งพวกเขาเลยน่ะ </Card.Header>
                                 <Card.Body>
                                     <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.</Card.Text>
+                                     " ให้ชีวิตใหม่แก่สุนัขและแมวจรจัดที่ถูกทอดทิ้ง 
+                                     เว็บไซต์นี้ก็ถือเป็นช่องทางในการหาบ้านให้หมาและแมวจรจัด
+                                     ตั้งขึ้นโดยนางสาว จันทภา บิลหีม นักศึกษาคณะวิศวกรรมศาสตร์
+                                    ภาควิชาวิศวกรรมคอมพิวเตอร์ ที่มีความตั้งใจและมุ่งมั่น
+                                      ที่จะช่วยเหลือสุนัขและแมวจรจัดในจังหวัดภูเก็ตและอื่นๆ ให้มีชีวิตที่ดีขึ้นและให้ชีวิตใหม่ 
+                                      รวมทั้งหาบ้านใหม่ให้กับพวกเขา สุนัขและแมวจรจัดก็ถือเป็นส่วนหนึ่งของสังคม 
+                                      สามารถพบเห็นทั่วไปตามท้องถนน สุนัขที่ถูกทอดทิ้ง หิวโหย เป็นโรคและได้รับบาดเจ็บจากอุบัติเหตุ
+                                       สุนัขที่ถูกทำร้ายโดยเจ้าของหรือผู้คนที่ไม่ต้องการพวกเขา มีสุนัขและแมวเป็นจำนวนมากถูกเอามาทิ้งไว้ตามวัด 
+                                       สุนัขและแมวเหล่านี้ต้องการอาหาร ที่อยู่อาศัย การช่วยเหลือทางด้านการรักษาพยาบาล ความรัก และความอบอุ่น"</Card.Text>
                                 </Card.Body>
                             </Card>
                             <br />

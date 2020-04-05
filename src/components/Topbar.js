@@ -34,7 +34,6 @@ const Topbar = props => {
     return (
         <div>
             <Navbar bg="white" expand="lg">
-
                 <Navbar.Brand href="/">
                     <img
                         src={logo1}
