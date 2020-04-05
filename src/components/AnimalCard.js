@@ -62,22 +62,22 @@ const AnimalCard = props => {
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={props.img1}
+                                            src={props.imgUrl1}
                                             style={{ height: 280, width: 330 }}
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={props.img2}
-                                            style={{ height: 280, width: 330 }}
+                                            src={props.imgUrl2}
+                                            style={{ height: 300, width: 280 }}
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src="https://cdn.pixabay.com/photo/2017/06/16/20/51/dog-2410332_1280.jpg"
-                                            style={props.img3}
+                                            src={props.imgUrl3}
+                                            style={{ height: 280, width: 330 }}
                                         />
                                     </Carousel.Item>
                                 </Carousel>

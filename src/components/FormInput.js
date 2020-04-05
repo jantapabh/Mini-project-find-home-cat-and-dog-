@@ -17,7 +17,7 @@ const FormInput = props => {
 
     const addAnimal = async () => {
 
-        await axios.post(`http://localhost:80/api/animals`, form)
+       const result =  await axios.post(`http://localhost/api/animals`, form)
 
         actionsAnimal.addAnimal(animals, form)
     }
@@ -31,29 +31,29 @@ const FormInput = props => {
                 </div>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="imgUrl">Image 1 : รูปภาพ</label>
+                        <label htmlFor="imgUrl1">Image 1 : รูปภาพ</label>
                         <input type="text"
-                            name="imgUrl"
+                            name="imgUrl1"
                             className="form-control"
-                            id="imgUrl"
+                            id="imgUrl1"
                             onChange={(e) => actionForm.changeImgurl1(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="imgUrl">Image 2 : รูปภาพ</label>
+                        <label htmlFor="imgUrl2">Image 2 : รูปภาพ</label>
                         <input type="text"
-                            name="imgUrl"
+                            name="imgUrl2"
                             className="form-control"
-                            id="imgUrl"
+                            id="imgUrl2"
                             onChange={(e) => actionForm.changeImgurl2(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="imgUrl">Image 3  : รูปภาพ</label>
+                        <label htmlFor="imgUrl3">Image 3  : รูปภาพ</label>
                         <input type="text"
-                            name="imgUrl"
+                            name="imgUrl3"
                             className="form-control"
-                            id="imgUrl"
+                            id="imgUrl3"
                             onChange={(e) => actionForm.changeImgurl3(e.target.value)}
                         />
                     </div>
@@ -203,11 +203,11 @@ const FormInput = props => {
                                 <Form.Group id="formGridCheckbox">
                                     <Form.Check type="checkbox" label="Check me out" />
                                 </Form.Group>
-                                <div className="text-center">
-                                    <button className="btn btn-primary my-1" type="submit" onClick={addAnimal}>ADD</button>
-                                </div>
                             </form>
                         </div>
+                        <div className="text-center">
+                                    <button className="btn btn-primary my-1" type="submit" onClick={addAnimal}>ADD</button>
+                                </div>
                     </div>
                     <div className="col-sm-3 mt-5"></div>
                 </div>
