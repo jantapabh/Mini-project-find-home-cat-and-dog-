@@ -93,13 +93,20 @@ const AnimalCard = props => {
                 return (
                  
                         <ListGroup  key={index}>
+                             <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+                                <img
+                                    className="img-fluid"
+                                    src={user.imgUrl}
+                                    style={{ width: 250, height: 180}}
+                                />
+                                </MDBView>
                             <ListGroup.Item>Cras justo odio</ListGroup.Item>
                             <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
                             <ListGroup.Item>Morbi leo risus</ListGroup.Item>
                             <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
                             <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                         </ListGroup>
-                        
+
                 )
             })
         else {
@@ -122,9 +129,9 @@ const AnimalCard = props => {
                                     alt=""
                                     style={{ width: 250, height: 180 }}
                                 />
-                                <a href="#!">
+                               
                                     <MDBMask overlay="white-slight" />
-                                </a>
+                             
                             </MDBView>
                         </MDBCol>
                         <MDBCol lg="7">
@@ -150,13 +157,13 @@ const AnimalCard = props => {
             </MDBCard>
             <Modal show={isOpen} onHide={hideModal}>
                 <Modal.Header>
-                    <Modal.Title>CONTACT THIS</Modal.Title>
+                    <Modal.Title>CONTACT THIS USER</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {printUsers()}
                 </Modal.Body>
                 <Modal.Footer>
-                    <button onClick={hideModal}>OK</button>
+                <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={hideModal}>OK </MDBBtn>
                 </Modal.Footer>
             </Modal>
         </div>

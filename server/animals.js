@@ -35,26 +35,6 @@ let animals = [
         habits: 'alone',
         because: 'ไม่สะดวกเลี้ยง',
         status: 'have'
-    },
-    {
-        id: 2,
-        imgUrl: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.0-9/90357810_1080609382307203_9018453696849117184_n.jpg?_nc_cat=107&_nc_sid=666b5a&_nc_eui2=AeHLMSr1d6B4pOCjHyx08EIFkvoZFdlydREK9wdsi4cJRGbkw1K2xLzeqEuNIGPGCvSWfEWhKXisTz0tKAq0_T4eYXshmAuhwi7pYRwjyXlGIA&_nc_ohc=RbxPPh73VK8AX80ab2f&_nc_ht=scontent.fbkk8-2.fna&oh=e2e37e4d1760f067755b5116036efe9d&oe=5EA8D419',
-        strain: 'Normal',
-        name: 'Malee',
-        old: 3,
-        habits: 'alone',
-        because: 'ไม่สะดวกเลี้ยง',
-        status: 'have'
-    },
-    {
-        id: 3,
-        imgUrl: 'https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.0-9/90357810_1080609382307203_9018453696849117184_n.jpg?_nc_cat=107&_nc_sid=666b5a&_nc_eui2=AeHLMSr1d6B4pOCjHyx08EIFkvoZFdlydREK9wdsi4cJRGbkw1K2xLzeqEuNIGPGCvSWfEWhKXisTz0tKAq0_T4eYXshmAuhwi7pYRwjyXlGIA&_nc_ohc=RbxPPh73VK8AX80ab2f&_nc_ht=scontent.fbkk8-2.fna&oh=e2e37e4d1760f067755b5116036efe9d&oe=5EA8D419',
-        strain: 'Normal',
-        name: 'Malee',
-        old: 3,
-        habits: 'alone',
-        because: 'ไม่สะดวกเลี้ยง',
-        status: 'have'
     }
 ];
 
