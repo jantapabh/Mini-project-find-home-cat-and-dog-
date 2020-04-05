@@ -11,6 +11,7 @@ import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { userActions } from '../redux/store'
 import UserCard from './UserCard';
+import ListUser from './ListUser';
 
 
 const AnimalCard = props => {
@@ -75,7 +76,7 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                HABIT : {props.habits} <br />
+                                    HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={showModal}> CONTACT </MDBBtn>
@@ -91,7 +92,7 @@ const AnimalCard = props => {
                     </div>
                 </Modal.Header>
                 <Modal.Body>
-                    <UserCard />
+                    <ListUser />
                 </Modal.Body>
                 <Modal.Footer>
                     <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={hideModal}>OK </MDBBtn>
