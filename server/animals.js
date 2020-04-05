@@ -65,7 +65,6 @@ router.route('/animals')
     animal.status = req.body.status;
     animal.imgUrlUser = req.body.imgUrlUser;
     animal.nameUser = req.body.nameUser;
-    animal.password = req.body.password;
     animal.email = req.body.email;
     animal.telephone = req.body.telephone;
     animal.facebook = req.body.facebook;
@@ -103,7 +102,6 @@ router.route('/animals/:animal_id')
     animals[index].status = req.body.status;
     animals[index].imgUrlUser = req.body.imgUrlUser;
     animals[index].nameUser = req.body.nameUser;
-    animals[index].password = req.body.password;
     animals[index].email = req.body.email;
     animals[index].telephone = req.body.telephone;
     animals[index].facebook = req.body.facebook;
