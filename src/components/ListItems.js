@@ -12,13 +12,12 @@ const ListItems = props => {
 
     const animals = useSelector(state => state.animal)
     const actionsAnimal = bindActionCreators(animalActions, useDispatch());
-    const users = useSelector(state => state.user)
-    const actionUser = bindActionCreators(userActions, useDispatch())
+
 
     useEffect(() => {
 
         actionsAnimal.getAnimals()
-        actionUser.getUsers()
+      
         
     }, [])
 

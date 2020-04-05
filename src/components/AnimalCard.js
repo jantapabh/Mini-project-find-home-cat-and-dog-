@@ -14,56 +14,11 @@ import { userActions } from '../redux/store'
 
 const AnimalCard = props => {
 
-    const [users, setUsers] = useState({});
-    const [id, setId] = useState(0)
-    const [imgUrl, setImgurl] = useState('')
-    const [name, setName] = useState('')
-    const [password, setPassword] = useState('')
-    const [email, setEmail] = useState('')
-    const [telephone, setTelephone] = useState('')
-    const [facebook, setFacebook] = useState('')
-    const [line, setLine] = useState('')
-    const [address, setAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState(0)
-
 
     const form = useSelector(state => state.form)
     const actions = bindActionCreators(animalActions, useDispatch())
     const dispatch = useDispatch();
 
-    useEffect(() => {
-
-        getUser();
-        console.log('UseEffect is running');
-
-    }, [])
-
-    const getUser = async () => {
-
-        const result = await axios.get(`http://localhost:8000/api/users`)
-        console.log(result);
-        setUsers(result.data)
-
-    }
-
-    const getUsers = async () => {
-
-        const result = await axios.get(`http://localhost:8000/api/users/${id}`)
-        setId(result.data.id)
-        setImgurl(result.data.imgUrl)
-        setName(result.data.name)
-        setPassword(result.data.password)
-        setEmail(result.data.email)
-        setTelephone(result.data.telephone)
-        setFacebook(result.data.facebook)
-        setLine(result.data.line)
-        setAddress(result.data.address)
-        setCity(result.data.city)
-        setState(result.data.state)
-        setZip(result.data.zip)
-    }
 
     const deleteAnimal = async () => {
 
