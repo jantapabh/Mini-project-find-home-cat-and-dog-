@@ -34,7 +34,17 @@ let animals = [
         old: 3,
         habits: 'alone',
         because: 'ไม่สะดวกเลี้ยง',
-        status: 'have'
+        status: 'have',
+        imgUrlUser: 'https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.0-9/32089429_1813031982097084_7269104841354379264_o.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=Bi4H4vO5YVoAX_NW-fg&_nc_ht=scontent.fhdy2-1.fna&oh=805262156374d2b4381c9c535fb9518f&oe=5EAAF717',
+        nameUser: 'Jantapa',
+        email: 'jantapa2407@gmail.com',
+        telephone: '0922389204',
+        facebook: 'Jan Tapa',
+        line: 'jantaa.24',
+        address: '77 soi.10',
+        city: 'hatyai',
+        state: 'hatyainai',
+        zip: '90110'
     }
 ];
 
@@ -53,6 +63,17 @@ router.route('/animals')
     animal.habits = req.body.habits;
     animal.because = req.body.because;
     animal.status = req.body.status;
+    user.imgUrlUser = req.body.imgUrlUser;
+    user.nameUser = req.body.nameUser;
+    user.password = req.body.password;
+    user.email = req.body.email;
+    user.telephone = req.body.telephone;
+    user.facebook = req.body.facebook;
+    user.line = req.body.line;
+    user.address = req.body.address;
+    user.city = req.body.city;
+    user.state = req.body.state;
+    user.zip = req.body.zip;
     animals.push(animal);
     res.json({ message: 'Animals created!' })
     
@@ -80,6 +101,17 @@ router.route('/animals/:animal_id')
     animals[index].habits = req.body.habits;
     animals[index].because = req.body.because;
     animals[index].status = req.body.status;
+    users[index].imgUrlUser = req.body.imgUrlUser;
+    users[index].nameUser = req.body.nameUser;
+    users[index].password = req.body.password;
+    users[index].email = req.body.email;
+    users[index].telephone = req.body.telephone;
+    users[index].facebook = req.body.facebook;
+    users[index].line = req.body.line;
+    users[index].address = req.body.address;
+    users[index].city = req.body.city;
+    users[index].state = req.body.state;
+    users[index].zip = req.body.zip;
     res.json({ message: 'Animal Update !' + req.params.animal_id});
 
 })

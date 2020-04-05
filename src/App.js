@@ -37,34 +37,34 @@ const App = () => {
   if (loading) {
     return "Loading ..."
   }
-  if (!auth.accessToken && !auth.psuInfo) {
+  
+  if (auth.accessToken && auth.psuInfo) {
     return (
 
       <div>
         <Topbar />
-      {/* ทำส่วนแสดงผล Login เพิ่ม */}
-          <Login/> 
+        <Login />
       </div>
-     
+
     )
-    }
-  
- 
+  }
+
+
   return (
 
     <div>
       <div className="Topbar">
         <Topbar />
       </div>
-        <BrowserRouter>
-          <Route exact path="/" component={Main} />
-          <Route path="/FormInput" component={FormInput} />
-          <Route path="/ListItems" component={ListItems} />
-          <Route path="/Register" component={Register} />
-          <Route path="/login" component={Login} />
-          <Route path="/Logout" component={Logout} />
-          <Route path="/Contact" component={ListUser} />
-        </BrowserRouter>
+      <BrowserRouter>
+        <Route exact path="/" component={Main} />
+        <Route path="/FormInput" component={FormInput} />
+        <Route path="/ListItems" component={ListItems} />
+        <Route path="/Register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/Logout" component={Logout} />
+        <Route path="/Contact" component={ListUser} />
+      </BrowserRouter>
     </div>
 
   );
