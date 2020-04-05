@@ -5,7 +5,7 @@ import { animalActions } from '../redux/store'
 import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ListGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -41,6 +41,12 @@ const AnimalCard = props => {
     const hideModal = () => {
         setIsOpen(false);
     };
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
 
 
 
@@ -78,12 +84,26 @@ const AnimalCard = props => {
                                     HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} href="/Contact"> CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }}  onClick={handleShow} > CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
             </MDBCard>
+            <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
         </div>
     )
 }
