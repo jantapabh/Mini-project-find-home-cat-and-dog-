@@ -5,7 +5,7 @@ import { animalActions } from '../redux/store'
 import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Col, roundedCircle } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +18,15 @@ const AnimalCard = props => {
     const [id, setId] = useState(0)
     const [imgUrl, setImgurl] = useState('')
     const [name, setName] = useState('')
+    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('')
+    const [telephone, setTelephone] = useState('')
+    const [facebook, setFacebook] = useState('')
+    const [line, setLine] = useState('')
+    const [address, setAddress] = useState('')
+    const [city, setCity] = useState('')
+    const [state, setState] = useState('')
+    const [zip, setZip] = useState(0)
 
 
     const form = useSelector(state => state.form)
@@ -37,7 +46,23 @@ const AnimalCard = props => {
         console.log(result);
         setUsers(result.data)
 
+    }
 
+    const getUsers = async () => {
+
+        const result = await axios.get(`http://localhost:8000/api/users/${id}`)
+        setId(result.data.id)
+        setImgurl(result.data.imgUrl)
+        setName(result.data.name)
+        setPassword(result.data.password)
+        setEmail(result.data.email)
+        setTelephone(result.data.telephone)
+        setFacebook(result.data.facebook)
+        setLine(result.data.line)
+        setAddress(result.data.address)
+        setCity(result.data.city)
+        setState(result.data.state)
+        setZip(result.data.zip)
     }
 
     const deleteAnimal = async () => {
@@ -60,6 +85,27 @@ const AnimalCard = props => {
     const hideModal = () => {
         setIsOpen(false);
     };
+
+    const printUsers = () => {
+
+        if (users && users.length)
+            return users.map((user, index) => {
+                return (
+                 
+                        <ListGroup  key={index}>
+                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                        </ListGroup>
+                        
+                )
+            })
+        else {
+            return (<h2> No User </h2>)
+        }
+    }
 
 
     return (
@@ -107,7 +153,7 @@ const AnimalCard = props => {
                     <Modal.Title>CONTACT THIS</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                
+                    {printUsers()}
                 </Modal.Body>
                 <Modal.Footer>
                     <button onClick={hideModal}>OK</button>
