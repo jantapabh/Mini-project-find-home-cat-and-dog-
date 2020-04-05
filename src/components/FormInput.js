@@ -135,76 +135,76 @@ const FormInput = props => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="emailUser">Email*</label>
+                                    <label htmlFor="email">Email*</label>
                                     <input type="email"
-                                        name="emailUser"
+                                        name="email"
                                         className="form-control"
-                                        id="emailUser"
+                                        id="email"
                                         onChange={(e) => actionForm.changeEmailUser(e.target.value)}
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="telephoneUser">Telephone</label>
+                                    <label htmlFor="telephone">Telephone</label>
                                     <input type="text"
-                                        name="telephoneUser"
+                                        name="telephone"
                                         className="form-control"
-                                        id="telephoneUser"
+                                        id="telephone"
                                         onChange={(e) => actionForm.changeTelephoneUser(e.target.value)}
 
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="facebookUser">Facebook</label>
+                                    <label htmlFor="facebook">Facebook</label>
                                     <input type="text"
-                                        name="facebookUser"
+                                        name="facebook"
                                         className="form-control"
-                                        id="facebookUser"
+                                        id="facebook"
                                         onChange={(e) => actionForm.changeFacebookUser(e.target.value)}
 
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="lineUser">Line</label>
+                                    <label htmlFor="line">Line</label>
                                     <input type="text"
-                                        name="lineUser"
+                                        name="line"
                                         className="form-control"
-                                        id="lineUser"
+                                        id="line"
                                         onChange={(e) => actionForm.changeLineUser(e.target.value)}
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="addressUser">Address</label>
+                                    <label htmlFor="address">Address</label>
                                     <input type="text"
-                                        name="addressUse"
+                                        name="address"
                                         className="form-control"
-                                        id="addressUse"
+                                        id="address"
                                         onChange={(e) => actionForm.changeAddressUser(e.target.value)}
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="cityUser">City</label>
+                                    <label htmlFor="city">City</label>
                                     <input type="text"
-                                        name="cityUser"
+                                        name="city"
                                         className="form-control"
-                                        id="cityUser"
+                                        id="city"
                                         onChange={(e) => actionForm.changeCityUser(e.target.value)}
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="stateUser">State</label>
+                                    <label htmlFor="state">State</label>
                                     <input type="text"
-                                        name="stateUser"
+                                        name="state"
                                         className="form-control"
-                                        id="stateUser"
+                                        id="state"
                                         onChange={(e) => actionForm.changeStateUser(e.target.value)}
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="zipUser">Zip</label>
+                                    <label htmlFor="zip">Zip</label>
                                     <input type="text"
-                                        name="zipUser"
+                                        name="zip"
                                         className="form-control"
-                                        id="zipUser"
+                                        id="zip"
                                         onChange={(e) => actionForm.changeZipUser(e.target.value)}
                                     />
                                 </div>

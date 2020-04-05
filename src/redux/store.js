@@ -308,7 +308,7 @@ const formReducer = (data = initialForm, action) => {
         case 'CHANGE_CITY_USER':
             return { ...data, city: action.city }
 
-        case 'CHANGE_STATE_USER'
+        case 'CHANGE_STATE_USER':
             return { ...data, state: action.state }
 
         case 'CHANGE_ZIP_USER':
