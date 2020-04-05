@@ -303,7 +303,7 @@ const formReducer = (data = initialForm, action) => {
             return { ...data, lineUser: action.lineUser }
 
         case 'CHANGE_ADDRESS_USER':
-            return { ...Date, addressUser: action.addressUser }
+            return { ...date, addressUser: action.addressUser }
 
         case 'CHANGE_CITY_USER':
             return { ...data, cityUser: action.cityUser }

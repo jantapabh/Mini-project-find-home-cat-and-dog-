@@ -112,17 +112,16 @@ const AnimalCard = props => {
                 </Modal.Header>
                 <Modal.Body>
                     <MDBView className="rounded z-depth-2 mb-lg-0 mb-4 " hover waves>
-                        <div class="d-flex justify-content-center mb-5">
+                        <div className="d-flex justify-content-center mb-5">
                             <img
                                 className="img-fluid"
                                 src={props.imgUrlUser}
-                                alt=""
                                 style={{ width: 250, height: 180 }}
                             />
                         </div>
                         <MDBMask overlay="white-slight" />
                     </MDBView>
-                    <ListGroup class="d-flex justify-content-center">
+                    <ListGroup className="d-flex justify-content-center">
                         <ListGroup.Item>NAME : {props.nameUser}</ListGroup.Item>
                         <ListGroup.Item>EMAIL : {props.email}</ListGroup.Item>
                         <ListGroup.Item>TELEPHONE : {props.telephone}</ListGroup.Item>

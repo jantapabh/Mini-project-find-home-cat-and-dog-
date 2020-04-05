@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { animalActions } from '../redux/store'
 import { bindActionCreators } from 'redux';
 import axios from 'axios'
-import { Button, Form, Col } from 'react-bootstrap';
+import { Form, Col } from 'react-bootstrap';
 
 
 const FormInput = props => {
@@ -13,11 +13,12 @@ const FormInput = props => {
     const actionsAnimal = bindActionCreators(animalActions, useDispatch())
     const actionForm = bindActionCreators(formActions, useDispatch())
     const form = useSelector(state => state.form)
+    const dispatch = useDispatch();
     const animals = useSelector(state => state.animal)
 
     const addAnimal = async () => {
 
-       const result =  await axios.post(`http://localhost/api/animals`, form)
+        await axios.post(`http://localhost/api/animals`, form)
 
         actionsAnimal.addAnimal(animals, form)
     }
@@ -112,18 +113,10 @@ const FormInput = props => {
                             onChange={(e) => actionForm.changeStatus(e.target.value)}
                         />
                     </div>
-
-                </form>
-            </div>
-
-            <div>
-                <div className="row">
-                    <div className="col-sm-3 mt-5"></div>
-                    <div className="col-sm-6 mt-5 card">
-                        <div className="card-body ml-3 mr-3 mt-5 mb-1">
-                            <form>
-                                <h1 className="Topic">ADD YOUR DATA</h1>
-                                <div className="form-group">
+                    <div className="card-body">
+                    <h1 className="Topic">" ADD YOUR DATA"</h1>
+                </div>
+                    <div className="form-group">
                                     <label htmlFor="username">IMAGE</label>
                                     <input type="text"
                                         name="imgUrlUser"
@@ -177,40 +170,48 @@ const FormInput = props => {
                                         className="form-control"
                                         id="line"
                                         onChange={(e) => actionForm.changeLineUser(e.target.value)}
-
                                     />
                                 </div>
-                                <Form.Group controlId="formGridAddress2">
-                                    <Form.Label>Address</Form.Label>
-                                    <Form.Control placeholder="Apartment, studio, or floor"   onChange={(e) => actionForm.changeAddressUser(e.target.value)}/>
-                                </Form.Group>
-
-                                <Form.Row>
-                                    <Form.Group as={Col} controlId="formGridCity">
-                                        <Form.Label>City</Form.Label>
-                                        <Form.Control  onChange={(e) => actionForm.changeCityUser(e.target.value)} />
-                                    </Form.Group>
-
-                                    <Form.Group as={Col} controlId="formGridState">
-                                        <Form.Label>State</Form.Label>
-                                        <Form.Control  onChange={(e) => actionForm.changeStateUser(e.target.value)} />
-                                    </Form.Group>
-                                    <Form.Group controlId="formGridZip">
-                                        <Form.Label>Zip</Form.Label>
-                                        <Form.Control  onChange={(e) => actionForm.changeZipUser(e.target.value)} />
-                                    </Form.Group>
-                                </Form.Row>
-                                <Form.Group id="formGridCheckbox">
-                                    <Form.Check type="checkbox" label="Check me out" />
-                                </Form.Group>
-                            </form>
-                        </div>
-                        <div className="text-center">
+                                <div className="form-group">
+                                    <label htmlFor="address">Address</label>
+                                    <input type="text"
+                                        name="address"
+                                        className="form-control"
+                                        id="address"
+                                        onChange={(e) => actionForm.changeAddressUser(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="address">Address</label>
+                                    <input type="text"
+                                        name="address"
+                                        className="form-control"
+                                        id="address"
+                                        onChange={(e) => actionForm.changeCityUser(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="address">Address</label>
+                                    <input type="text"
+                                        name="address"
+                                        className="form-control"
+                                        id="address"
+                                        onChange={(e) => actionForm.changeStateUser(e.target.value)}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="address">Address</label>
+                                    <input type="text"
+                                        name="address"
+                                        className="form-control"
+                                        id="address"
+                                        onChange={(e) => actionForm.changeZipUser(e.target.value)}
+                                    />
+                                </div>
+                                <div className="text-center">
                                     <button className="btn btn-primary my-1" type="submit" onClick={addAnimal}>ADD</button>
                                 </div>
-                    </div>
-                    <div className="col-sm-3 mt-5"></div>
-                </div>
+                </form>
             </div>
         </div>
     );
