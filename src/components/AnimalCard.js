@@ -97,7 +97,7 @@ const AnimalCard = props => {
                 </Modal.Header>
                 <Modal.Body>
                     <MDBView className="rounded z-depth-2 mb-lg-0 mb-4 " hover waves>
-                    <div class="d-flex justify-content-center mb-a">
+                    <div class="d-flex justify-content-center mb-5">
                         <img
                             className="img-fluid"
                             src={props.imgUrlUser}
