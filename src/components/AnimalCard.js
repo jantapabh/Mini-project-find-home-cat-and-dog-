@@ -86,35 +86,6 @@ const AnimalCard = props => {
         setIsOpen(false);
     };
 
-    // const printUsers = () => {
-
-    //     if (users && users.length)
-    //         return users.map((user, index) => {
-    //             return (
-    //                 <div class="d-flex justify-content-center">
-    //                     <ListGroup key={index}>
-    //                         <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves >
-    //                         <div class="d-flex justify-content-center mb-5">
-    //                             <img
-    //                                 className="img-fluid"
-    //                                 src={user.imgUrl}
-    //                                 style={{ width: 250, height: 180 }}
-    //                             />
-    //                             </div>
-    //                         </MDBView>
-    //                         <ListGroup.Item>NAME : {user.name}</ListGroup.Item>
-    //                         <ListGroup.Item>FACEBOOK : {user.facebook}</ListGroup.Item>
-    //                         <ListGroup.Item>LINE : {user.line}</ListGroup.Item>
-    //                         <ListGroup.Item>EMAIL : {user.email}</ListGroup.Item>
-    //                         <ListGroup.Item>ADDRESS : {user.address}  {user.city}  {user.state}  {user.zip}</ListGroup.Item>
-    //                     </ListGroup>
-    //                 </div>
-    //             )
-    //         })
-    //     else {
-    //         return (<h2> No User </h2>)
-    //     }
-    // }
 
 
     return (
