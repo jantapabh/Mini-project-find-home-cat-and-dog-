@@ -94,11 +94,13 @@ const AnimalCard = props => {
                     <div class="d-flex justify-content-center">
                         <ListGroup key={index}>
                             <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves >
+                            <div class="d-flex justify-content-center mb-5">
                                 <img
                                     className="img-fluid"
                                     src={user.imgUrl}
                                     style={{ width: 250, height: 180 }}
                                 />
+                                </div>
                             </MDBView>
                             <ListGroup.Item>NAME : {user.name}</ListGroup.Item>
                             <ListGroup.Item>FACEBOOK : {user.facebook}</ListGroup.Item>
@@ -157,7 +159,9 @@ const AnimalCard = props => {
             </MDBCard>
             <Modal show={isOpen} onHide={hideModal}>
                 <Modal.Header>
+                <div class="d-flex justify-content-center">
                     <Modal.Title>CONTACT THIS USER</Modal.Title>
+                    </div>
                 </Modal.Header>
                 <Modal.Body>
                     {printUsers()}
