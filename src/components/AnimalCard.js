@@ -91,22 +91,22 @@ const AnimalCard = props => {
         if (users && users.length)
             return users.map((user, index) => {
                 return (
-                 
-                        <ListGroup  key={index}>
-                             <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+                    <div class="d-flex justify-content-center">
+                        <ListGroup key={index}>
+                            <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves >
                                 <img
                                     className="img-fluid"
                                     src={user.imgUrl}
-                                    style={{ width: 250, height: 180}}
+                                    style={{ width: 250, height: 180 }}
                                 />
-                                </MDBView>
-                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                            </MDBView>
+                            <ListGroup.Item>NAME : {user.name}</ListGroup.Item>
+                            <ListGroup.Item>FACEBOOK : {user.facebook}</ListGroup.Item>
+                            <ListGroup.Item>LINE : {user.line}</ListGroup.Item>
+                            <ListGroup.Item>EMAIL : {user.email}</ListGroup.Item>
+                            <ListGroup.Item>ADDRESS : {user.address}  {user.city}  {user.state}  {user.zip}</ListGroup.Item>
                         </ListGroup>
-
+                    </div>
                 )
             })
         else {
@@ -129,9 +129,9 @@ const AnimalCard = props => {
                                     alt=""
                                     style={{ width: 250, height: 180 }}
                                 />
-                               
-                                    <MDBMask overlay="white-slight" />
-                             
+
+                                <MDBMask overlay="white-slight" />
+
                             </MDBView>
                         </MDBCol>
                         <MDBCol lg="7">
@@ -163,7 +163,7 @@ const AnimalCard = props => {
                     {printUsers()}
                 </Modal.Body>
                 <Modal.Footer>
-                <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={hideModal}>OK </MDBBtn>
+                    <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={hideModal}>OK </MDBBtn>
                 </Modal.Footer>
             </Modal>
         </div>
