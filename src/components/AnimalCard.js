@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AnimalCard.css';
 import { animalActions } from '../redux/store'
@@ -13,9 +13,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const AnimalCard = props => {
 
+    const [users, setUsers] = useState({});
+
     const form = useSelector(state => state.form)
     const actions = bindActionCreators(animalActions, useDispatch())
     const dispatch = useDispatch();
+
+    useEffect(() => {
+
+        //     getBear();
+        //     console.log('UseEffect is running');
+        
+    })
+
+    const getUser = async () => {
+
+        const result = await axios.get(`http://localhost:8000/api/users`)
+        console.log(result);
+        setUsers(result.data)
+
+    }
 
     const deleteAnimal = async () => {
 
@@ -73,21 +90,20 @@ const AnimalCard = props => {
                                     HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
-                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} > CONTACT </MDBBtn>
+                            <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }}  onClick={showModal}> CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
             </MDBCard>
-            <button onClick={showModal}>Display Modal</button>
             <Modal show={isOpen} onHide={hideModal}>
                 <Modal.Header>
-                    <Modal.Title>Hi</Modal.Title>
+                    <Modal.Title>CONTACT THIS</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>The body</Modal.Body>
+    <Modal.Body>{props.nameUser}</Modal.Body>
                 <Modal.Footer>
                     <button onClick={hideModal}>Cancel</button>
-                    <button>Save</button>
+                    <button>OK</button>
                 </Modal.Footer>
             </Modal>
         </div>

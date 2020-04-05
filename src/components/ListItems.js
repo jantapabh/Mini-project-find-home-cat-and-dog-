@@ -15,6 +15,7 @@ const ListItems = props => {
     useEffect(() => {
 
         actionsAnimal.getAnimals()
+        
     }, [])
 
     if (!animals || !animals.length)
