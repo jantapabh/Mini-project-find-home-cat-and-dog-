@@ -63,17 +63,17 @@ router.route('/animals')
     animal.habits = req.body.habits;
     animal.because = req.body.because;
     animal.status = req.body.status;
-    user.imgUrlUser = req.body.imgUrlUser;
-    user.nameUser = req.body.nameUser;
-    user.password = req.body.password;
-    user.email = req.body.email;
-    user.telephone = req.body.telephone;
-    user.facebook = req.body.facebook;
-    user.line = req.body.line;
-    user.address = req.body.address;
-    user.city = req.body.city;
-    user.state = req.body.state;
-    user.zip = req.body.zip;
+    animal.imgUrlUser = req.body.imgUrlUser;
+    animal.nameUser = req.body.nameUser;
+    animal.password = req.body.password;
+    animal.email = req.body.email;
+    animal.telephone = req.body.telephone;
+    animal.facebook = req.body.facebook;
+    animal.line = req.body.line;
+    animal.address = req.body.address;
+    animal.city = req.body.city;
+    animal.state = req.body.state;
+    animal.zip = req.body.zip;
     animals.push(animal);
     res.json({ message: 'Animals created!' })
     
@@ -101,17 +101,17 @@ router.route('/animals/:animal_id')
     animals[index].habits = req.body.habits;
     animals[index].because = req.body.because;
     animals[index].status = req.body.status;
-    users[index].imgUrlUser = req.body.imgUrlUser;
-    users[index].nameUser = req.body.nameUser;
-    users[index].password = req.body.password;
-    users[index].email = req.body.email;
-    users[index].telephone = req.body.telephone;
-    users[index].facebook = req.body.facebook;
-    users[index].line = req.body.line;
-    users[index].address = req.body.address;
-    users[index].city = req.body.city;
-    users[index].state = req.body.state;
-    users[index].zip = req.body.zip;
+    animals[index].imgUrlUser = req.body.imgUrlUser;
+    animals[index].nameUser = req.body.nameUser;
+    animals[index].password = req.body.password;
+    animals[index].email = req.body.email;
+    animals[index].telephone = req.body.telephone;
+    animals[index].facebook = req.body.facebook;
+    animals[index].line = req.body.line;
+    animals[index].address = req.body.address;
+    animals[index].city = req.body.city;
+    animals[index].state = req.body.state;
+    animals[index].zip = req.body.zip;
     res.json({ message: 'Animal Update !' + req.params.animal_id});
 
 })

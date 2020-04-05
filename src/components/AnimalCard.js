@@ -10,8 +10,7 @@ import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MD
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { userActions } from '../redux/store'
-import UserCard from './UserCard';
-import ListUser from './ListUser';
+
 
 
 const AnimalCard = props => {

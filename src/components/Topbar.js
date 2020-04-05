@@ -50,7 +50,6 @@ const Topbar = props => {
                     <Nav.Link href="/FormInput" style={{ fontSize: 20}}>COMPLETE HISTORY</Nav.Link>
                         <Nav.Link href="/ListItems" style={{ fontSize: 20}}>OBSERVATION ROOM</Nav.Link>
                         <Nav.Link href="/Register" style={{ fontSize: 20}}>REGISTER</Nav.Link>
-                           <Nav.Link href="/Contact" style={{ fontSize: 20}}>CONTACT</Nav.Link>
                     </Nav>
                     <Form inline>
                     <Avatar alt={props.name} src={props.imgUrl} />
