@@ -24,6 +24,20 @@ const AnimalCard = props => {
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
 
+    const getAnimals = async () => {
+
+        const result = await axios.get(`http://localhost:80/api/animals`)
+        const action = { type: 'GET_ANIMALS', animals: result.data };
+        dispatch(action)
+        console.log(result.data)
+    }
+
+    useEffect(() => {
+
+        getAnimals()
+
+    }, []) 
+
 
     const deleteAnimal = async () => {
 
