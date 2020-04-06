@@ -31,6 +31,7 @@ const AnimalCard = props => {
         firestore.collection("animals").onSnapshot( (snapshot) => {
 
             console.log(snapshot.docs);
+            
          let myAnimal = snapshot.docs.map( d => {
 
                 

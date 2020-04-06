@@ -9,6 +9,8 @@ import { bindActionCreators } from 'redux';
 import axios from 'axios'
 import Sidebar from './Sidebar'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {firestore} from '../index.js'
+
 
 
 const FormInput = props => {
@@ -21,9 +23,13 @@ const FormInput = props => {
 
     const addAnimal = async () => {
 
+        let id = animals[animals.length - 1].id + 1;
+
         await axios.post(`http://localhost/api/animals`, form)
 
         actionsAnimal.addAnimal(animals, form)
+
+        firestore.collection("animals").doc(id).set({id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip})
     }
 
     const [activeTab, setActiveTab] = useState('1');
@@ -31,6 +37,38 @@ const FormInput = props => {
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
+
+    const [animals, setAnimals] = ([])
+
+    useEffect(() => {
+      
+
+        retriveData()
+        
+
+    }, [])
+
+    const retriveData = () => {
+
+        firestore.collection("animals").onSnapshot( (snapshot) => {
+
+            console.log(snapshot.docs);
+            
+         let myAnimal = snapshot.docs.map( d => {
+
+                
+            const {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip } = d.data()
+           
+            return {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip }
+        })
+
+        setAnimals(myAnimal)
+
+
+        })
+    }
+
+    
 
 
     return (
