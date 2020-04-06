@@ -83,7 +83,7 @@ const AnimalCard =  props => {
              })
 
              setMyAnimal(myAni);
-             console.log(myAni)
+            //  console.log(myAni)
          })
      }
 

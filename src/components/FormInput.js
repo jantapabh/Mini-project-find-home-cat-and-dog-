@@ -9,6 +9,7 @@ import {firestore} from '../index.js'
 
 
 
+
 const FormInput = props => {
 
     const form = useSelector(state => state.form)
@@ -25,8 +26,6 @@ const FormInput = props => {
                 id: animals.length > 0 ? animals.id : 0,
                 ...form
             }
-
-            
         })
         
     }
@@ -36,6 +35,52 @@ const FormInput = props => {
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
+
+    const [myAnimal, setMyAnimal] = useState([])
+    
+
+    const retriveData = () => {
+
+        firestore.collection("animals").onSnapshot(( snapshot) => {
+
+           let myAni =  snapshot.docs.map(d => {
+
+                const {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip} = d.data()
+                console.log(id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
+                return {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
+
+            })
+
+            setMyAnimal(myAni);
+           //  console.log(myAni)
+        })
+
+        
+    }
+
+    // const addData = () => {
+
+    //     let id = (myAnimal.length === 0 ) ? 1 : myAnimal[myAnimal.length - 1].id + 1
+
+    //     firestore.collection("animals").doc(id).set( 
+            
+    //         {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip})
+
+    // }
+
+    const getAnimal = async () => {
+
+        const result = await axios.get(`http://localhost:80/api/animals`)
+        setMyAnimal(result.data)
+      
+    }
+
+    useEffect(() => {
+
+        getAnimal()
+        retriveData()
+
+    }, [])
 
     
 
