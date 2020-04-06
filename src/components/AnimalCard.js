@@ -80,8 +80,6 @@ const AnimalCard =  props => {
                  console.log(id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
                  return {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
 
-                
-
              })
 
              setMyAnimal(myAni);

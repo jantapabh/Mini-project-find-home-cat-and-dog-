@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import './Form.css'
 import { useSelector, useDispatch } from 'react-redux'
 import axios from 'axios'
-import Sidebar from './Sidebar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {firestore} from '../index.js'
 
@@ -12,8 +11,6 @@ import {firestore} from '../index.js'
 
 const FormInput = props => {
 
-
-  
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
     const animals = useSelector(state => state.animal)
@@ -23,10 +20,13 @@ const FormInput = props => {
         await axios.post(`http://localhost:80/api/animals`, form)
 
         dispatch({
+            
             type: 'ADD_ANIMAL', animal: {
                 id: animals.length > 0 ? animals.id : 0,
                 ...form
             }
+
+            
         })
         
     }
