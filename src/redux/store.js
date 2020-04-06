@@ -17,6 +17,34 @@ const initAuthData = {
 
 }
 
+//ส่วนแบบฟอร์ม
+
+const initialForm = {
+
+    id: 0,
+    imgUrl1: '',
+    imgUrl2: '',
+    imgUrl3: '',
+    strain: '',
+    name: '',
+    old: 0,
+    habits: '',
+    because: '',
+    status: '',
+    imgUrlUser: '',
+    nameUser: '',
+    email: '',
+    telephone: '',
+    facebook: '',
+    line: '',
+    address: '',
+    city: '',
+    state: '',
+    zip: 0
+
+
+}
+
 
 export const AuthActions = {
 
@@ -82,6 +110,7 @@ export const animalActions = {
             const respone = await axios.get(`http://localhost:80/api/animals`)
             const responeBody = await respone.data;
             console.log(responeBody)
+            console.log(respone)
             dispatch({
                 type: 'GET_ANIMALS_FAILED', animals: responeBody
             });
@@ -124,33 +153,7 @@ export const animalActions = {
     })
 }
 
-//ส่วนแบบฟอร์ม
 
-const initialForm = {
-
-    id: 0,
-    imgUrl1: '',
-    imgUrl2: '',
-    imgUrl3: '',
-    strain: '',
-    name: '',
-    old: 0,
-    habits: '',
-    because: '',
-    status: '',
-    imgUrlUser: '',
-    nameUser: '',
-    email: '',
-    telephone: '',
-    facebook: '',
-    line: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: 0
-
-
-}
 
 export const formActions = {
 

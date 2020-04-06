@@ -17,6 +17,10 @@ import { userActions } from '../redux/store'
 
 const AnimalCard = props => {
 
+
+
+   
+   //Reduc thunk ส่งผ่าน props
    
     const actionsAnimal = bindActionCreators(animalActions, useDispatch());
 
@@ -25,7 +29,6 @@ const AnimalCard = props => {
 
         actionsAnimal.getAnimals()
       
-        
     }, [])
 
 

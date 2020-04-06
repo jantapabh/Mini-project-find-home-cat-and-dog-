@@ -18,6 +18,7 @@ const ListItems = props => {
 
         actionsAnimal.getAnimals()
       
+      
         
     }, [])
 
