@@ -13,43 +13,16 @@ import { useSelector, useDispatch } from 'react-redux'
 
 
 
-const AnimalCard = async props => {
+const AnimalCard =  props => {
 
 
     //Reduc thunk ส่งผ่าน props
 
-    const animals = useSelector(state => state.animal)
+
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
 
-    const [animalTwo, setAnimalTwo] = useState([])
-
-    const getAnimals = async () => {
-
-        const result = await axios.get(`http://localhost:80/api/animals`)
-        const action = { type: 'GET_ANIMALS', animals: result.data };
-        //result.data เก็บค่าอยู่
-        dispatch(action)
-
-        setAnimalTwo(result.data)
-
-        return animalTwo.map((animalTwoS, index) => {
-
-            return (
-                <li key={index}>
-                    {' '} 
-                    {animalTwoS.id} : {animalTwoS.imgUrl1}
-                </li>
-            )
-        })
-    }
-
-    useEffect(() => {
-
-        getAnimals()
-
-    }, [])
-
+    
 
     const deleteAnimal = async () => {
 

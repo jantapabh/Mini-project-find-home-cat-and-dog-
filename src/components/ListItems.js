@@ -9,16 +9,10 @@ import axios from 'axios'
 
 const ListItems = props => {
 
+
+
     const animals = useSelector(state => state.animal)
     const dispatch = useDispatch()
-
-    const getAnimals = async () => {
-
-        const result = await axios.get(`http://localhost:80/api/animals`)
-        const action = { type: 'GET_ANIMALS', animals: result.data };
-        console.log(result.data)
-        dispatch(action)
-    }
 
     useEffect(() => {
 
@@ -28,6 +22,15 @@ const ListItems = props => {
 
     }, [])
    
+
+    const getAnimals = async () => {
+
+        const result = await axios.get(`http://localhost:80/api/animals`)
+        const action = { type: 'GET_ANIMALS', animals: result.data };
+        dispatch(action)
+    }
+
+
 
     if (!animals || !animals.length)
 
