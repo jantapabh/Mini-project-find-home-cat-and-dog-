@@ -91,67 +91,67 @@ const AuthReducer = (data = initAuthData, action) => {
 }
 // ทำต่อ
 
-export const animalActions = {
+// export const animalActions = {
 
-    getAnimalsSuccess: animals => ({
+//     getAnimalsSuccess: animals => ({
 
-        type: 'GET_ANIMALS_SUCCESS', animals
-    }),
+//         type: 'GET_ANIMALS_SUCCESS', animals
+//     }),
 
-    getAnimalsFailed: () => ({
-        type: 'GET_ANIMALS_FAILED'
-    }),
+//     getAnimalsFailed: () => ({
+//         type: 'GET_ANIMALS_FAILED'
+//     }),
 
-    getAnimals: () => async (dispatch) => {
+//     getAnimals: () => async (dispatch) => {
 
-        try {
+//         try {
 
-            console.log('Get Animal New')
-            const respone = await axios.get(`http://localhost:80/api/animals`)
-            const responeBody = await respone.data;
-            console.log(responeBody)
-            console.log(respone)
-            dispatch({
-                type: 'GET_ANIMALS_FAILED', animals: responeBody
-            });
+//             console.log('Get Animal New')
+//             const respone = await axios.get(`http://localhost:80/api/animals`)
+//             const responeBody = await respone.data;
+//             console.log(responeBody)
+//             console.log(respone)
+//             dispatch({
+//                 type: 'GET_ANIMALS_FAILED', animals: responeBody
+//             });
 
-        }
+//         }
 
-        catch (error) {
+//         catch (error) {
 
-            console.log(error);
+//             console.log(error);
 
-            dispatch({
+//             dispatch({
 
-                type: 'GET_ANIMALS_FAILED'
+//                 type: 'GET_ANIMALS_FAILED'
 
-            });
-        }
-    },
+//             });
+//         }
+//     },
 
-    addAnimal: (animals, form) => ({
-        type: 'ADD_ANIMAL', animals: {
+//     addAnimal: (animals, form) => ({
+//         type: 'ADD_ANIMAL', animals: {
 
-            id: animals.length > 0 ? animals[animals.length - 1].id + 1 : 0,
-            ...form
-        }
-    }),
+//             id: animals.length > 0 ? animals[animals.length - 1].id + 1 : 0,
+//             ...form
+//         }
+//     }),
 
-    deleteAnimal: (id) => ({
+//     deleteAnimal: (id) => ({
 
-        type: 'DELETE_ANIMAL',
-        id: id
-    }),
-    updateAnimal: (id, form) => ({
+//         type: 'DELETE_ANIMAL',
+//         id: id
+//     }),
+//     updateAnimal: (id, form) => ({
 
-        type: 'UPDATE_ANIMAL',
-        id: id,
-        animals: {
-            ...form, id: id
-        }
+//         type: 'UPDATE_ANIMAL',
+//         id: id,
+//         animals: {
+//             ...form, id: id
+//         }
 
-    })
-}
+//     })
+// }
 
 
 
@@ -371,4 +371,4 @@ const reducers = combineReducers({
 
 
 //เรียกใช้ redux-thunk
-export const store = createStore(reducers, applyMiddleware(logger, thunk));
+export const store = createStore(reducers, applyMiddleware(logger));

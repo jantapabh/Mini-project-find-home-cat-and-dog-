@@ -1,39 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AnimalCard.css';
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ListGroup, Carousel } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
 import {firestore} from '../index.js'
 import { useSelector, useDispatch } from 'react-redux'
-import { bindActionCreators } from 'redux';
-import { animalActions } from '../redux/store'
-import { userActions } from '../redux/store'
+
+
+
 
 
 
 const AnimalCard = props => {
 
-
-
    
    //Reduc thunk ส่งผ่าน props
    
-    const actionsAnimal = bindActionCreators(animalActions, useDispatch());
 
 
-    useEffect(() => {
-
-        actionsAnimal.getAnimals()
-      
-    }, [])
-
-
+    const animals = useSelector(state => state.animal)
     const form = useSelector(state => state.form)
-    const actions = bindActionCreators(animalActions, useDispatch())
     const dispatch = useDispatch();
 
 

@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import './Form.css'
-import { formActions } from '../redux/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { animalActions } from '../redux/store'
-import { bindActionCreators } from 'redux';
 import axios from 'axios'
 import Sidebar from './Sidebar'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,20 +13,21 @@ import {firestore} from '../index.js'
 const FormInput = props => {
 
 
-    const actionsAnimal = bindActionCreators(animalActions, useDispatch())
-    const actionForm = bindActionCreators(formActions, useDispatch())
+  
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
     const animals = useSelector(state => state.animal)
 
     const addAnimal = async () => {
 
-      
-
         await axios.post(`http://localhost/api/animals`, form)
 
-        actionsAnimal.addAnimal(animals, form)
-
+        dispatch({
+            type: 'ADD_ANIMAL', animal: {
+                id: animals.length > 0 ? animals.id: 0,
+                ...form
+            }
+        })
         
     }
 
@@ -79,7 +77,7 @@ const FormInput = props => {
                                                     name="imgUrl1"
                                                     className="form-control"
                                                     id="imgUrl1"
-                                                    onChange={(e) => actionForm.changeImgurl1(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_IMGURL1', imgUrl1: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -88,7 +86,7 @@ const FormInput = props => {
                                                     name="imgUrl2"
                                                     className="form-control"
                                                     id="imgUrl2"
-                                                    onChange={(e) => actionForm.changeImgurl2(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_IMGURL2', imgUrl2: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -97,7 +95,7 @@ const FormInput = props => {
                                                     name="imgUrl3"
                                                     className="form-control"
                                                     id="imgUrl3"
-                                                    onChange={(e) => actionForm.changeImgurl3(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_IMGURL3', imgUrl3: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -106,7 +104,7 @@ const FormInput = props => {
                                                     name="strain"
                                                     className="form-control"
                                                     id="strain"
-                                                    onChange={(e) => actionForm.changeStrain(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_STRAIN', starin: e.target.value })} 
                                                 />
 
                                             </div>
@@ -116,7 +114,7 @@ const FormInput = props => {
                                                     name="name"
                                                     className="form-control"
                                                     id="name"
-                                                    onChange={(e) => actionForm.changeName(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_NAME', name: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -125,7 +123,7 @@ const FormInput = props => {
                                                     name="old"
                                                     className="form-control"
                                                     id="old"
-                                                    onChange={(e) => actionForm.changeOld(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_OLD', old: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -134,7 +132,7 @@ const FormInput = props => {
                                                     name="habit"
                                                     className="form-control"
                                                     id="habit"
-                                                    onChange={(e) => actionForm.changeHabit(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_HABIT', habits: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -143,7 +141,7 @@ const FormInput = props => {
                                                     name="because"
                                                     className="form-control"
                                                     id="because"
-                                                    onChange={(e) => actionForm.changeBecause(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_BECAUSE', because: e.target.value })} 
                                                 />
                                             </div>
                                             <div className="form-group">
@@ -152,7 +150,7 @@ const FormInput = props => {
                                                     name="status"
                                                     className="form-control"
                                                     id="status"
-                                                    onChange={(e) => actionForm.changeStatus(e.target.value)}
+                                                    onChange={(e) => dispatch({ type: 'CHANGE_STATUS', status: e.target.value })} 
                                                 />
                                             </div>
                                         </form>
@@ -176,7 +174,7 @@ const FormInput = props => {
                                         name="imgUrlUser"
                                         className="form-control"
                                         id="imgUrlUser"
-                                        onChange={(e) => actionForm.changeImgurlUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_IMGURL_USER', imgUrlUser: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -185,7 +183,7 @@ const FormInput = props => {
                                         name="nameUser"
                                         className="form-control"
                                         id="nameUser"
-                                        onChange={(e) => actionForm.changeNameUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_NAME_USER', nameUser: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -194,7 +192,7 @@ const FormInput = props => {
                                         name="email"
                                         className="form-control"
                                         id="email"
-                                        onChange={(e) => actionForm.changeEmailUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_EMAIL_USER', email: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -203,7 +201,7 @@ const FormInput = props => {
                                         name="telephone"
                                         className="form-control"
                                         id="telephone"
-                                        onChange={(e) => actionForm.changeTelephoneUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_TELEPHONE_USER', telephone: e.target.value })} 
 
                                     />
                                 </div>
@@ -213,7 +211,7 @@ const FormInput = props => {
                                         name="facebook"
                                         className="form-control"
                                         id="facebook"
-                                        onChange={(e) => actionForm.changeFacebookUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_FACEBOOK_USER', facebook: e.target.value })} 
 
                                     />
                                 </div>
@@ -223,7 +221,7 @@ const FormInput = props => {
                                         name="line"
                                         className="form-control"
                                         id="line"
-                                        onChange={(e) => actionForm.changeLineUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_LINE_USER', line: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -232,7 +230,7 @@ const FormInput = props => {
                                         name="address"
                                         className="form-control"
                                         id="address"
-                                        onChange={(e) => actionForm.changeAddressUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_ADDRESS_USER', address: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -241,7 +239,7 @@ const FormInput = props => {
                                         name="city"
                                         className="form-control"
                                         id="city"
-                                        onChange={(e) => actionForm.changeCityUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_CITY_USER', city: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -250,7 +248,7 @@ const FormInput = props => {
                                         name="state"
                                         className="form-control"
                                         id="state"
-                                        onChange={(e) => actionForm.changeStateUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_STATE_USER', state: e.target.value })} 
                                     />
                                 </div>
                                 <div className="form-group">
@@ -259,7 +257,7 @@ const FormInput = props => {
                                         name="zip"
                                         className="form-control"
                                         id="zip"
-                                        onChange={(e) => actionForm.changeZipUser(e.target.value)}
+                                        onChange={(e) => dispatch({ type: 'CHANGE_ZIP_USER', zip: e.target.value })} 
                                     />
                                 </div>
                             </div>
@@ -268,7 +266,7 @@ const FormInput = props => {
                 </TabPane>
             </TabContent>
             <div className="text-center">
-            <Button color="primary" onClick={addAnimal} style={{ margin: 15, padding: 10}}>ADD DOG OR CAT AND YOUR DATA</Button>
+            <Button color="primary" onClick={() => addAnimal()} style={{ margin: 15, padding: 10}}>ADD DOG OR CAT AND YOUR DATA</Button>
             </div>
         </div>
 

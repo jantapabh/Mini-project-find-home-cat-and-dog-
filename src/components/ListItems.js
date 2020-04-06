@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './List.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { bindActionCreators } from 'redux';
-import { animalActions } from '../redux/store'
 import AnimalCard from './AnimalCard'
 import { userActions } from '../redux/store'
 
@@ -11,16 +9,9 @@ import { userActions } from '../redux/store'
 const ListItems = props => {
 
     const animals = useSelector(state => state.animal)
-    const actionsAnimal = bindActionCreators(animalActions, useDispatch());
+   
 
 
-    useEffect(() => {
-
-        actionsAnimal.getAnimals()
-      
-      
-        
-    }, [])
 
     if (!animals || !animals.length)
 
