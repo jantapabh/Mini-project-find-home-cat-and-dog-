@@ -24,7 +24,7 @@ const FormInput = props => {
 
     const addAnimal = async () => {
 
-        let id = animals[animals.length - 1].id + 1;
+      
 
         await axios.post(`http://localhost/api/animals`, form)
 
