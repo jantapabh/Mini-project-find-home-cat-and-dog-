@@ -10,10 +10,41 @@ import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MD
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { userActions } from '../redux/store'
+import {firestore} from '../index.js'
 
 
 
 const AnimalCard = props => {
+
+    const [animals, setAnimals] = ([])
+
+    useEffect(() => {
+      
+
+        retriveData()
+        
+
+    }, [])
+
+    const retriveData = () => {
+
+        firestore.collection("animals").onSnapshot( (snapshot) => {
+
+            console.log(snapshot.docs);
+         let myAnimal = snapshot.docs.map( d => {
+
+                
+            const {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip } = d.data()
+           
+            return {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip }
+        })
+
+        setAnimals(myAnimal)
+
+
+        })
+    }
+
 
 
     const form = useSelector(state => state.form)
