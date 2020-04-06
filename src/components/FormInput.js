@@ -15,38 +15,6 @@ import {firestore} from '../index.js'
 
 const FormInput = props => {
 
-    const [myAnimals, setMyAnimals] = useState([])
-
-    useEffect(() => {
-      
-
-        retriveData()
-        
-
-    }, [])
-
-    const retriveData = () => {
-
-        firestore.collection("animals").onSnapshot( (snapshot) => {
-
-            console.log(snapshot.docs);
-            
-         let myAnimal = snapshot.docs.map( d => {
-
-                
-         const  {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip } = d.data()
-           
-            return {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip }
-        })
-
-        setMyAnimals(myAnimal)
-
-
-        })
-    }
-
-    
-
 
     const actionsAnimal = bindActionCreators(animalActions, useDispatch())
     const actionForm = bindActionCreators(formActions, useDispatch())
@@ -62,7 +30,7 @@ const FormInput = props => {
 
         actionsAnimal.addAnimal(animals, form)
 
-        firestore.collection("animals").doc(id).set(animals)
+        
     }
 
     const [activeTab, setActiveTab] = useState('1');

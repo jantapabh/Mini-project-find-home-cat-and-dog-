@@ -17,38 +17,7 @@ import { userActions } from '../redux/store'
 
 const AnimalCard = props => {
 
-    const [animals, setAnimals] = useState([])
-
-    useEffect(() => {
-      
-
-        retriveData()
-        
-
-    }, [])
-
-    const retriveData = () => {
-
-        firestore.collection("animals").onSnapshot( (snapshot) => {
-
-            console.log(snapshot.data());
-
-         let myAnimal = snapshot.docs.map( d => {
- 
-            const {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip } = d.data()
-           
-            return {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip }
-            
-       
-        })
-
-        setAnimals(myAnimal)
-      
-
-
-        })
-    }
-  
+   
     const actionsAnimal = bindActionCreators(animalActions, useDispatch());
 
 
