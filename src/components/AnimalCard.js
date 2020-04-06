@@ -21,8 +21,27 @@ const AnimalCard =  props => {
 
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
+    const animals = useSelector(state => state.animal)
 
-    
+    const [myAnimal, setMyAnimal] = useState([])
+
+    const getAnimal = async () => {
+
+        const result = await axios.get(`http://localhost:80/api/animals`)
+        setMyAnimal(result.data)
+      
+    }
+
+    useEffect(() => {
+
+        getAnimal()
+
+        // console.log(getAnimals())
+
+        retriveData()
+
+
+    }, [])
 
     const deleteAnimal = async () => {
 
@@ -50,6 +69,25 @@ const AnimalCard =  props => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
+     const retriveData = () => {
+
+         firestore.collection("animals").onSnapshot(( snapshot) => {
+
+            let myAni =  snapshot.docs.map(d => {
+
+                 const {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip} = d.data()
+                 console.log(id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
+                 return {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
+
+                
+
+             })
+
+             setMyAnimal(myAni);
+             console.log(myAni)
+         })
+     }
 
 
 
