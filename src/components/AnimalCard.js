@@ -39,7 +39,6 @@ const AnimalCard = props => {
            
             return {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip }
             
-            console.log(d.data())
        
         })
 
