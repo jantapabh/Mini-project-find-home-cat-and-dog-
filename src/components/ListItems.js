@@ -16,12 +16,15 @@ const ListItems = props => {
 
         const result = await axios.get(`http://localhost:80/api/animals`)
         const action = { type: 'GET_ANIMALS', animals: result.data };
+        console.log(result.data)
         dispatch(action)
     }
 
     useEffect(() => {
 
         getAnimals()
+        // console.log(getAnimals())
+
 
     }, [])
    

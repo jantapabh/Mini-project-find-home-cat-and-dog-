@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ListGroup, Carousel } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
-import {firestore} from '../index.js'
+import { firestore } from '../index.js'
 import { useSelector, useDispatch } from 'react-redux'
 
 
@@ -13,30 +13,42 @@ import { useSelector, useDispatch } from 'react-redux'
 
 
 
-const AnimalCard = props => {
+const AnimalCard = async props => {
 
-   
-   //Reduc thunk ส่งผ่าน props
-   
 
+    //Reduc thunk ส่งผ่าน props
 
     const animals = useSelector(state => state.animal)
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
 
+    const [animalTwo, setAnimalTwo] = useState([])
+
     const getAnimals = async () => {
 
         const result = await axios.get(`http://localhost:80/api/animals`)
         const action = { type: 'GET_ANIMALS', animals: result.data };
+        //result.data เก็บค่าอยู่
         dispatch(action)
-        console.log(result.data)
+
+        setAnimalTwo(result.data)
+
+        return animalTwo.map((animalTwoS, index) => {
+
+            return (
+                <li key={index}>
+                    {' '} 
+                    {animalTwoS.id} : {animalTwoS.imgUrl1}
+                </li>
+            )
+        })
     }
 
     useEffect(() => {
 
         getAnimals()
 
-    }, []) 
+    }, [])
 
 
     const deleteAnimal = async () => {
@@ -47,7 +59,7 @@ const AnimalCard = props => {
 
     const updateAnimal = async () => {
         const result = await axios.put(`http://localhost:80/api/animals/${props.id}`, form)
-        dispatch({ type: 'UPDATE_ANIMAL', id: props.id, animals: {...form, id: props.id}})
+        dispatch({ type: 'UPDATE_ANIMAL', id: props.id, animals: { ...form, id: props.id } })
     }
 
 
@@ -115,7 +127,7 @@ const AnimalCard = props => {
                                 </strong>
                             </h3>
                             <p>
-                                    HABIT : {props.habits} <br />
+                                HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
