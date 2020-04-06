@@ -7,6 +7,17 @@ import {BrowserRouter, Router, Route, Link} from 'react-router-dom'
 import {browserHistory} from 'react-router'
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import config from './config'
+
+
+if(firebase.apps.length === 0)
+
+  firebase.initializeApp(config)
+
+
+  export const firestore = firebase.firestore()
 
 render(
   <BrowserRouter>
