@@ -24,7 +24,7 @@ const FormInput = props => {
 
         dispatch({
             type: 'ADD_ANIMAL', animal: {
-                id: animals.length > 0 ? animals.id: 0,
+                id: animals.length > 0 ? animals.id : 0,
                 ...form
             }
         })
