@@ -68,6 +68,8 @@ const FormInput = props => {
 
     // }
 
+    
+
     const getAnimal = async () => {
 
         const result = await axios.get(`http://localhost:80/api/animals`)
