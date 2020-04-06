@@ -2,16 +2,29 @@ import React, { useState, useEffect } from 'react'
 import './List.css'
 import { useSelector, useDispatch } from 'react-redux'
 import AnimalCard from './AnimalCard'
-import { userActions } from '../redux/store'
+import axios from 'axios'
+
 
 //แสดงรายการที่เพิ่มของหมาและแมว
 
 const ListItems = props => {
 
     const animals = useSelector(state => state.animal)
+    const dispatch = useDispatch()
+
+    const getAnimals = async () => {
+
+        const result = await axios.get(`http://localhost/api/animals`)
+        const action = { type: 'GET_ANIMAL', animals: result.data };
+        dispatch(action)
+    }
+
+    useEffect(() => {
+
+        getAnimals()
+
+    }, [])
    
-
-
 
     if (!animals || !animals.length)
 

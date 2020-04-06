@@ -28,12 +28,12 @@ const AnimalCard = props => {
     const deleteAnimal = async () => {
 
         const result = await axios.delete(`http://localhost:80/api/animals/${props.id}`)
-        actions.deleteAnimal(props.id)
+        dispatch({ type: 'DELETE_ANIMAL', id: props.id })
     }
 
     const updateAnimal = async () => {
         const result = await axios.put(`http://localhost:80/api/animals/${props.id}`, form)
-        actions.updateAnimal(props.id, form)
+        dispatch({ type: 'UPDATE_ANIMAL', id: props.id, animals: {...form, id: props.id}})
     }
 
 
