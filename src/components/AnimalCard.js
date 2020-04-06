@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AnimalCard.css';
-import { animalActions } from '../redux/store'
-import { bindActionCreators } from 'redux';
-import { useSelector, useDispatch } from 'react-redux';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ListGroup, Carousel } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { userActions } from '../redux/store'
 import {firestore} from '../index.js'
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import { animalActions } from '../redux/store'
+import { userActions } from '../redux/store'
 
 
 
 const AnimalCard = props => {
 
-    const [animals, setAnimals] = ([])
+    const [animals, setAnimals] = useState([])
 
     useEffect(() => {
       
@@ -30,22 +31,34 @@ const AnimalCard = props => {
 
         firestore.collection("animals").onSnapshot( (snapshot) => {
 
-            console.log(snapshot.docs);
-            
-         let myAnimal = snapshot.docs.map( d => {
+            console.log(snapshot.data());
 
-                
+         let myAnimal = snapshot.docs.map( d => {
+ 
             const {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip } = d.data()
            
             return {id, imgUrl1, imgUrl2, imgUrl3, strain,name, old, habits, because, status, imgUrlUser, nameUser, email,facebook, line, address, city, state, zip }
+            
+            console.log(d.data())
+       
         })
 
         setAnimals(myAnimal)
+      
 
 
         })
     }
+  
+    const actionsAnimal = bindActionCreators(animalActions, useDispatch());
 
+
+    useEffect(() => {
+
+        actionsAnimal.getAnimals()
+      
+        
+    }, [])
 
 
     const form = useSelector(state => state.form)
