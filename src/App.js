@@ -13,8 +13,6 @@ import pic6 from './static/images/pic6.jpg'
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
-import { AuthActions } from './redux/store'
-import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch, Provider } from 'react-redux'
 
 
@@ -25,28 +23,6 @@ const App = () => {
 
   const [loading, setLoading] = useState(false)
   const auth = useSelector(state => state.Auth);
-  const actions = bindActionCreators(AuthActions, useDispatch())
-
-  useEffect(() => {
-
-    actions.getLoginStatus().then(res => setLoading(false))
-
-  }, []);
-
-  if (loading) {
-    return "Loading ..."
-  }
-  
-  if (auth.accessToken && auth.psuInfo) {
-    return (
-
-      <div>
-        <Topbar />
-        <Login />
-      </div>
-
-    )
-  }
 
 
   return (

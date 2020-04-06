@@ -20,7 +20,7 @@ const FormInput = props => {
 
     const addAnimal = async () => {
 
-        await axios.post(`http://localhost/api/animals`, form)
+        await axios.post(`http://localhost:80/api/animals`, form)
 
         dispatch({
             type: 'ADD_ANIMAL', animal: {
@@ -266,7 +266,7 @@ const FormInput = props => {
                 </TabPane>
             </TabContent>
             <div className="text-center">
-            <Button color="primary" onClick={() => addAnimal()} style={{ margin: 15, padding: 10}}>ADD DOG OR CAT AND YOUR DATA</Button>
+            <Button color="primary" onClick={addAnimal} style={{ margin: 15, padding: 10}}>ADD DOG OR CAT AND YOUR DATA</Button>
             </div>
         </div>
 

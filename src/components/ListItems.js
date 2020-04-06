@@ -14,8 +14,8 @@ const ListItems = props => {
 
     const getAnimals = async () => {
 
-        const result = await axios.get(`http://localhost/api/animals`)
-        const action = { type: 'GET_ANIMAL', animals: result.data };
+        const result = await axios.get(`http://localhost:80/api/animals`)
+        const action = { type: 'GET_ANIMALS', animals: result.data };
         dispatch(action)
     }
 
