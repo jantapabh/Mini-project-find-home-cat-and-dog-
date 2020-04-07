@@ -15,7 +15,7 @@ import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
 import { useSelector, useDispatch, Provider } from 'react-redux'
 import Animal from './components/Animal';
-import AnimalTest from './components/AnimalTest';
+
 
 
 axios.defaults.withCredentials = true
