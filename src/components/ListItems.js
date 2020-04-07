@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './List.css'
-import { useSelector, useDispatch } from 'react-redux'
 import { firestore } from '../index'
 import axios from 'axios'
 import Animal from './Animal'
@@ -75,9 +74,7 @@ const ListItems = props => {
                 return (
 
                     <Animal key={index} animal={animal}
-                    // deleteAnimal={deleteAnimal}
-                    // editAnimal={editAnimal}
-
+                    
                     />
 
                 )
@@ -92,28 +89,14 @@ const ListItems = props => {
     }
 
 
-
-
-
-    const animals = useSelector(state => state.animal)
-    const dispatch = useDispatch()
-
-
     useEffect(() => {
 
-        getAnimals()
+       
         retriveData()
 
 
     }, [])
 
-
-    const getAnimals = async () => {
-
-        const result = await axios.get(`http://localhost:80/api/animals`)
-        const action = { type: 'GET_ANIMALS', animals: result.data };
-        dispatch(action)
-    }
 
 
     return (

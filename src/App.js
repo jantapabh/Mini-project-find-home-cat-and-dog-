@@ -9,12 +9,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import FormInput from './components/FormInput';
 import ListItems from './components/ListItems';
 import Login from './components/Login';
-import pic6 from './static/images/pic6.jpg'
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
 import { useSelector, useDispatch, Provider } from 'react-redux'
-import Animal from './components/Animal';
 
 
 
