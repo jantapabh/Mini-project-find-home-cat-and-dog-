@@ -14,8 +14,7 @@ import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
 import { useSelector, useDispatch, Provider } from 'react-redux'
-import AnimalTest from './components/AnimalTest';
-
+import Animal from './components/Animal';
 
 
 axios.defaults.withCredentials = true
@@ -31,7 +30,7 @@ const App = () => {
     <div>
       <div className="Topbar">
         <Topbar />
-        <AnimalTest />
+        {/* <AnimalTest /> */}
       </div>
       <BrowserRouter>
         <Route exact path="/" component={Main} />

@@ -1,10 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import Animal from './Animal'
-import { firestore } from './index'
+import { firestore } from '../index'
 
 const AnimalTest = () => {
 
+    const [id, setId] = useState(0)
+    const [imgUrl1, setImgUrl1] = useState('')
+    const [imgUrl2, setImgUrl2] = useState('')
+    const [imgUrl3, setImgUrl3] = useState('')
+    const [strain, setStrain] = useState('')
     const [name, setName] = useState('')
+    const [old, setOld] = useState(0)
+    const [habits, setHabits] = useState('')
+    const [because, setBecause] = useState('')
+    const [status, setStatus] = useState('')
+    const [imgUrlUser, setImgUrlUser] = useState('')
+    const [nameUser, setNameUser] = useState('')
+    const [email, setEmail] = useState('')
+    const [telephone, setTelephone] = useState('')
+    const [facebook, setFacebook] = useState('')
+    const [line, setLine] = useState('')
+    const [address, setAddress] = useState('')
+    const [city, setCity] = useState('')
+    const [state, setState] = useState('')
+    const [zip, setZip] = useState('')
     const [animal, setAnimal] = useState([{}])
 
     useEffect(() => {
@@ -28,7 +47,7 @@ const AnimalTest = () => {
             })
 
             setAnimal(myAnimal)
-            console.log(myAnimal)
+          
 
         })
     }
@@ -67,14 +86,10 @@ const AnimalTest = () => {
         <div>
 
             <div>
-                <h1>To do</h1>
-                <input type="text" name="name" onChange={(e) => setName(e.target.value)} />
+                
                 <button onClick={addAnimal}>ADD</button>
-                <ul style={{ display: 'flex', listStyle: 'none' }}>{renderTask()}</ul>
+               
             </div>
-
-
-
         </div>
 
     )
