@@ -36,7 +36,7 @@ const App = () => {
         <Route exact path="/" component={Main} />
         <Route path="/FormInput" component={FormInput} />
         <Route path="/ListItems" component={ListItems} />
-        <Route path="/login" component={Login} />
+        <Route path="/lo gin" component={Login} />
         <Route path="/Logout" component={Logout} />
       </BrowserRouter>
     </div>

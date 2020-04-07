@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import './Form.css'
-import { useSelector, useDispatch } from 'react-redux'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Animal from './Animal'
 import { firestore } from '../index'
 
 
-
+//ใช้ firebase กับ Hook
 
 const FormInput = props => {
 
@@ -90,39 +89,14 @@ const FormInput = props => {
     }
 
 
-    const form = useSelector(state => state.form)
-    const dispatch = useDispatch();
-    // const animals = useSelector(state => state.animal)
-
-    // const addAnimal = async () => {
-
-    //     await axios.post(`http://localhost:80/api/animals`, form)
-
-    //     dispatch({
-            
-    //         type: 'ADD_ANIMAL', animal: {
-    //             id: animals.length > 0 ? animals.id : 0,
-    //             ...form
-
-            
-    //         }
-
-            
-    //     })
-
-    // }
-
     const [activeTab, setActiveTab] = useState('1');
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
 
-    const [myAnimal, setMyAnimal] = useState([])
-    
 
     
-
     return (
 
         <div>
