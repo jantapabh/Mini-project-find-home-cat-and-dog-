@@ -150,21 +150,21 @@ const AnimalCard =  props => {
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={imgUrl1}
+                                            src={props.imgUrl1}
                                             style={{ height: 280, width: 330 }}
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={imgUrl2}
+                                            src={props.imgUrl2}
                                             style={{ height: 300, width: 280 }}
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={imgUrl3}
+                                            src={props.imgUrl3}
                                             style={{ height: 280, width: 330 }}
                                         />
                                     </Carousel.Item>
@@ -179,14 +179,14 @@ const AnimalCard =  props => {
                             </a>
                             <h3 className="font-weight-bold mb-1 p-0">
                                 <strong>
-                                    STRAIN : {strain} <br />
-                                    NAME : {name} <br />
-                                    OLD: {old} ปี<br />
+                                    STRAIN : {props.strain} <br />
+                                    NAME : {props.name} <br />
+                                    OLD: {props.old} ปี<br />
                                 </strong>
                             </h3>
                             <p>
-                                HABIT : {habits} <br />
-                                    BECAUSE : {because} <br />
+                                HABIT : {props.habits} <br />
+                                    BECAUSE : {props.because} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
                             <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn>
@@ -203,19 +203,19 @@ const AnimalCard =  props => {
                         <div className="d-flex justify-content-center mb-5">
                             <img
                                 className="img-fluid"
-                                src={imgUrlUser}
+                                src={props.imgUrlUser}
                                 style={{ width: 250, height: 180 }}
                             />
                         </div>
                         <MDBMask overlay="white-slight" />
                     </MDBView>
-                    <ListGroup className="d-flex justify-content-center mg-1">
-                        <ListGroup.Item>NAME : {name}</ListGroup.Item>
-                        <ListGroup.Item>EMAIL : {email}</ListGroup.Item>
-                        <ListGroup.Item>TELEPHONE : {telephone}</ListGroup.Item>
-                        <ListGroup.Item>FACEBOOK : {facebook}</ListGroup.Item>
-                        <ListGroup.Item>LINE : {line}</ListGroup.Item>
-                        <ListGroup.Item>ADDRESS: {address}  {city}  {state} {zip}</ListGroup.Item>
+                    <ListGroup className="d-flex justify-con  tent-center mg-1">
+                        <ListGroup.Item>NAME : {props.name}</ListGroup.Item>
+                        <ListGroup.Item>EMAIL : {props.email}</ListGroup.Item>
+                        <ListGroup.Item>TELEPHONE : {props.telephone}</ListGroup.Item>
+                        <ListGroup.Item>FACEBOOK : {props.facebook}</ListGroup.Item>
+                        <ListGroup.Item>LINE : {props.line}</ListGroup.Item>
+                        <ListGroup.Item>ADDRESS: {props.address}  {props.city}  {props.state} {props.zip}</ListGroup.Item>
                     </ListGroup>
                 </Modal.Body>
                 <Modal.Footer>
