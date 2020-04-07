@@ -7,93 +7,57 @@ import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MD
 import Modal from "react-bootstrap/Modal";
 import { firestore } from '../index.js'
 import { useSelector, useDispatch } from 'react-redux'
-import Animal from './Animal'
-
-
-
-
 
 
 const AnimalCard =  props => {
     
 
 
-    const [id, setId] = useState(0)
-    const [imgUrl1, setImgUrl1] = useState('')
-    const [imgUrl2, setImgUrl2] = useState('')
-    const [imgUrl3, setImgUrl3] = useState('')
-    const [strain, setStrain] = useState('')
-    const [name, setName] = useState('')
-    const [old, setOld] = useState(0)
-    const [habits, setHabits] = useState('')
-    const [because, setBecause] = useState('')
-    const [status, setStatus] = useState('')
-    const [imgUrlUser, setImgUrlUser] = useState('')
-    const [nameUser, setNameUser] = useState('')
-    const [email, setEmail] = useState('')
-    const [telephone, setTelephone] = useState('')
-    const [facebook, setFacebook] = useState('')
-    const [line, setLine] = useState('')
-    const [address, setAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState('')
-    const [animal, setAnimal] = useState([{}])
+    // const [id, setId] = useState(0)
+    // const [imgUrl1, setImgUrl1] = useState('')
+    // const [imgUrl2, setImgUrl2] = useState('')
+    // const [imgUrl3, setImgUrl3] = useState('')
+    // const [strain, setStrain] = useState('')
+    // const [name, setName] = useState('')
+    // const [old, setOld] = useState(0)
+    // const [habits, setHabits] = useState('')
+    // const [because, setBecause] = useState('')
+    // const [status, setStatus] = useState('')
+    // const [imgUrlUser, setImgUrlUser] = useState('')
+    // const [nameUser, setNameUser] = useState('')
+    // const [email, setEmail] = useState('')
+    // const [telephone, setTelephone] = useState('')
+    // const [facebook, setFacebook] = useState('')
+    // const [line, setLine] = useState('')
+    // const [address, setAddress] = useState('')
+    // const [city, setCity] = useState('')
+    // const [state, setState] = useState('')
+    // const [zip, setZip] = useState('')
+    // const [animal, setAnimal] = useState([{}])
 
 
-    useEffect(() => {
+    // const renderAnimal = () => {
+    //     console.log(animal)
+    //     if (animal && animal.length) {
+    //         return animal.map((animal, index) => {
+    //             return (
 
-        retriveData()
+    //                 <Animal key={index} animal={animal}
+
+    //                 />
+
+    //             )
+    //         })
+
+    //     }
+    //     else {
+
+    //         return <li>No Animal</li>
+
+    //     }
+    // }
 
 
-    }, [])
-
-
-    const retriveData = () => {
-
-        firestore.collection("animals").onSnapshot(snapshot => {
-
-            console.log(snapshot);
-
-            let myAnimal = snapshot.docs.map(d => {
-                const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
-                console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
-                return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip }
-            })
-
-            setAnimal(myAnimal)
-          
-
-        })
-    }
-
-    const renderAnimal = () => {
-        console.log(animal)
-        if (animal && animal.length) {
-            return animal.map((animal, index) => {
-                return (
-
-                    <Animal key={index} animal={animal}
-
-                    />
-
-                )
-            })
-
-        }
-        else {
-
-            return <li>No Animal</li>
-
-        }
-    }
-
-    const addAnimal = () => {
-
-        let id = (animal.length === 0) ? 1 : animal[animal.length - 1].id + 1
-        firestore.collection("animals").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
-
-    }
 
     //Reduc thunk ส่งผ่าน props
     
@@ -103,21 +67,6 @@ const AnimalCard =  props => {
     const animals = useSelector(state => state.animal)
 
     
-
-    const getAnimal = async () => {
-
-        const result = await axios.get(`http://localhost:80/api/animals`)
-        // setMyAnimal(result.data)
-      
-    }
-
-    useEffect(() => {
-
-        getAnimal()
-        retriveData()
-
-
-    }, [])
 
     const deleteAnimal = async () => {
 
@@ -195,7 +144,7 @@ const AnimalCard =  props => {
                                 </strong>
                             </h3>
                             <p>
-                                HABIT : {props.habits} <br />
+                                    HABIT : {props.habits} <br />
                                     BECAUSE : {props.because} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
