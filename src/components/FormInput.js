@@ -25,9 +25,13 @@ const FormInput = props => {
             type: 'ADD_ANIMAL', animal: {
                 id: animals.length > 0 ? animals.id : 0,
                 ...form
+
+            
             }
+
+            
         })
-        
+
     }
 
     const [activeTab, setActiveTab] = useState('1');
@@ -57,19 +61,7 @@ const FormInput = props => {
 
         
     }
-
-    // const addData = () => {
-
-    //     let id = (myAnimal.length === 0 ) ? 1 : myAnimal[myAnimal.length - 1].id + 1
-
-    //     firestore.collection("animals").doc(id).set( 
-            
-    //         {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip})
-
-    // }
-
     
-
     const getAnimal = async () => {
 
         const result = await axios.get(`http://localhost:80/api/animals`)
