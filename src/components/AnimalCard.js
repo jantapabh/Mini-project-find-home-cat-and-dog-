@@ -17,7 +17,7 @@ const AnimalCard =  props => {
 
 
     //Reduc thunk ส่งผ่าน props
-
+    
 
     const form = useSelector(state => state.form)
     const dispatch = useDispatch();
@@ -25,27 +25,27 @@ const AnimalCard =  props => {
 
     //Data from firestore 
      
-    const [myAnimal, setMyAnimal] = useState([])
-    const [id, setId] = useState(0)
-    const [imgUrl1, setImgUrl1] = useState('')
-    const [imgUrl2, setImgUrl2] = useState('')
-    const [imgUrl3, setImgUrl3] = useState('')
-    const [strain, setStrain] = useState('')
-    const [name, setName] = useState('')
-    const [old, setOld] = useState(0)
-    const [habits, setHabits] = useState('')
-    const [because, setBecause] = useState('')
-    const [status, setStatus] = useState('')
-    const [imgUrlUser, setImgUrlUser] = useState('')
-    const [nameUser, setNameUser] = useState('')
-    const [email, setEmail] = useState('')
-    const [telephone, setTelephone] = useState('')
-    const [facebook, setFacebook] = useState('')
-    const [line, setLine] = useState('')
-    const [address, setAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState('')
+    // const [myAnimal, setMyAnimal] = useState([])
+    // const [id, setId] = useState(0)
+    // const [imgUrl1, setImgUrl1] = useState('')
+    // const [imgUrl2, setImgUrl2] = useState('')
+    // const [imgUrl3, setImgUrl3] = useState('')
+    // const [strain, setStrain] = useState('')
+    // const [name, setName] = useState('')
+    // const [old, setOld] = useState(0)
+    // const [habits, setHabits] = useState('')
+    // const [because, setBecause] = useState('')
+    // const [status, setStatus] = useState('')
+    // const [imgUrlUser, setImgUrlUser] = useState('')
+    // const [nameUser, setNameUser] = useState('')
+    // const [email, setEmail] = useState('')
+    // const [telephone, setTelephone] = useState('')
+    // const [facebook, setFacebook] = useState('')
+    // const [line, setLine] = useState('')
+    // const [address, setAddress] = useState('')
+    // const [city, setCity] = useState('')
+    // const [state, setState] = useState('')
+    // const [zip, setZip] = useState('')
     
   
 
@@ -54,7 +54,7 @@ const AnimalCard =  props => {
     const getAnimal = async () => {
 
         const result = await axios.get(`http://localhost:80/api/animals`)
-        setMyAnimal(result.data)
+        // setMyAnimal(result.data)
       
     }
 
@@ -104,32 +104,12 @@ const AnimalCard =  props => {
                 
                   console.log(id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
                    
-                  setId(id)
-                  setImgUrl1(imgUrl1)
-                  setImgUrl2(imgUrl2)
-                  setImgUrl3(imgUrl3)
-                  setStrain(strain)
-                  setName(name)
-                  setOld(old)
-                  setHabits(habits)
-                  setBecause(because)
-                  setStatus(status)
-                  setImgUrlUser(imgUrlUser)
-                  setNameUser(nameUser)
-                  setEmail(email)
-                  setTelephone(telephone)
-                  setFacebook(facebook)
-                  setLine(line)
-                  setAddress(address)
-                  setCity(city)
-                  setState(state)
-                  setZip(zip)
-
-                
                   return {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
 
              })
-             setMyAnimal(myAni);
+
+
+            //  setMyAnimal(myAni);
              //Array ขอข้อมูลที่ดึงมากจาก firestore
    
     
@@ -150,7 +130,7 @@ const AnimalCard =  props => {
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100"
-                                            src={props.imgUrl1}
+                                            src={props.imgUrl1} 
                                             style={{ height: 280, width: 330 }}
                                         />
                                     </Carousel.Item>
