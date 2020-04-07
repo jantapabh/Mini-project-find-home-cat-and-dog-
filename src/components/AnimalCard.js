@@ -61,9 +61,6 @@ const AnimalCard =  props => {
     useEffect(() => {
 
         getAnimal()
-
-        // console.log(getAnimals())
-
         retriveData()
 
 
@@ -103,12 +100,38 @@ const AnimalCard =  props => {
             let myAni =  snapshot.docs.map(d => {
 
                  const {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip} = d.data()
-                 console.log(id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
-                 return {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
+                 
+                
+                  console.log(id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
+                   
+                  setId(id)
+                  setImgUrl1(imgUrl1)
+                  setImgUrl2(imgUrl2)
+                  setImgUrl3(imgUrl3)
+                  setStrain(strain)
+                  setName(name)
+                  setOld(old)
+                  setHabits(habits)
+                  setBecause(because)
+                  setStatus(status)
+                  setImgUrlUser(imgUrlUser)
+                  setNameUser(nameUser)
+                  setEmail(email)
+                  setTelephone(telephone)
+                  setFacebook(facebook)
+                  setLine(line)
+                  setAddress(address)
+                  setCity(city)
+                  setState(state)
+                  setZip(zip)
+
+                
+                  return {id , imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
 
              })
-
              setMyAnimal(myAni);
+             //Array ขอข้อมูลที่ดึงมากจาก firestore
+   
           
            
          })
@@ -157,7 +180,7 @@ const AnimalCard =  props => {
                             </a>
                             <h3 className="font-weight-bold mb-1 p-0">
                                 <strong>
-                                    STRAIN : {myAnimal.strain} <br />
+                                    STRAIN : {strain} <br />
                                     NAME : {props.name} <br />
                                     OLD: {props.old} ปี<br />
                                 </strong>
