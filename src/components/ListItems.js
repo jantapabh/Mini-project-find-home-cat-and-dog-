@@ -14,12 +14,11 @@ const ListItems = props => {
     const animals = useSelector(state => state.animal)
     const dispatch = useDispatch()
 
+
     useEffect(() => {
 
         getAnimals()
-        // console.log(getAnimals())
-
-
+        
     }, [])
    
 

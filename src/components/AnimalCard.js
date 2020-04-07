@@ -23,7 +23,33 @@ const AnimalCard =  props => {
     const dispatch = useDispatch();
     const animals = useSelector(state => state.animal)
 
+    //Data from firestore 
+     
     const [myAnimal, setMyAnimal] = useState([])
+    const [id, setId] = useState(0)
+    const [imgUrl1, setImgUrl1] = useState('')
+    const [imgUrl2, setImgUrl2] = useState('')
+    const [imgUrl3, setImgUrl3] = useState('')
+    const [strain, setStrain] = useState('')
+    const [name, setName] = useState('')
+    const [old, setOld] = useState(0)
+    const [habits, setHabits] = useState('')
+    const [because, setBecause] = useState('')
+    const [status, setStatus] = useState('')
+    const [imgUrlUser, setImgUrlUser] = useState('')
+    const [nameUser, setNameUser] = useState('')
+    const [email, setEmail] = useState('')
+    const [telephone, setTelephone] = useState('')
+    const [facebook, setFacebook] = useState('')
+    const [line, setLine] = useState('')
+    const [address, setAddress] = useState('')
+    const [city, setCity] = useState('')
+    const [state, setState] = useState('')
+    const [zip, setZip] = useState('')
+    
+  
+
+    
 
     const getAnimal = async () => {
 
@@ -83,7 +109,8 @@ const AnimalCard =  props => {
              })
 
              setMyAnimal(myAni);
-            //  console.log(myAni)
+          
+           
          })
      }
 
@@ -130,7 +157,7 @@ const AnimalCard =  props => {
                             </a>
                             <h3 className="font-weight-bold mb-1 p-0">
                                 <strong>
-                                    STRAIN : {props.strain} <br />
+                                    STRAIN : {myAnimal.strain} <br />
                                     NAME : {props.name} <br />
                                     OLD: {props.old} ปี<br />
                                 </strong>
