@@ -1,13 +1,15 @@
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ListGroup, Carousel } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBView, MDBMask, MDBModal, MDBModalHeader, MDBModalFooter, MDBModalBody } from "mdbreact";
 import Modal from "react-bootstrap/Modal";
-
+import { useSelector, useDispatch } from 'react-redux'
+import { firestore } from '../index'
 
 export default props => {
 
-    const { animal } = props
+    const { animal, deleteAnimal, updateAnimal  } = props
     const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = animal
 
     
@@ -26,7 +28,14 @@ export default props => {
     const handleShow = () => setShow(true);
 
 
-     
+     //Reduc thunk ส่งผ่าน props
+    
+
+    const form = useSelector(state => state.form)
+    const dispatch = useDispatch();
+    const animals = useSelector(state => state.animal)
+
+    
 
 
     return (
@@ -81,7 +90,7 @@ export default props => {
                                 STATUS : {status} <br />
                             </p>
                             <MDBBtn color="secondary" size="md" className="waves-light " style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
-                            {/* <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal}> DELETE</MDBBtn> */}
+                            {/* <MDBBtn color="success" style={{ padding: 5, margin: 5 }} onClick={deleteAnimal(id)}> DELETE</MDBBtn> */}
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
