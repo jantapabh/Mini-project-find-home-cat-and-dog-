@@ -27,11 +27,10 @@ const App = () => {
 
 
   return (
-
+ 
     <div>
       <div className="Topbar">
         <Topbar />
-        {/* <AnimalTest /> */}
       </div>
       <BrowserRouter>
         <Route exact path="/" component={Main} />
