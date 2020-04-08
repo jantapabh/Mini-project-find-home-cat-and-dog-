@@ -14,6 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import fire from '../config/fire';
+import FacebookLogin from './FacebookLogin'
 
 
 //Login and Sign up with firebase email and password
@@ -31,7 +32,7 @@ class Login extends Component {
 
             email: "",
             password: " "
-    
+
         }
 
     }
@@ -133,7 +134,7 @@ class Login extends Component {
                                 >
                                     Sign Up
             </Button>
-                                
+                                <FacebookLogin />
 
                             </form>
                         </div>
