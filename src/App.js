@@ -15,7 +15,6 @@ import Logout from './components/Logout';
 import { useSelector, useDispatch, Provider } from 'react-redux'
 import fire from './config/fire'
 import { render } from '@testing-library/react';
-import Home from './components/Home';
 
 
 
@@ -56,7 +55,7 @@ class App extends Component {
       <div>
         <div className="Topbar">
           <Topbar />
-          {this.state.user ? (<Home />) : (<Login />)}
+          {this.state.user ? (<Main />) : (<Login />)}
         </div>
         <BrowserRouter>
           {/* <Route exact path="/" component={Main} /> */}

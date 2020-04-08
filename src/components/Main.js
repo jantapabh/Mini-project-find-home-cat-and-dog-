@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Main.css';
-import pic6 from '../static/images/pic6.jpg'
-import { useMediaQuery } from 'react-responsive'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 
-const Main = () => {
+class Main extends Component {
 
-    const Desktop = ({ children }) => {
-        const isDesktop = useMediaQuery({ minWidth: 992 })
-        return isDesktop ? children : null
+    constructor(props) {
+
+        super(props)
+
+        this.state = {
+
+            email: "",
+            password: " "
+        }
+
     }
 
+render(){
     return (
         <div>
             <Carousel>
@@ -100,5 +106,6 @@ const Main = () => {
             </MDBCard>
         </div>
     )
+}
 }
 export default Main;
