@@ -21,28 +21,12 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-
-
-const [facebookLink, setFacebookLink] = useState('');
-
-
-//ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
-const getFacebookLink = async () => {
-
-    const res = await axios.get(`http://localhost/api/auth/facebook`);
-    setFacebookLink(res.data);
-
-}
-
-useEffect(() => {
-
-    getFacebookLink()
-
-}, []);
+import fire from '../config/fire';
 
 
 
-   
+
+
 function Copyright() {
 
     return (
@@ -57,111 +41,99 @@ function Copyright() {
 }
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        height: '100vh',
-    },
-    image: {
-        backgroundImage: 'url(https://cdn.pixabay.com/photo/2017/06/16/20/51/dog-2410332_1280.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor:
-            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    },
-    paper: {
-        margin: theme.spacing(8, 4),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
-}));
-
-const classes = useStyles();
-
-
 class Login extends Component {
- 
-    constructor(props){
+
+
+
+    constructor(props) {
 
         super(props)
-
-        this.state={
+        this.login = this.login.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.state = {
 
             email: "",
             password: " "
         }
 
     }
- 
-    render(){
-    return (
 
-        <Grid container component="main" className={classes.root}>
-            <CssBaseline />
-            <Grid item xs={false} sm={4} md={7} className={classes.image} />
-            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-                <div className={classes.paper}>
-                    <Avatar className={classes.avatar}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h5">LOGIN</Typography>
-                    <form className={classes.form} noValidate>
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="text"
-                            label="PSU PASSPORT"
-                            name="email"
-                            autoComplete="text"
-                            autoFocus
-                            value={this.state.email}
-                            onChange={this.handleChange}
+    login(e) {
 
-                        />
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                            
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
-                        <div className="text-center">
-                            <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
-                            <button className="btn btn-primary my-1" type="submit" onClick={this.signup}>Signup</button>
-                            <div className="row my-3 d-flex justify-content-center">
-                            </div>
-                        </div>
-                    </form>
+        e.preventDefault()
+        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+            console.log(u)
+
+        }).catch((err) => {
+
+            console.log(err)
+
+        })
+    }
+
+    signup(e) {
+        e.preventDefault()
+        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+            console.log(u)
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+
+    handleChange(e) {
+
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    render() {
+        return (
+
+
+            <form>
+                <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="text"
+                    label="EMAIL"
+                    name="email"
+                    autoComplete="text"
+                    autoFocus
+                    value={this.state.email}
+                    onChange={this.handleChange}
+
+                />
+                <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+
+                />
+                <FormControlLabel
+                    control={<Checkbox value="remember" color="primary" />}
+                    label="Remember me"
+                />
+                <div className="text-center">
+                    <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
+                    <button className="btn btn-primary my-1" type="submit" onClick={this.signup}>Signup</button>
+                    <div className="row my-3 d-flex justify-content-center">
+                    </div>
                 </div>
-            </Grid>
-        </Grid>
-    )
-}
+            </form>
+
+        )
+    }
 
 }
 
