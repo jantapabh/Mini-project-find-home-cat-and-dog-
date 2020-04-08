@@ -1,8 +1,32 @@
-.Topic {
-    align-items: center;
-    text-align: center;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
+.root {
+    height: '100vh',
+  }
+
+  .image {
+ 
+  background-repeat: 'no-repeat';
+  background-size: cover;
+  background-position: center;
+  }
+
+  .paper {
+    margin: 8px;
     display: flex;
-    justify-content: center;
-}
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    margin: 1px;
+    background-color: seagreen;
+  }
+
+  .form {
+    width: '100%';
+    margin-top: 1px;
+  }
+
+  .submit {
+    margin: 5px
+  }
+
