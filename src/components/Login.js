@@ -1,8 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 import './Login.css'
-import axios from 'axios';
 import './Form.css'
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,18 +13,11 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import fire from '../config/fire';
-import FacebookLogin from 'react-facebook-login';
-import { useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux'
-import { AuthActions } from '../redux/store';
 
 
-
-
+//Login and Sign up with firebase email and password
 class Login extends Component {
-
 
 
     constructor(props) {
@@ -39,9 +30,8 @@ class Login extends Component {
         this.state = {
 
             email: "",
-            password: " ",
-        
-
+            password: " "
+    
         }
 
     }
