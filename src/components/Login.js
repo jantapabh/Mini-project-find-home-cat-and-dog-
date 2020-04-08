@@ -28,7 +28,7 @@ const Login = props => {
 
     const actions = bindActionCreators({ ...AuthActions }, useDispatch())
     const [facebookLink, setFacebookLink] = useState('');
-    const [username, setUsername] = useState('');
+    const [emal, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
@@ -45,13 +45,7 @@ const Login = props => {
 
     }, []);
 
-    const LoginPSU = (e) => {
-
-
-        e.preventDefault();
-        actions.loginPSU(username, password)
-    }
-
+   
     function Copyright() {
 
         return (
@@ -121,7 +115,8 @@ const Login = props => {
                             name="email"
                             autoComplete="text"
                             autoFocus
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={this.state.email}
+                            onChange={this.handleChange}
 
                         />
                         <TextField
@@ -134,14 +129,17 @@ const Login = props => {
                             type="password"
                             id="password"
                             autoComplete="current-password"
-                            onChange={(e) => setPassword(e.target.value)}
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                            
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary" />}
                             label="Remember me"
                         />
                         <div className="text-center">
-                            <button className="btn btn-primary my-1" type="submit" onClick={LoginPSU}>Login</button>
+                            <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
+                            <button className="btn btn-primary my-1" type="submit" onClick={this.signup}>Signup</button>
                             <div className="row my-3 d-flex justify-content-center">
                             </div>
                         </div>

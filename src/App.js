@@ -23,14 +23,16 @@ axios.defaults.withCredentials = true
 class App extends Component {
 
   constructor(props) {
+
     super(props);
     this.state = {
       user: {}
+
     }
   }
 
   componentDidMount() {
-    this.authListener
+    this.authListener()
   }
 
   authListener() {
@@ -53,9 +55,10 @@ class App extends Component {
       <div>
         <div className="Topbar">
           <Topbar />
+          {this.state.user ? (<Main />) : (<Login />)}
         </div>
         <BrowserRouter>
-          <Route exact path="/" component={Main} />
+          {/* <Route exact path="/" component={Main} /> */}
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/lo gin" component={Login} />
