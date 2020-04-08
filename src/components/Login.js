@@ -25,6 +25,7 @@ import { AuthActions } from '../redux/store';
 
 
 
+
 async function Copyright() {
 
     return (
@@ -40,12 +41,42 @@ async function Copyright() {
 }
 
 
-
+const useStyles = makeStyles((theme) => ({
+    root: {
+        height: '100vh',
+    },
+    image: {
+        backgroundImage: 'url(https://source.unsplash.com/random)',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor:
+            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    },
+    paper: {
+        margin: theme.spacing(8, 4),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.secondary.main,
+    },
+    form: {
+        width: '100%', // Fix IE 11 issue.
+        marginTop: theme.spacing(1),
+    },
+    submit: {
+        margin: theme.spacing(3, 0, 2),
+    },
+}));
 
 
 
 
 class Login extends Component {
+
 
 
     constructor(props) {
@@ -54,11 +85,15 @@ class Login extends Component {
         this.login = this.login.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.signup = this.signup.bind(this)
+        this.changeClass = this.changeClass.bind(this)
         this.state = {
 
             email: "",
             password: " ",
-            facebookLink: ""
+            facebookLink: "",
+            classes: ([])
+
+
         }
 
     }
@@ -95,95 +130,85 @@ class Login extends Component {
 
 
     }
+    changeClass(e) {
+
+
+    }
+    // setState(
+
+    //   classes = useStyles()
+
+    // )
 
     render() {
 
-
-
         return (
-            <Grid container component="main" className="root" inline>
-                <CssBaseline />
-                <Grid item fix>
-                    <img src="https://cdn.pixabay.com/photo/2015/12/13/20/16/cats-1091652_960_720.jpg" style={{ width: 885, height: 500, }} />
-                </Grid>
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={5} square>
-                    <div className="paper">
-                        <Avatar className="avatar">
-                            <LockOutlinedIcon style={{ backgroundColor: 'green' }} />
-                        </Avatar>
-                        <Typography component="h1" variant="h5">
-                            Login
-                </Typography>
-                        <form className="form" noValidate>
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                label="Email Address"
-                                name="email"
-                                autoComplete="email"
-                                autoFocus
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Password"
-                                type="password"
-                                id="password"
-                                autoFocus
-                                value={this.state.password}
-                                onChange={this.handleChange}
-                            />
-                            <Grid style={{ display: 'flex', justifyContent: 'center' }}>
-
-                                <div>
-                                    <Button
-                                        type="submit"
-                                        variant="contained"
-                                        color="primary"
-                                        className="submit"
-                                        onClick={this.login}
-                                        style={{ margin: 5, width: 100 }}
-                                    >
-                                        Log in
-                  </Button>
-                                    <Button
-                                        type="submit"
-                                        variant="contained"
-                                        color="dark"
-                                        className="submit"
-                                        onClick={this.signup}
-                                        style={{ margin: 5, width: 100, }}
-                                    >
-                                        Sign Up
-                  </Button>
-                                </div>
-                                <Grid item style={{ display: 'flex', justifyContent: 'center' }}>
-
-                                    <Button
-                                        type="submit"
-                                        variant="contained"
-                                        color="secondary"
-                                        className="submit"
-                                        style={{ margin: 5,  width: 200 }}
-
-                                    >
-                                        LOG IN WITH FACEBOOK
-                  </Button>
+            <div>
+                <Grid container component="main" className="root">
+                    <CssBaseline />
+                    <Grid item xs={false} sm={4} md={7} className="image" />
+                    <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                        <div className="paper">
+                            <Avatar className="avata">
+                                <LockOutlinedIcon />
+                            </Avatar>
+                            <Typography component="h1" variant="h5">
+                                Sign in
+          </Typography>
+                            <form className="form" noValidate>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Email Address"
+                                    name="email"
+                                    autoComplete="email"
+                                    autoFocus
+                                />
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="password"
+                                    label="Password"
+                                    type="password"
+                                    id="password"
+                                    autoComplete="current-password"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox value="remember" color="primary" />}
+                                    label="Remember me"
+                                />
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    color="primary"
+                                    className="submit"
+                                >
+                                    Sign In
+            </Button>
+                                <Grid container>
+                                    <Grid item xs>
+                                        <Link href="#" variant="body2">
+                                            Forgot password?
+                </Link>
+                                    </Grid>
+                                    <Grid item>
+                                        <Link href="#" variant="body2">
+                                            {"Don't have an account? Sign Up"}
+                                        </Link>
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </form>
-                    </div>
-                </Grid>
 
-            </Grid>
+                            </form>
+                        </div>
+                    </Grid>
+                </Grid>
+            </div>
         )
     }
 
