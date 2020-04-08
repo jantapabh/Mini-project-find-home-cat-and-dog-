@@ -23,76 +23,89 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 
+const [facebookLink, setFacebookLink] = useState('');
 
-const Login = props => {
 
-    const actions = bindActionCreators({ ...AuthActions }, useDispatch())
-    const [facebookLink, setFacebookLink] = useState('');
-    const [emal, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+//ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
+const getFacebookLink = async () => {
 
-    //ฟังก์ชั่นเข้าสู่ระบบด้วยเฟสบุ๊ค
-    const getFacebookLink = async () => {
+    const res = await axios.get(`http://localhost/api/auth/facebook`);
+    setFacebookLink(res.data);
 
-        const res = await axios.get(`http://localhost/api/auth/facebook`);
-        setFacebookLink(res.data);
+}
 
-    }
+useEffect(() => {
 
-    useEffect(() => {
+    getFacebookLink()
 
-        getFacebookLink()
+}, []);
 
-    }, []);
+
 
    
-    function Copyright() {
+function Copyright() {
 
-        return (
-            <Typography variant="body2" color="textSecondary" align="center">
-                {'Copyright © '}
-                <Link color="inherit" href="https://material-ui.com/">
-                </Link>{' '}
-                {new Date().getFullYear()}
-                {'.'}
-            </Typography>
-        );
+    return (
+        <Typography variant="body2" color="textSecondary" align="center">
+            {'Copyright © '}
+            <Link color="inherit" href="https://material-ui.com/">
+            </Link>{' '}
+            {new Date().getFullYear()}
+            {'.'}
+        </Typography>
+    );
+}
+
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        height: '100vh',
+    },
+    image: {
+        backgroundImage: 'url(https://cdn.pixabay.com/photo/2017/06/16/20/51/dog-2410332_1280.jpg)',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor:
+            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    },
+    paper: {
+        margin: theme.spacing(8, 4),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.secondary.main,
+    },
+    form: {
+        width: '100%', // Fix IE 11 issue.
+        marginTop: theme.spacing(1),
+    },
+    submit: {
+        margin: theme.spacing(3, 0, 2),
+    },
+}));
+
+const classes = useStyles();
+
+
+class Login extends Component {
+ 
+    constructor(props){
+
+        super(props)
+
+        this.state={
+
+            email: "",
+            password: " "
+        }
+
     }
-
-
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            height: '100vh',
-        },
-        image: {
-            backgroundImage: 'url(https://cdn.pixabay.com/photo/2017/06/16/20/51/dog-2410332_1280.jpg)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor:
-                theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-        },
-        paper: {
-            margin: theme.spacing(8, 4),
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
-        avatar: {
-            margin: theme.spacing(1),
-            backgroundColor: theme.palette.secondary.main,
-        },
-        form: {
-            width: '100%', // Fix IE 11 issue.
-            marginTop: theme.spacing(1),
-        },
-        submit: {
-            margin: theme.spacing(3, 0, 2),
-        },
-    }));
-
-    const classes = useStyles();
-
+ 
+    render(){
     return (
 
         <Grid container component="main" className={classes.root}>
@@ -148,6 +161,8 @@ const Login = props => {
             </Grid>
         </Grid>
     )
+}
+
 }
 
 
