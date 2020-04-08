@@ -150,10 +150,10 @@ class Login extends Component {
                     <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                         <div className="paper">
                             <Avatar className="avata">
-                                <LockOutlinedIcon />
+                                <LockOutlinedIcon style={{ backgroundColor: 'green'}}/>
                             </Avatar>
                             <Typography component="h1" variant="h5">
-                                Sign in
+                                Log In
           </Typography>
                             <form className="form" noValidate>
                                 <TextField
@@ -166,6 +166,8 @@ class Login extends Component {
                                     name="email"
                                     autoComplete="email"
                                     autoFocus
+                                    value={this.state.email}
+                                    onChange={this.handleChange}
                                 />
                                 <TextField
                                     variant="outlined"
@@ -177,6 +179,7 @@ class Login extends Component {
                                     type="password"
                                     id="password"
                                     autoComplete="current-password"
+                                    value={this.state.password}
                                 />
                                 <FormControlLabel
                                     control={<Checkbox value="remember" color="primary" />}
@@ -188,8 +191,20 @@ class Login extends Component {
                                     variant="contained"
                                     color="primary"
                                     className="submit"
+                                    onClick={this.login}
                                 >
-                                    Sign In
+                                    Log In
+            </Button>
+            <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    color="secondary"
+                                    className="submit"
+                                    onClick={this.signup}
+                                    style={{ margin: 5, }}
+                                >
+                                   Sign Up
             </Button>
                                 <Grid container>
                                     <Grid item xs>
