@@ -92,12 +92,12 @@ class Login extends Component {
             <Grid container component="main" className="root">
                 <CssBaseline />
                 <Grid item className="image" >
-                    <img src="https://cdn.pixabay.com/photo/2015/12/13/20/16/cats-1091652_960_720.jpg" style={{ width: 700, height: 500, margin: 20, padding: 10}} />
+                    <img src="https://cdn.pixabay.com/photo/2015/12/13/20/16/cats-1091652_960_720.jpg" style={{ width: 700, height: 500, margin: 20, padding: 10 }} />
                 </Grid>
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                     <div className="paper">
                         <Avatar className="avatar">
-                            <LockOutlinedIcon style={{ backgroundColor: 'green'}}/>
+                            <LockOutlinedIcon style={{ backgroundColor: 'green' }} />
                         </Avatar>
                         <Typography component="h1" variant="h5">
                             Login
@@ -153,16 +153,25 @@ class Login extends Component {
                             >
                                 Sign Up
                   </Button>
-                            <Grid container>
-                                <Grid item xs>
-                                    <Link href="#" variant="body2">
-                                        Forgot password?
-                      </Link>
+                            <Grid >
+                                <Grid item style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Button
+                                        type="submit"
+                                        variant="contained"
+                                        color="secondary"
+                                        className="submit"
+                                        onClick={this.signup}
+                                        style={{ margin: 5, padding: 10, width: 200 }}
+
+                                    >
+                                     LOG IN WITH FACEBOOK
+                  </Button>
                                 </Grid>
                             </Grid>
                         </form>
                     </div>
                 </Grid>
+
             </Grid>
         )
     }

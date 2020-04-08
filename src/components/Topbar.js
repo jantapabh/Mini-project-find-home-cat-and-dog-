@@ -18,7 +18,7 @@ import fire from '../config/fire'
 
 axios.defaults.withCredentials = true
 
-const color = 'red'
+const color = 'blue'
 
 
 class Topbar extends Component {
