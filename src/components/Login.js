@@ -25,56 +25,6 @@ import { AuthActions } from '../redux/store';
 
 
 
-
-async function Copyright() {
-
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-
-}
-
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        height: '100vh',
-    },
-    image: {
-        backgroundImage: 'url(https://source.unsplash.com/random)',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor:
-            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    },
-    paper: {
-        margin: theme.spacing(8, 4),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
-}));
-
-
-
-
 class Login extends Component {
 
 
@@ -85,14 +35,12 @@ class Login extends Component {
         this.login = this.login.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.signup = this.signup.bind(this)
-        this.changeClass = this.changeClass.bind(this)
+
         this.state = {
 
             email: "",
             password: " ",
-            facebookLink: "",
-            classes: ([])
-
+        
 
         }
 
@@ -130,15 +78,8 @@ class Login extends Component {
 
 
     }
-    changeClass(e) {
+    
 
-
-    }
-    // setState(
-
-    //   classes = useStyles()
-
-    // )
 
     render() {
 
@@ -150,7 +91,7 @@ class Login extends Component {
                     <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                         <div className="paper">
                             <Avatar className="avata">
-                                <LockOutlinedIcon style={{ backgroundColor: 'green'}}/>
+                                <LockOutlinedIcon style={{ backgroundColor: 'green' }} />
                             </Avatar>
                             <Typography component="h1" variant="h5">
                                 Log In
@@ -180,6 +121,7 @@ class Login extends Component {
                                     id="password"
                                     autoComplete="current-password"
                                     value={this.state.password}
+                                    onChange={this.handleChange}
                                 />
                                 <FormControlLabel
                                     control={<Checkbox value="remember" color="primary" />}
@@ -195,7 +137,7 @@ class Login extends Component {
                                 >
                                     Log In
             </Button>
-            <Button
+                                <Button
                                     type="submit"
                                     fullWidth
                                     variant="contained"
@@ -204,20 +146,9 @@ class Login extends Component {
                                     onClick={this.signup}
                                     style={{ margin: 5, }}
                                 >
-                                   Sign Up
+                                    Sign Up
             </Button>
-                                <Grid container>
-                                    <Grid item xs>
-                                        <Link href="#" variant="body2">
-                                            Forgot password?
-                </Link>
-                                    </Grid>
-                                    <Grid item>
-                                        <Link href="#" variant="body2">
-                                            {"Don't have an account? Sign Up"}
-                                        </Link>
-                                    </Grid>
-                                </Grid>
+                                
 
                             </form>
                         </div>
