@@ -22,8 +22,8 @@ import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { AuthActions } from '../redux/store';
 
-// const actions = bindActionCreators({ ...AuthActions }, useDispatch())
-// const [facebookLink, setFacebookLink] = useState('');
+
+
 
 async function Copyright() {
 
@@ -57,7 +57,8 @@ class Login extends Component {
         this.state = {
 
             email: "",
-            password: " "
+            password: " ",
+            facebookLink: ""
         }
 
     }
@@ -89,6 +90,10 @@ class Login extends Component {
         this.setState({
             [e.target.name]: e.target.value
         })
+    }
+    facebookLogin(e) {
+
+
     }
 
     render() {
@@ -132,36 +137,36 @@ class Login extends Component {
                                 label="Password"
                                 type="password"
                                 id="password"
-                                autoComplete="current-password"
+                                autoFocus
                                 value={this.state.password}
                                 onChange={this.handleChange}
                             />
-                            <FormControlLabel
-                                control={<Checkbox value="remember" color="primary" />}
-                                label="Remember me"
-                            />
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                color="primary"
-                                className="submit"
-                                onClick={this.login}
-                                style={{ margin: 5, width: 100, display: 'flex', justifyContent: 'center'  }}
-                            >
-                                Log in
+                            <Grid style={{ display: 'flex', justifyContent: 'center' }}>
+
+                                <div>
+                                    <Button
+                                        type="submit"
+                                        variant="contained"
+                                        color="primary"
+                                        className="submit"
+                                        onClick={this.login}
+                                        style={{ margin: 5, width: 100 }}
+                                    >
+                                        Log in
                   </Button>
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                color="primary"
-                                className="submit"
-                                onClick={this.signup}
-                                style={{ margin: 5, width: 100, display: 'flex', justifyContent: 'center'  }}
-                            >
-                                Sign Up
+                                    <Button
+                                        type="submit"
+                                        variant="contained"
+                                        color="primary"
+                                        className="submit"
+                                        onClick={this.signup}
+                                        style={{ margin: 5, width: 100, }}
+                                    >
+                                        Sign Up
                   </Button>
-                            <Grid >
+                                </div>
                                 <Grid item style={{ display: 'flex', justifyContent: 'center' }}>
+
                                     <Button
                                         type="submit"
                                         variant="contained"

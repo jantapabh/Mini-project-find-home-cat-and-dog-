@@ -28,6 +28,8 @@
   }
 
   .submit {
-    margin: 5px
+    margin: 5px;
+    display: flex;
+    justify-content: center;
   }
 
