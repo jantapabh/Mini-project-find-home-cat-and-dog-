@@ -65,6 +65,7 @@ render(){
                                 <img
                                     className="img-fluid"
                                     src="https://www.nobfactory.com/wp-content/uploads/2017/11/%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94.jpg"
+                                    style={{ width: 500, height: 370}}
                                     alt=""
                                 />
                                 <a href="#!">
@@ -81,9 +82,7 @@ render(){
                             <h3 className="font-weight-bold mb-3 p-0">
                                 <strong>CHAUY NONG HAA BAAN</strong>
                             </h3>
-                            <p>
-                                This project to help children find homes provides a way to help homeless animals, which is an intermediary between people who want to find homes for animals and those who want to help homeless animals.
-                            </p>
+                        
                             <Card border="primary" style={{ width: '40rem' }}>
                                 <Card.Header> เลี้ยงพวกเขาแล้ว . . . อย่าทิ้งพวกเขาเลยน่ะ </Card.Header>
                                 <Card.Body>
