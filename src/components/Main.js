@@ -3,6 +3,8 @@ import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
+import Footer from './Footer'
+
 
 class Main extends Component {
 
@@ -103,6 +105,9 @@ render(){
                     </MDBRow>
                 </MDBCardBody>
             </MDBCard>
+            <div>
+                <Footer />
+                </div>
         </div>
     )
 }
