@@ -12,7 +12,6 @@ import Login from './components/Login';
 import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
-import { useSelector, useDispatch, Provider } from 'react-redux'
 import fire from './config/fire'
 import { render } from '@testing-library/react';
 
@@ -50,15 +49,28 @@ class App extends Component {
 
 
   render() {
+
+    if(this.state.user == null)
+    {
+      return(
+        <div>
+
+        <Topbar />
+        <Login />
+        </div>
+
+      );
+
+    }
+  
     return (
 
       <div>
         <div className="Topbar">
           <Topbar />
-          {this.state.user ? (<Main />) : (<Login />)}
         </div>
         <BrowserRouter>
-          {/* <Route exact path="/" component={Main} /> */}
+          <Route exact path="/" component={Main} />
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/lo gin" component={Login} />
