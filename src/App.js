@@ -14,6 +14,7 @@ import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
 import fire from './config/fire'
 import { render } from '@testing-library/react';
+import Dashboard from './components/Dashboard'
 
 
 
@@ -74,6 +75,7 @@ class App extends Component {
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
           <Route path="/lo gin" component={Login} />
+          <Route path="/Dashboard" component={Dashboard} />
           <Route path="/Logout" component={Logout} />
         </BrowserRouter>
       </div>

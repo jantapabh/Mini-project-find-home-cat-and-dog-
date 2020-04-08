@@ -1,3 +1,7 @@
+/* body {
+  font-family: 'Kodchasan-Bold.ttf'
+} */
+
 .h {
    
     background-color: slategrey;
@@ -116,4 +120,11 @@
 
 .show {
   margin-top: -10px;
+}
+
+.font {
+
+  font-family: 'Raleway-ExtraBoldItalic.ttf';
+  font-size: 1.2em;
+
 }

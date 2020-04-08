@@ -60,8 +60,9 @@ class Topbar extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/FormInput" style={{ fontSize: 20 }}>COMPLETE HISTORY</Nav.Link>
+                            <Nav.Link href="/DormInput" style={{ fontSize: 20 }}>COMPLETE HISTORY</Nav.Link>
                             <Nav.Link href="/ListItems" style={{ fontSize: 20 }}>OBSERVATION ROOM</Nav.Link>
+                            <Nav.Link href="/Dashboard" style={{ fontSize: 20 }}>DATA GRAPH SHOW</Nav.Link>
                         </Nav>
                         <Form inline>
                             <Avatar style={{ backgroundColor: color }} />
