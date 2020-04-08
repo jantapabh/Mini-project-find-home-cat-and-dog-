@@ -157,7 +157,7 @@ class Login extends Component {
                                     <Button
                                         type="submit"
                                         variant="contained"
-                                        color="primary"
+                                        color="dark"
                                         className="submit"
                                         onClick={this.signup}
                                         style={{ margin: 5, width: 100, }}
@@ -172,7 +172,7 @@ class Login extends Component {
                                         variant="contained"
                                         color="secondary"
                                         className="submit"
-                                        style={{ margin: 5, padding: 10, width: 200 }}
+                                        style={{ margin: 5,  width: 200 }}
 
                                     >
                                         LOG IN WITH FACEBOOK
