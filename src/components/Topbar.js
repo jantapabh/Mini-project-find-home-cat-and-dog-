@@ -19,16 +19,6 @@ axios.defaults.withCredentials = true
 
 const Topbar = props => {
 
-    // const users = useSelector(state => state.user)
-    // const actionsUser = bindActionCreators(userActions, useDispatch());
-
-    // useEffect(() => {
-
-    //     actionsUser.getUsers()
-    //     console.log(actionsUser.getUsers())
-        
-    // }, [])
-
     const auth = useSelector(state => state.Auth);
     const actions = bindActionCreators(AuthActions, useDispatch())
 
