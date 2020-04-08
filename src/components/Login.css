@@ -1,5 +1,6 @@
 .root {
-    height: '100vh',
+    height: 100px;
+    width:  300px;
   }
 
   .image {

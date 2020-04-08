@@ -17,13 +17,15 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import fire from '../config/fire';
+import FacebookLogin from 'react-facebook-login';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { AuthActions } from '../redux/store';
 
+// const actions = bindActionCreators({ ...AuthActions }, useDispatch())
+// const [facebookLink, setFacebookLink] = useState('');
 
-
-
-
-
-function Copyright() {
+async function Copyright() {
 
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -34,11 +36,16 @@ function Copyright() {
             {'.'}
         </Typography>
     );
+
 }
 
 
-class Login extends Component {
 
+
+
+
+
+class Login extends Component {
 
 
     constructor(props) {
@@ -89,12 +96,12 @@ class Login extends Component {
 
 
         return (
-            <Grid container component="main" className="root">
+            <Grid container component="main" className="root" inline>
                 <CssBaseline />
-                <Grid item className="image" >
-                    <img src="https://cdn.pixabay.com/photo/2015/12/13/20/16/cats-1091652_960_720.jpg" style={{ width: 700, height: 500, margin: 20, padding: 10 }} />
+                <Grid item fix>
+                    <img src="https://cdn.pixabay.com/photo/2015/12/13/20/16/cats-1091652_960_720.jpg" style={{ width: 885, height: 500, }} />
                 </Grid>
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={5} square>
                     <div className="paper">
                         <Avatar className="avatar">
                             <LockOutlinedIcon style={{ backgroundColor: 'green' }} />
@@ -139,7 +146,7 @@ class Login extends Component {
                                 color="primary"
                                 className="submit"
                                 onClick={this.login}
-                                style={{ margin: 5, width: 100 }}
+                                style={{ margin: 5, width: 100, display: 'flex', justifyContent: 'center'  }}
                             >
                                 Log in
                   </Button>
@@ -149,7 +156,7 @@ class Login extends Component {
                                 color="primary"
                                 className="submit"
                                 onClick={this.signup}
-                                style={{ margin: 5, width: 100 }}
+                                style={{ margin: 5, width: 100, display: 'flex', justifyContent: 'center'  }}
                             >
                                 Sign Up
                   </Button>
@@ -160,11 +167,10 @@ class Login extends Component {
                                         variant="contained"
                                         color="secondary"
                                         className="submit"
-                                        onClick={this.signup}
                                         style={{ margin: 5, padding: 10, width: 200 }}
 
                                     >
-                                     LOG IN WITH FACEBOOK
+                                        LOG IN WITH FACEBOOK
                   </Button>
                                 </Grid>
                             </Grid>
