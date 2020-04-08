@@ -13,34 +13,59 @@ import Main from './components/Main';
 import { useMediaQuery } from 'react-responsive'
 import Logout from './components/Logout';
 import { useSelector, useDispatch, Provider } from 'react-redux'
+import fire from './config/fire'
+import { render } from '@testing-library/react';
 
 
 
 axios.defaults.withCredentials = true
 
-const App = () => {
+class App extends Component {
 
-  const [loading, setLoading] = useState(false)
-  const auth = useSelector(state => state.Auth);
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {}
+    }
+  }
+
+  componentDidMount() {
+    this.authListener
+  }
+
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user })
+      }
+      else {
+        this.setState({ user: null })
+      }
+
+    })
+  }
 
 
-  return (
- 
-    <div>
-      <div className="Topbar">
-        <Topbar />
+
+  render() {
+    return (
+
+      <div>
+        <div className="Topbar">
+          <Topbar />
+        </div>
+        <BrowserRouter>
+          <Route exact path="/" component={Main} />
+          <Route path="/FormInput" component={FormInput} />
+          <Route path="/ListItems" component={ListItems} />
+          <Route path="/lo gin" component={Login} />
+          <Route path="/Logout" component={Logout} />
+        </BrowserRouter>
       </div>
-      <BrowserRouter>
-        <Route exact path="/" component={Main} />
-        <Route path="/FormInput" component={FormInput} />
-        <Route path="/ListItems" component={ListItems} />
-        <Route path="/lo gin" component={Login} />
-        <Route path="/Logout" component={Logout} />
-      </BrowserRouter>
-    </div>
 
-  );
+    );
 
+  }
 }
 
 
