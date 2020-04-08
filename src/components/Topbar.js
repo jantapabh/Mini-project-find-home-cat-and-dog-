@@ -26,8 +26,6 @@ class Topbar extends Component {
 
         this.state = {
 
-            email: "",
-            password: " "
         }
 
     }
@@ -59,7 +57,7 @@ class Topbar extends Component {
                         <Form inline>
                             <Avatar />
                             <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5 }} id="basic-nav-dropdown">
-                                <NavDropdown.Item style={{ fontSize: 15 }} onClick={this.signOut}>LOGOUT</NavDropdown.Item>
+                                <NavDropdown.Item style={{ fontSize: 15 }} onClick={this.logout}>LOGOUT</NavDropdown.Item>
                                 <NavDropdown.Divider />
                             </NavDropdown>
                         </Form>

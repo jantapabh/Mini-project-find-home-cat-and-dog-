@@ -2,43 +2,12 @@ import React, { Component, useState, useEffect } from 'react'
 import './Login.css'
 import axios from 'axios';
 import './Form.css'
-import FacebookLogin from 'react-facebook-login';
-import { AuthActions } from '../redux/store';
-import { useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux'
-import { Button, Form, Card } from 'react-bootstrap';
-import { render } from '@testing-library/react';
-import { MDBIcon, MDBBtn, MDBContainer } from "mdbreact";
-import Avatar from '@material-ui/core/Avatar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBInput } from 'mdbreact';
 import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import fire from '../config/fire';
 
 
-
-
-
-function Copyright() {
-
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 
 class Login extends Component {
@@ -91,47 +60,48 @@ class Login extends Component {
     render() {
         return (
 
+            <div>
+                <form>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        fullWidth
+                        id="text"
+                        label="EMAIL"
+                        name="email"
+                        autoComplete="text"
+                        autoFocus
+                        value={this.state.email}
+                        onChange={this.handleChange}
 
-            <form>
-                <TextField
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="text"
-                    label="EMAIL"
-                    name="email"
-                    autoComplete="text"
-                    autoFocus
-                    value={this.state.email}
-                    onChange={this.handleChange}
+                    />
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        fullWidth
+                        name="password"
+                        label="Password"
+                        type="password"
+                        id="password"
+                        autoComplete="current-password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
 
-                />
-                <TextField
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    fullWidth
-                    name="password"
-                    label="Password"
-                    type="password"
-                    id="password"
-                    autoComplete="current-password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-
-                />
-                <FormControlLabel
-                    control={<Checkbox value="remember" color="primary" />}
-                    label="Remember me"
-                />
-                <div className="text-center">
-                    <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
-                    <button className="btn btn-primary my-1" type="submit" onClick={this.signup}>Signup</button>
-                    <div className="row my-3 d-flex justify-content-center">
+                    />
+                    <FormControlLabel
+                        control={<Checkbox value="remember" color="primary" />}
+                        label="Remember me"
+                    />
+                    <div className="text-center">
+                        <button className="btn btn-primary my-1" type="submit" onClick={this.login}>Login</button>
+                        <button className="btn btn-primary my-1" type="submit" onClick={this.signup}>Signup</button>
+                        <div className="row my-3 d-flex justify-content-center">
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
 
         )
     }
