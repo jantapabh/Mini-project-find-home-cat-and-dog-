@@ -18,6 +18,9 @@ import fire from '../config/fire'
 
 axios.defaults.withCredentials = true
 
+const color = 'red'
+
+
 class Topbar extends Component {
 
     constructor(props) {
@@ -26,16 +29,22 @@ class Topbar extends Component {
 
         this.state = {
 
+            color: ''
         }
 
     }
 
     logout(e) {
-       
+
         fire.auth().signOut();
 
     }
+
+
+
     render() {
+
+
         return (
             <div>
                 <Navbar bg="white" expand="lg">
@@ -55,7 +64,7 @@ class Topbar extends Component {
                             <Nav.Link href="/ListItems" style={{ fontSize: 20 }}>OBSERVATION ROOM</Nav.Link>
                         </Nav>
                         <Form inline>
-                            <Avatar />
+                            <Avatar style={{ backgroundColor: color }} />
                             <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5 }} id="basic-nav-dropdown">
                                 <NavDropdown.Item style={{ fontSize: 15 }} onClick={this.logout}>LOGOUT</NavDropdown.Item>
                                 <NavDropdown.Divider />
