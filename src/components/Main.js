@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 import Footer from './Footer'
+import Header from './Header'
 
 
 class Main extends Component {
@@ -67,7 +68,7 @@ class Main extends Component {
                                     <img
                                         className="img-fluid"
                                         src="https://www.nobfactory.com/wp-content/uploads/2017/11/%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94.jpg"
-                                        style={{ width: 500, height: 370 }}
+                                        style={{ width: 500, height: 430 }}
                                         alt=""
                                     />
                                     <a href="#!">
@@ -86,20 +87,9 @@ class Main extends Component {
                                 </h3>
 
                                 <Card border="primary" style={{ width: '40rem' }}>
-                                    <Card.Header><h3> Raising them ... Don't throw them away</h3></Card.Header>
+                                    <Card.Header><h3> แสดงกราฟวงกลมอัตราข้อมูลหมา แมวถูกทิ้ง</h3></Card.Header>
                                     <Card.Body>
 
-                                        <p className="font">
-                                            Giving new life to stray dogs and cats
-                                            This website is also a means of finding a home for stray dogs and cats.
-                                            Set up by Miss Chanthapapha Thammon, student of the Faculty of Engineering
-                                            Department of Computer Engineering with determination and determination.
-                                            To help stray dogs and cats in Phuket and beyond to have a better life and a new life
-                                            Including finding new homes for them, stray dogs and cats are considered part of society.
-                                            An abandoned fox starved with a disease and received a reward from the expedition.
-                                            Many people who do not want dogs and cats are left to trust in temples.
-                                            These dogs and cats need food, shelter, medical assistance, love and warmth. "
-                                       </p>
                                     </Card.Body>
                                 </Card>
                                 <br />
@@ -107,6 +97,9 @@ class Main extends Component {
                         </MDBRow>
                     </MDBCardBody>
                 </MDBCard>
+                <div>
+                    <Header />
+                    </div>
                 <div>
                     <Footer />
                 </div>
