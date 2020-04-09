@@ -66,7 +66,7 @@ class Main extends Component {
                 <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
-                            <Card border="primary" style={{ width: '87rem', height: '8rem', padding: 50, margin: 10 }} center>
+                            <Card border="primary" style={{ width: '87rem', height: '15rem', padding: 50, margin: 10 }} center>
                             <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
