@@ -14,7 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import fire from '../config/fire';
-import FacebookLogin from './FacebookLogin'
+
 
 
 //Login and Sign up with firebase email and password
@@ -63,6 +63,19 @@ class Login extends Component {
 
         this.setState({
             [e.target.name]: e.target.value
+        })
+    }
+
+    loginFaceBook(e) {
+
+        e.preventDefault()
+        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+            console.log(u)
+
+        }).catch((err) => {
+
+            console.log(err)
+
         })
     }
 
