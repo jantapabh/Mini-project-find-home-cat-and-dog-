@@ -42,12 +42,13 @@ class Login extends Component {
 
     componentDidMount = () => {
 
-        firebase.auth().onAuthStateChanged(user => {
+        firebase.initializeApp({
 
+            apiKey: "AIzaSyBK29PZlEcHMwQsXpJpgOKd5fTErKSi8EE",
+            authDomain: "fir-react-auth-97868.firebaseapp.com"
 
-            this.setState({isSignedIn:!!user})
-
-        })}
+        })
+        }
 
     constructor(props) {
 
