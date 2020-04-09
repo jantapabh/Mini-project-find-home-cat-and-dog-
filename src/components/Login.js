@@ -40,6 +40,15 @@ class Login extends Component {
         }
     }
 
+    componentDidMount = () => {
+
+        firebase.auth().onAuthStateChanged(user => {
+
+
+            this.setState({isSignedIn:!!user})
+
+        })}
+
     constructor(props) {
 
 
@@ -110,7 +119,12 @@ class Login extends Component {
                     <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                         <div className="paper">
                             <Avatar className="avata">
-                                <LockOutlinedIcon style={{ backgroundColor: 'green' }} />
+                                {/* <LockOutlinedIcon style={{ backgroundColor: 'green' }} /> */}
+                                <StyledFirebaseAuth
+                                uiConfig = {this.uiConfig}
+                                firebaseAuth = {firebase.auth()}
+ 
+                                />
                             </Avatar>
                             <Typography component="h1" variant="h5">
                                 Log In
