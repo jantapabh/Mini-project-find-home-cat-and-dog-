@@ -1,3 +1,4 @@
+import React, {Component} from 'react'
 import FusionCharts from "fusioncharts";
 import charts from "fusioncharts/fusioncharts.charts";
 import ReactFusioncharts from "react-fusioncharts";
@@ -178,10 +179,10 @@ const dataSource = {
   }
 };
 
-class Map extends React.Component {
+class Map extends Component {
 
   render() {
-      
+
     return (
       <ReactFusioncharts
         type="world"
