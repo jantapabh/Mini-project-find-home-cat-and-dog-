@@ -5,6 +5,7 @@ import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 import Header from './Header'
 import ApexChart from './ApexChart'
+import Map from './Map'
  
 
 
