@@ -13,7 +13,9 @@ import { AuthActions } from '../redux/store'
 import { useSelector, useDispatch, Provider } from 'react-redux'
 import Avatar from '@material-ui/core/Avatar';
 import { userActions } from '../redux/store'
-import fire from '../config/fire'
+import fire from '../config/fire';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import firebase from 'firebase'
 
 
 axios.defaults.withCredentials = true
@@ -22,6 +24,8 @@ const color = 'blue'
 
 
 class Topbar extends Component {
+
+
 
     constructor(props) {
 
@@ -65,8 +69,10 @@ class Topbar extends Component {
                             <Nav.Link href="/Dashboard" style={{ fontSize: 20 }}>DATA GRAPH SHOW</Nav.Link>
                         </Nav>
                         <Form inline>
-                            <Avatar style={{ backgroundColor: color }} />
-                            <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5 }} id="basic-nav-dropdown">
+                            <Avatar>
+                                <img src="https://cdn.pixabay.com/photo/2020/01/22/17/28/puppy-4785827_1280.jpg" style={{ width: 50, height: 50}}/>
+                            </Avatar>
+                             <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5 }} id="basic-nav-dropdown">
                                 <NavDropdown.Item style={{ fontSize: 15 }} onClick={this.logout}>LOGOUT</NavDropdown.Item>
                                 <NavDropdown.Divider />
                             </NavDropdown>

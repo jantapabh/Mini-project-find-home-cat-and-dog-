@@ -22,7 +22,7 @@ import firebase from 'firebase'
 //Login and Sign up with firebase email and password
 class Login extends Component {
 
-    state={ isSignedIn: false}
+    state = { isSignedIn: false }
 
     uiConfig = {
 
@@ -42,13 +42,12 @@ class Login extends Component {
 
     componentDidMount = () => {
 
-        firebase.initializeApp({
+      
 
-            apiKey: "AIzaSyBK29PZlEcHMwQsXpJpgOKd5fTErKSi8EE",
-            authDomain: "fir-react-auth-97868.firebaseapp.com"
-
+        firebase.auth().onAuthStateChanged(user => {
+            this.setState({ isSignedIn: !!user })
         })
-        }
+    }
 
     constructor(props) {
 
@@ -70,8 +69,10 @@ class Login extends Component {
     login(e) {
 
         e.preventDefault()
+
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
             console.log(u)
+            
 
         }).catch((err) => {
 
@@ -96,18 +97,6 @@ class Login extends Component {
         })
     }
 
-    loginFaceBook(e) {
-
-        e.preventDefault()
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-            console.log(u)
-
-        }).catch((err) => {
-
-            console.log(err)
-
-        })
-    }
 
 
     render() {
@@ -120,12 +109,7 @@ class Login extends Component {
                     <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                         <div className="paper">
                             <Avatar className="avata">
-                                {/* <LockOutlinedIcon style={{ backgroundColor: 'green' }} /> */}
-                                <StyledFirebaseAuth
-                                uiConfig = {this.uiConfig}
-                                firebaseAuth = {firebase.auth()}
- 
-                                />
+                                <LockOutlinedIcon style={{ backgroundColor: 'green' }} />
                             </Avatar>
                             <Typography component="h1" variant="h5">
                                 Log In
@@ -182,7 +166,12 @@ class Login extends Component {
                                 >
                                     Sign Up
             </Button>
-                               
+            <StyledFirebaseAuth
+                                    uiConfig={this.uiConfig}
+                                    firebaseAuth={firebase.auth()}
+
+                                />
+
 
                             </form>
                         </div>
