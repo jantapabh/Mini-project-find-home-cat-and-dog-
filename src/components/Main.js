@@ -3,8 +3,9 @@ import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
-import Footer from './Footer'
 import Header from './Header'
+import ApexChart from './ApexChart'
+ 
 
 
 class Main extends Component {
@@ -63,35 +64,23 @@ class Main extends Component {
                 <MDBCard className="my-5 px-5 pb-5">
                     <MDBCardBody>
                         <MDBRow>
-                            <MDBCol lg="5">
-                                <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                                    <img
-                                        className="img-fluid"
-                                        src="https://www.nobfactory.com/wp-content/uploads/2017/11/%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94.jpg"
-                                        style={{ width: 500, height: 430 }}
-                                        alt=""
-                                    />
-                                    <a href="#!">
-                                        <MDBMask overlay="white-slight" />
-                                    </a>
-                                </MDBView>
-                            </MDBCol>
+                            {/* <MDBCol lg="5">
+                                
+                            </MDBCol> */}
                             <MDBCol lg="7">
                                 <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-3">
-                                        <MDBIcon icon="dog" className="pr-2" /> Animal
- </h6>
+                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
                                 </a>
                                 <h3 className="font-weight-bold mb-3 p-0">
                                     <strong>CHAUY NONG HAA BAAN</strong>
                                 </h3>
-
-                                <Card border="primary" style={{ width: '40rem' }}>
-                                    <Card.Header><h3> แสดงกราฟวงกลมอัตราข้อมูลหมา แมวถูกทิ้ง</h3></Card.Header>
-                                    <Card.Body>
-
-                                    </Card.Body>
+                                <Card border="primary" style={{ width: '85rem', height: '30rem', padding: 10, margin: 10 }}>
+                                   
+                                        <ApexChart />
+                               
                                 </Card>
+                                
                                 <br />
                             </MDBCol>
                         </MDBRow>
@@ -99,10 +88,8 @@ class Main extends Component {
                 </MDBCard>
                 <div>
                     <Header />
-                    </div>
-                <div>
-                    <Footer />
                 </div>
+
             </div>
         )
     }
