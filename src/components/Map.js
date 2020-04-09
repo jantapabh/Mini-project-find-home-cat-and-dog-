@@ -178,8 +178,10 @@ const dataSource = {
   }
 };
 
-class MyComponent extends React.Component {
+class Map extends React.Component {
+
   render() {
+      
     return (
       <ReactFusioncharts
         type="world"
