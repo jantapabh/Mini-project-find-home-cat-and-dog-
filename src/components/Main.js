@@ -63,6 +63,24 @@ class Main extends Component {
                     </Carousel.Item>
                 </Carousel>
                 <MDBCard className="my-5 px-5 pb-5">
+                <MDBCardBody>
+                        <MDBRow>
+                            <MDBCol lg="5">
+                            <Card border="primary" style={{ width: '87rem', height: '8rem', padding: 50, margin: 10 }} center>
+                            <MDBCardBody>
+                        <MDBRow>
+                            <MDBCol lg="5">
+                           dsdsd
+                            </MDBCol>
+                            <MDBCol lg="7">
+                               sdsda
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBCardBody>
+                                </Card>
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBCardBody>
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
