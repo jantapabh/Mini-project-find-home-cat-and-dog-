@@ -65,9 +65,18 @@ class Main extends Component {
                 <MDBCard className="my-5 px-5 pb-5">
                     <MDBCardBody>
                         <MDBRow>
-                            {/* <MDBCol lg="5">
-                                
-                            </MDBCol> */}
+                            <MDBCol lg="5">
+                            <a href="#!" className="green-text">
+                                    <h6 className="font-weight-bold mb-3">
+                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                                </a>
+                                <h3 className="font-weight-bold mb-3 p-0">
+                                    <strong>CHAUY NONG HAA BAAN</strong>
+                                </h3>
+                                <Card border="primary" style={{ width: '30rem', height: '30rem', padding: 50, margin: 10 }} center>
+                                <ApexChart />
+                                </Card>
+                            </MDBCol>
                             <MDBCol lg="7">
                                 <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-3">
@@ -76,7 +85,7 @@ class Main extends Component {
                                 <h3 className="font-weight-bold mb-3 p-0">
                                     <strong>CHAUY NONG HAA BAAN</strong>
                                 </h3>
-                                <Card border="primary" style={{ width: '85rem', height: '30rem', padding: 10, margin: 10 }}>
+                                <Card border="primary" style={{ width: '50rem', height: '30rem', padding: 10, margin: 10 }}>
                                         <Map />
                                 </Card>
                                 <br />

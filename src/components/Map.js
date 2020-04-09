@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactApexChart from 'react-apexcharts'
 import ApexCharts from 'apexcharts'
 
-class ApexChart extends React.Component {
+class Map extends React.Component {
     constructor(props) {
       super(props);
 
@@ -96,3 +96,5 @@ class ApexChart extends React.Component {
       );
     }
   }
+
+  export default Map
