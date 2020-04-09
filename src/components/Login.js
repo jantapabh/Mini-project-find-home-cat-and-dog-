@@ -14,14 +14,34 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import fire from '../config/fire';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import firebase from 'firebase'
 
 
 
 //Login and Sign up with firebase email and password
 class Login extends Component {
 
+    state={ isSignedIn: false}
+
+    uiConfig = {
+
+        signInFlow: "popup",
+        signInOptions: [
+
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            firebase.auth.GithubAuthProvider.PROVIDER_ID
+        ],
+
+        callback: {
+
+            signInSuccess: () => false
+        }
+    }
 
     constructor(props) {
+
 
         super(props)
         this.login = this.login.bind(this)
@@ -147,7 +167,7 @@ class Login extends Component {
                                 >
                                     Sign Up
             </Button>
-                                <FacebookLogin />
+                               
 
                             </form>
                         </div>

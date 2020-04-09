@@ -15,12 +15,16 @@ import Logout from './components/Logout';
 import fire from './config/fire'
 import { render } from '@testing-library/react';
 import Dashboard from './components/Dashboard'
+import firebase from 'firebase'
 
 
 
 axios.defaults.withCredentials = true
 
 class App extends Component {
+
+  
+ 
 
   constructor(props) {
 
