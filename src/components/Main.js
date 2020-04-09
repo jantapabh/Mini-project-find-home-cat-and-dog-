@@ -77,11 +77,8 @@ class Main extends Component {
                                     <strong>CHAUY NONG HAA BAAN</strong>
                                 </h3>
                                 <Card border="primary" style={{ width: '85rem', height: '30rem', padding: 10, margin: 10 }}>
-                                   
-                                        <ApexChart />
-                               
+                                        <Map />
                                 </Card>
-                                
                                 <br />
                             </MDBCol>
                         </MDBRow>

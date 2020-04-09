@@ -1,198 +1,98 @@
 import React, {Component} from 'react'
-import FusionCharts from "fusioncharts";
-import charts from "fusioncharts/fusioncharts.charts";
-import ReactFusioncharts from "react-fusioncharts";
+import ReactApexChart from 'react-apexcharts'
+import ApexCharts from 'apexcharts'
 
-// Resolves charts dependancy
-charts(FusionCharts);
+class ApexChart extends React.Component {
+    constructor(props) {
+      super(props);
 
-const dataSource = {
-  chart: {
-    showlegend: 0,
-    caption: "Co-working Locations of WeWork in Different Countries",
-    nullentityfillcolor: "#757DE8",
-    showmarkerlabels: "0",
-    showentitytooltip: "0",
-    showentityhovereffect: "0",
-    theme: "fusion"
-  },
-  markers: {
-    items: [
-      {
-        id: "lon",
-        shapeid: "we-anchor",
-        x: "190.23",
-        y: "350.9",
-        label: "Chile",
-        value: "1",
-        tooltext: "In Chile, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "atl",
-        shapeid: "we-anchor",
-        x: "130.14",
-        y: "140.9",
-        label: "USA",
-        value: "25",
-        tooltext: "In USA, WeWork has <b>$value</b> co-working locations</b>",
-        labelpos: "left"
-      },
-      {
-        id: "ind",
-        shapeid: "we-anchor",
-        x: "500.14",
-        y: "203.9",
-        label: "India",
-        value: "3",
-        tooltext: "In India, WeWork has <b>$value</b> co-working locations",
-        labelpos: "bottom"
-      },
-      {
-        id: "Aus",
-        shapeid: "we-anchor",
-        x: "628.14",
-        y: "305.9",
-        label: "Autralia",
-        value: "3",
-        tooltext: "In Australia, WeWork has <b>$value</b> co-working locations"
-      },
-      {
-        id: "china",
-        shapeid: "we-anchor",
-        x: "573.14",
-        y: "161.9",
-        label: "China",
-        value: "6",
-        tooltext: "In China, WeWork has <b>$value</b> co-working locations"
-      },
-      {
-        id: "Thi",
-        shapeid: "we-anchor",
-        x: "553.14",
-        y: "211.9",
-        label: "Thailand",
-        value: "1",
-        tooltext: "In Thailand, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "Sing",
-        shapeid: "we-anchor",
-        x: "560.14",
-        y: "231.9",
-        label: "Singapore",
-        value: "1",
-        tooltext: "In Singapore, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "Indo",
-        shapeid: "we-anchor",
-        x: "570.14",
-        y: "250.9",
-        label: "Indonesia",
-        value: "1",
-        tooltext: "In Indonesia, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "sKorea",
-        shapeid: "we-anchor",
-        x: "603.14",
-        y: "155.9",
-        label: "South Korea",
-        value: "1",
-        tooltext: "In South Korea, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "jap",
-        shapeid: "we-anchor",
-        x: "633.14",
-        y: "145.9",
-        label: "Japan",
-        value: "1",
-        tooltext: "In Japan, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "isrl",
-        shapeid: "we-anchor",
-        x: "445.14",
-        y: "165.9",
-        label: "Isreal",
-        value: "5",
-        tooltext: "In Israel, WeWork has <b>$value</b> co-working locations"
-      },
-      {
-        id: "ire",
-        shapeid: "we-anchor",
-        x: "325.14",
-        y: "105.9",
-        label: "Ireland",
-        value: "1",
-        tooltext: "In Ireland, WeWork has <b>$value</b> co-working location",
-        labelpos: "left"
-      },
-      {
-        id: "pol",
-        shapeid: "we-anchor",
-        x: "365.14",
-        y: "118.9",
-        label: "Poland",
-        value: "1",
-        tooltext: "In Poland, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "spain",
-        shapeid: "we-anchor",
-        x: "330.14",
-        y: "145.9",
-        label: "Spain",
-        value: "2",
-        tooltext: "In Spain, WeWork has <b>$value</b> co-working locations"
-      },
-      {
-        id: "Mexico",
-        shapeid: "we-anchor",
-        x: "130.14",
-        y: "190.9",
-        label: "Mexico",
-        value: "1",
-        tooltext: "In Mexico, WeWork has <b>$value</b> co-working location"
-      },
-      {
-        id: "Brazil",
-        shapeid: "we-anchor",
-        x: "250.14",
-        y: "260.9",
-        label: "Brazil",
-        value: "3",
-        tooltext: "In Brazil, WeWork has <b>$value</b> co-working locations"
-      }
-    ],
-    shapes: [
-      {
-        id: "we-anchor",
-        type: "image",
-        url:
-          "https://cdn3.iconfinder.com/data/icons/iconic-1/32/map_pin_fill-512.png",
-        xscale: "4",
-        yscale: "4"
-      }
-    ]
+      this.state = {
+      
+        series: [{
+          name: 'TEAM A',
+          type: 'column',
+          data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+        }, {
+          name: 'TEAM B',
+          type: 'area',
+          data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+        }, {
+          name: 'TEAM C',
+          type: 'line',
+          data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+        }],
+        options: {
+          chart: {
+            height: 350,
+            type: 'line',
+            stacked: false,
+          },
+          stroke: {
+            width: [0, 2, 5],
+            curve: 'smooth'
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: '50%'
+            }
+          },
+          
+          fill: {
+            opacity: [0.85, 0.25, 1],
+            gradient: {
+              inverseColors: false,
+              shade: 'light',
+              type: "vertical",
+              opacityFrom: 0.85,
+              opacityTo: 0.55,
+              stops: [0, 100, 100, 100]
+            }
+          },
+          labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003',
+            '08/01/2003', '09/01/2003', '10/01/2003', '11/01/2003'
+          ],
+          markers: {
+            size: 0
+          },
+          xaxis: {
+            type: 'datetime'
+          },
+          yaxis: {
+            title: {
+              text: 'Points',
+            },
+            min: 0
+          },
+          tooltip: {
+            shared: true,
+            intersect: false,
+            y: {
+              formatter: function (y) {
+                if (typeof y !== "undefined") {
+                  return y.toFixed(0) + " points";
+                }
+                return y;
+          
+              }
+            }
+          }
+        },
+      
+      
+      };
+    }
+
+  
+
+    render() {
+      return (
+        
+
+  <div id="chart">
+<ReactApexChart options={this.state.options} series={this.state.series} type="line" height={350} />
+</div>
+
+
+      );
+    }
   }
-};
-
-class Map extends Component {
-
-  render() {
-
-    return (
-      <ReactFusioncharts
-        type="world"
-        width="100%"
-        height="100%"
-        dataFormat="JSON"
-        dataSource={dataSource}
-      />
-    );
-  }
-}
-
-export default Map
