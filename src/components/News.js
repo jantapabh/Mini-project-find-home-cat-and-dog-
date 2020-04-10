@@ -29,7 +29,7 @@ const News = (props) => {
                     <Button href="http://www.thairabies.net/trn/">อ่านเพิ่มเติม</Button>
                 </CardBody>
             </Card>
-            <Card  style={{ margin: 10}}>
+            <Card  style={{ margin: 10, padding: 10}}>
                 <CardImg top width="100%" src="https://image.bangkokbiznews.com/kt/media/image/news/2019/01/23/825021/750x422_825021_1548238139.jpg" style={{ width: 450, height: 150}} />
                 <CardBody>
                     <CardTitle><h4>"ปศุสัตว์"เผยไทยจะมีสุนัข-แมวจรจัด 1.92 ล้านตัวในปี 70 </h4></CardTitle>

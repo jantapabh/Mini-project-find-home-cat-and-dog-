@@ -19,7 +19,7 @@ const TapTwo = (props) => {
                 </CardBody>
             </Card>
             <Card  style={{ margin: 10, padding: 10}}>
-                <CardImg top width="100%" src="https://home4animals.org/wp-content/uploads/2018/02/5.jpg" style={{ width: 450, height: 150}}  />
+                <CardImg top width="100%" src="https://home4animals.org/wp-content/uploads/2019/07/16-17-1-370x277.jpg" style={{ width: 450, height: 150}}  />
                 <CardBody>
                 <CardTitle>
                        <h4>มูลนิธิบ้านสงเคราะห์สัตว์พิการ</h4>
@@ -29,13 +29,13 @@ const TapTwo = (props) => {
                 </CardBody>
             </Card>
             <Card  style={{ margin: 10, padding: 10}}>
-                <CardImg top width="100%" src="/assets/318x180.svg" style={{ width: 400, height: 150}}  />
+                <CardImg top width="100%" src="http://www.samuidog.org/Images/Common/LogoFoundation240.jpg" style={{ width: 400, height: 150}}  />
                 <CardBody>
                 <CardTitle>
-                       <h4>มูลนิธิสันติสุขเพื่อสุนัขและแมวจรจัด</h4>
+                       <h4>มูลนิธิช่วยสัตว์ เกาะสมุย</h4>
                         </CardTitle>
-                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-                    <Button>อ่านพิ่มเติม</Button>
+                    <CardText>มูลินิธิที่จัดขึ้นเพื่อช่วยเหลือสัตว์สี่ขาโดยมีกิจกรรมต่างๆ เช่นการทำหมันฟรีหรือการบริจาคเพื่อช่วยเหลือสัตว์สี่ขา</CardText>
+                    <Button href="http://www.samuidog.org/LatestNews_de.html">อ่านพิ่มเติม</Button>
                 </CardBody>
             </Card>
             
