@@ -19,7 +19,7 @@ const TapShow = props => {
             className={classnames({ active: activeTab === '1' })}
             onClick={() => { toggle('1'); }}
           >
-            Tab1
+            ข่าวประชาสัมพันธ์
           </NavLink>
         </NavItem>
         <NavItem>
@@ -27,7 +27,15 @@ const TapShow = props => {
             className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
           >
-            Moar Tabs
+            ความรู้ทั่วไปเกี่ยวกับสัตว์
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => { toggle('3'); }}
+          >
+            มูลนิธิและเพจช่วยเหลือ
           </NavLink>
         </NavItem>
       </Nav>
@@ -35,11 +43,29 @@ const TapShow = props => {
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
-              <h4>Tab 1 Contents</h4>
+            {/* ข่าวประชาสัมพันธ์ */}
             </Col>
           </Row>
         </TabPane>
         <TabPane tabId="2">
+          <Row>
+            <Col sm="6">
+              <Card body>
+                <CardTitle>Special Title Treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <Button>Go somewhere</Button>
+              </Card>
+            </Col>
+            <Col sm="6">
+              <Card body>
+                <CardTitle>Special Title Treatment</CardTitle>
+                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                <Button>Go somewhere</Button>
+              </Card>
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="3">
           <Row>
             <Col sm="6">
               <Card body>
@@ -62,4 +88,4 @@ const TapShow = props => {
   );
 }
 
-export default TabShow
+export default TapShow;
