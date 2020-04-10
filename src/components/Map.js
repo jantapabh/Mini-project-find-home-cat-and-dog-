@@ -10,7 +10,7 @@ class Map extends React.Component {
 
       series: [{
 
-        name: 'พื้นที่เกิดโรคพิษสุนัขบ้า',
+        name: 'จำนวนสุนัขเกิดโรคพิษสุนัขบ้า',
         type: 'area',
         data: [3,2,2,1,1,1,1,1,1]
       }],
