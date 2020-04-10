@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 
-const Tap = (props) => {
+const TapShow = props => {
+
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {
@@ -60,4 +61,4 @@ const Tap = (props) => {
   );
 }
 
-export default Tab;
+export default TabShow
