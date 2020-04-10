@@ -38,7 +38,7 @@ class ApexChartTwo extends React.Component {
 
         return (
             <div id="chart">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={550} />
+                <ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={500} />
             </div>
 
         );
