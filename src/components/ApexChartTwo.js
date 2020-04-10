@@ -15,7 +15,7 @@ class ApexChartTwo extends React.Component {
                     width: 500,
                     type: 'pie',
                 },
-                labels: ['จำนวนแมวโดยรวมทั้งที่มีเจ้าของ', 'จำนวนแมวโดยรวมทั้งที่ไม่มีเจ้าของ', ],
+                labels: ['จำนวนแมวที่มีเจ้าของ', 'จำนวนแมวที่ไม่มีเจ้าของ', ],
                 responsive: [{
                     breakpoint: 550,
                     options: {

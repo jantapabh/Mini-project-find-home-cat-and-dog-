@@ -15,7 +15,7 @@ class ApexChart extends React.Component {
                     width: 500,
                     type: 'pie',
                 },
-                labels: ['จำนวนสุนัขโดยรวมทั้งที่มีเจ้าของ', 'จำนวนสุนัขโดยรวมทั้งที่ไม่มีเจ้าของ', ],
+                labels: ['จำนวนสุนัขที่มีเจ้าของ', 'จำนวนสุนัขที่ไม่มีเจ้าของ', ],
                 responsive: [{
                     breakpoint: 550,
                     options: {
