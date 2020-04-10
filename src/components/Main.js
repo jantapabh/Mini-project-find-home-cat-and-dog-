@@ -123,7 +123,7 @@ class Main extends Component {
                         </React.Fragment>
                     </MDBRow>
                 </MDBCardBody>
-                <MDBCard className="my-5 px-5 pb-0">
+                <MDBCard>
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
