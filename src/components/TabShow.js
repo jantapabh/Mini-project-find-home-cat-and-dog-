@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import News from './News'
 
 const TapShow = props => {
 
@@ -43,7 +44,7 @@ const TapShow = props => {
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
-            {/* ข่าวประชาสัมพันธ์ */}
+            <News />
             </Col>
           </Row>
         </TabPane>

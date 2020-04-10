@@ -6,6 +6,22 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Animal from './Animal'
 import { firestore } from '../index'
+import { Table } from 'reactstrap';
+import AppBar from '@material-ui/core/AppBar';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 //ใช้ firebase กับ Hook
@@ -94,12 +110,58 @@ const FormInput = props => {
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
     }
-
-
+ 
     
+const useStyles = makeStyles((theme) => ({
+    icon: {
+      marginRight: theme.spacing(2),
+    },
+    heroContent: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(8, 0, 6),
+    },
+    heroButtons: {
+      marginTop: theme.spacing(4),
+    },
+    cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
+    card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    cardMedia: {
+      paddingTop: '56.25%', // 16:9
+    },
+    cardContent: {
+      flexGrow: 1,
+    },
+    footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+    },
+  }));
+  
+  
+  
+  const classes = useStyles();
+
     return (
 
         <div>
+                <React.Fragment>
+                <CssBaseline />
+                <AppBar position="relative">
+                    <Toolbar>
+                        <CameraIcon className={classes.icon} />
+                        <Typography variant="h4" color="inherit" noWrap>
+                            News
+          </Typography>
+                    </Toolbar>
+                </AppBar>
+            </React.Fragment>
             <Nav tabs>
                 <NavItem>
                     <NavLink
