@@ -29,7 +29,7 @@ const TapShow = props => {
             className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
           >
-            ความรู้ทั่วไปเกี่ยวกับสัตว์
+           ตามหาแมวและสุนัขหาย
           </NavLink>
         </NavItem>
         <NavItem>

@@ -14,6 +14,16 @@ class ApexChartTwo extends React.Component {
             chart: {
               type: 'donut',
             },
+            theme: {
+              mode: 'light', 
+              palette: 'palette6', 
+              monochrome: {
+                  enabled: false,
+                  color: '#F9CE1D',
+                  shadeTo: 'light',
+                  shadeIntensity: 0.65
+              },
+          },
             labels: ['จำนวนแมวที่มีเจ้าของ', 'จำนวนแมวที่ไม่มีเจ้าของ', ],
             responsive: [{
               breakpoint: 480,

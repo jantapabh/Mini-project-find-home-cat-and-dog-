@@ -38,6 +38,16 @@ class Map extends React.Component {
             stops: [0, 100, 100, 100]
           }
         },
+        theme: {
+          mode: 'light', 
+          palette: 'palette7', 
+          monochrome: {
+              enabled: false,
+              color: '#F9CE1D',
+              shadeTo: 'light',
+              shadeIntensity: 0.65
+          },
+      },
         labels: ['อุบลราชธานี', 'ราชบุรี', 'ระยอง', 'สระแก้ว', 'สุรินทร์', 'อำนาจเจริญ', 'นครศรีธรรมราช',
           'ชลบุรี', 'พัทลุง' ],
         markers: {

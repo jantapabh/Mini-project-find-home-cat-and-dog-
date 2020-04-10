@@ -14,6 +14,15 @@ class ApexChart extends React.Component {
                 chart: {
                     width: 500,
                     type: 'pie',
+                },theme: {
+                    mode: 'light', 
+                    palette: 'palette2', 
+                    monochrome: {
+                        enabled: false,
+                        color: '#F9CE1D',
+                        shadeTo: 'light',
+                        shadeIntensity: 0.65
+                    },
                 },
                 labels: ['จำนวนสุนัขที่มีเจ้าของ', 'จำนวนสุนัขที่ไม่มีเจ้าของ', ],
                 responsive: [{
@@ -28,6 +37,7 @@ class ApexChart extends React.Component {
                     }
                 }]
             },
+            
 
 
         };
