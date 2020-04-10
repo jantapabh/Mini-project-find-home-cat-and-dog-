@@ -81,30 +81,45 @@ class Main extends Component {
                 </Carousel>
                 <MDBCardBody>
                     <MDBRow>
-                        <MDBCol lg="4">
+                        <MDBCol lg="6">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
                                     <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
                             </a>
                             <h5 className="font-family-normal mb-3 p-0">
-                                <strong>กราฟแสดงจำนวนสุนัขและแมว (ปี 2562 รอบที่ 1)</strong>
+                                <strong style={{ margin: 5}}>กราฟวงกลมแสดงจำนวนสุนัข (ปี 2562 รอบที่ 1)</strong>
                             </h5>
-                            <Card border="primary" style={{ width: '30rem', height: '30rem', padding: 50, margin: 10 }} center>
+                            <Card border="primary" style={{ width: '42rem', height: '23rem', padding: 30, margin: 10 }} center>
                                 <ApexChart />
                             </Card>
                         </MDBCol>
+                        <MDBCol lg="5">
+                            <a href="#!" className="green-text">
+                                <h6 className="font-weight-bold mb-3">
+                                    <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                            </a>
+                            <h5 className="font-family-normal mb-3 p-0">
+                                <strong style={{ margin: 5}}>กราฟวงกลมแสดงจำนวนแมว (ปี 2562 รอบที่ 1)</strong>
+                            </h5>
+                            <Card border="primary" style={{ width: '42rem', height: '23rem', padding: 30, margin: 10 }} center>
+                                <ApexChart />
+                            </Card>
+                        </MDBCol>
+                    </MDBRow>
+                </MDBCardBody>
+                <MDBCardBody>
+                    <MDBRow>
                         <MDBCol lg="7">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
                                     <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
                             </a>
                             <h5 className="font-weight-bold mb-3 p-0">
-                                <strong>10 อับดับพื้นที่เกิดโรคพิษสุนัขบ้าสูงสุด 30 วันย้อนหลัง (ตั้งแต่ 11 มีนาคม - 10เมษายน 2563)</strong>
+                                <strong>10 อับดับพื้นที่เกิดโรคพิษสุนัขบ้าสูงสุด 30 วันย้อนหลัง (ตั้งแต่ 11 มีนาคม - 10 เมษายน 2563)</strong>
                             </h5>
-                            <Card border="primary" style={{ width: '60rem', height: '30rem', padding: 10, margin: 10 }}>
+                            <Card border="primary" style={{ width: '91rem', height: '30rem', padding: 10, margin: 10 }}>
                                 <Map />
                             </Card>
-
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
@@ -115,8 +130,8 @@ class Main extends Component {
                             <AppBar position="relative">
                                 <Toolbar>
                                     <CameraIcon className="icon" />
-                                    <Typography variant="h4" color="inherit" noWrap>
-                                        News
+                                    <Typography variant="h6" color="inherit" noWrap>
+                                    กราฟวงกลมแสดงจำนวนสุนัข - แมวที่ไม่มีเจ้าของ (ปี 2562 รอบที่ 1) สำรวจโดยองค์กรปกครองส่วนท้องถิ่น
           </Typography>
                                 </Toolbar>
                             </AppBar>
@@ -127,7 +142,7 @@ class Main extends Component {
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
-                                <Card border="primary" style={{ width: '87rem', height: '25rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
+                                <Card border="primary" style={{ width: '91rem', height: '25rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
                                     <MDBCardBody center>
                                         <MDBRow center>
                                             <MDBCol lg="4" middle>

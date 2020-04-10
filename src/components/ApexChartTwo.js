@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactApexChart from 'react-apexcharts'
 import ApexCharts from 'apexcharts'
 
-class ApexChart extends React.Component {
+class ApexChartTwo extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +15,7 @@ class ApexChart extends React.Component {
                     width: 500,
                     type: 'pie',
                 },
-                labels: ['จำนวนสุนัขโดยรวมทั้งที่มีเจ้าของ', 'จำนวนสุนัขโดยรวมทั้งที่ไม่มีเจ้าของ', ],
+                labels: ['จำนวนแมวโดยรวมทั้งที่มีเจ้าของ', 'จำนวนแมวโดยรวมทั้งที่ไม่มีเจ้าของ', ],
                 responsive: [{
                     breakpoint: 550,
                     options: {
@@ -46,4 +46,4 @@ class ApexChart extends React.Component {
 }
 
 
-export default ApexChart
+export default ApexChartTwo
