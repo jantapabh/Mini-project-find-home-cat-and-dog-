@@ -13,6 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Tab from './Tab'
+
+
 
 function Copyright() {
   return (
@@ -61,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3, 4, 5, 6];
 
+
 export default function Album() {
   const classes = useStyles();
 
@@ -70,53 +75,15 @@ export default function Album() {
       <AppBar position="relative">
         <Toolbar>
           <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-          News
+          <Typography variant="h4" color="inherit" noWrap>
+          News 
           </Typography>
         </Toolbar>
       </AppBar>
       <main>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-       
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            
-            </Typography>
-          </Container>
-        </div>
         <Container className={classes.cardGrid} maxWidth="md">
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://www.nobfactory.com/wp-content/uploads/2017/11/%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%88%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94.jpg"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                    การขึ้นทะเบีนนสุนัขและแมวระหว่างปรับปรุงระบบขึ้นทะเบียนสุนัข -แมวให้ดำเนินการตามหนังสือ เลขที่ มท 0180.5/ว848 ลงวันที่ 26 มีนาคม 2561 
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary" href="thairabies.net/trn/home/detailnews/1?ReturnUrl=http%3A%2F%2Fwww.thairabies.net%2Ftrn%2Fhome%2Flistallnews">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+         <Tab />
         </Container>
       </main>
       {/* Footer */}
