@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 
 
-const News = (props) => {
+const TapTwo = (props) => {
     return (
         <CardGroup style={{ margin: 10, padding: 10}}>
             <Card  style={{ margin: 10, padding: 10}}>
@@ -40,4 +40,4 @@ const News = (props) => {
     );
 };
 
-export default News;
+export default TapTwo;

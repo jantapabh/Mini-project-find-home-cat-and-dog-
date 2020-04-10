@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import News from './News'
+import TabTwo from './TabTwo'
 
 const TapShow = props => {
 
@@ -50,20 +51,7 @@ const TapShow = props => {
         </TabPane>
         <TabPane tabId="2">
           <Row>
-            <Col sm="6">
-              <Card body>
-                <CardTitle>Special Title Treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-            <Col sm="6">
-              <Card body>
-                <CardTitle>Special Title Treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
+            <TabTwo />
           </Row>
         </TabPane>
         <TabPane tabId="3">
