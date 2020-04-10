@@ -8,7 +8,22 @@ import ApexChart from './ApexChart'
 import Map from './Map'
 import ChartOne from './ChartOne'
 import ChartTwo from './ChartTwo'
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
+
+
+  
 
 class Main extends Component {
 
@@ -23,6 +38,7 @@ class Main extends Component {
         }
 
     }
+  
 
     render() {
         return (
@@ -64,35 +80,50 @@ class Main extends Component {
                     </Carousel.Item>
                 </Carousel>
                 <MDBCardBody>
-                        <MDBRow>
-                            <MDBCol lg="5">
-                                <a href="#!" className="green-text">
-                                    <h6 className="font-weight-bold mb-3">
-                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
-                                </a>
-                                <h3 className="font-weight-bold mb-3 p-0">
-                                    <strong>CHAUY NONG HAA BAAN</strong>
-                                </h3>
-                                <Card border="primary" style={{ width: '30rem', height: '30rem', padding: 50, margin: 10 }} center>
-                                    <ApexChart />
-                                </Card>
-                            </MDBCol>
-                            <MDBCol lg="7">
-                                <a href="#!" className="green-text">
-                                    <h6 className="font-weight-bold mb-3">
-                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
-                                </a>
-                                <h3 className="font-weight-bold mb-3 p-0">
-                                    <strong>CHAUY NONG HAA BAAN</strong>
-                                </h3>
-                                <Card border="primary" style={{ width: '50rem', height: '30rem', padding: 10, margin: 10 }}>
-                                    <Map />
-                                </Card>
-                                <br />
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBCardBody>
-                <MDBCard className="my-5 px-5 pb-5">
+                    <MDBRow>
+                        <MDBCol lg="4">
+                            <a href="#!" className="green-text">
+                                <h6 className="font-weight-bold mb-3">
+                                    <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                            </a>
+                            <h5 className="font-family-normal mb-3 p-0">
+                                <strong>กราฟแสดงจำนวนสุนัขและแมว (ปี 2562 รอบที่ 1)</strong>
+                            </h5>
+                            <Card border="primary" style={{ width: '30rem', height: '30rem', padding: 50, margin: 10 }} center>
+                                <ApexChart />
+                            </Card>
+                        </MDBCol>
+                        <MDBCol lg="7">
+                            <a href="#!" className="green-text">
+                                <h6 className="font-weight-bold mb-3">
+                                    <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                            </a>
+                            <h5 className="font-weight-bold mb-3 p-0">
+                                <strong>10 อับดับพื้นที่เกิดโรคพิษสุนัขบ้าสูงสุด 30 วันย้อนหลัง (ตั้งแต่ 11 มีนาคม - 10เมษายน 2563)</strong>
+                            </h5>
+                            <Card border="primary" style={{ width: '60rem', height: '30rem', padding: 10, margin: 10 }}>
+                                <Map />
+                            </Card>
+
+                        </MDBCol>
+                    </MDBRow>
+                </MDBCardBody>
+                <MDBCardBody>
+                    <MDBRow center>
+                        <React.Fragment>
+                            <CssBaseline />
+                            <AppBar position="relative">
+                                <Toolbar>
+                                    <CameraIcon className="icon" />
+                                    <Typography variant="h4" color="inherit" noWrap>
+                                        News
+          </Typography>
+                                </Toolbar>
+                            </AppBar>
+                        </React.Fragment>
+                    </MDBRow>
+                </MDBCardBody>
+                <MDBCard className="my-5 px-5 pb-0">
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
@@ -101,12 +132,12 @@ class Main extends Component {
                                         <MDBRow center>
                                             <MDBCol lg="4" middle>
                                                 <Card>
-                                                <ChartOne />
+                                                    <ChartOne />
                                                 </Card>
                                             </MDBCol >
                                             <MDBCol lg="4" middle>
                                                 <Card>
-                                                <ChartTwo />
+                                                    <ChartTwo />
                                                 </Card>
                                             </MDBCol>
                                         </MDBRow>

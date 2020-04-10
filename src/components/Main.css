@@ -128,3 +128,33 @@
   font-size: 1.2em;
 
 }
+
+  .icon {
+    margin-right: 4px;
+  }
+  .heroContent {
+ 
+    padding: 8px
+  }
+  .heroButtons {
+    margin-top: 4px;
+  }
+  .cardGrid {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .card {
+    height: 100%;
+    display: flex;
+    flex-Direction: 'column';
+  }
+  .cardMedia {
+    padding-top: 56.25%;
+  }
+  .cardContent {
+    flex-grow: 1;
+  }
+  .footer {
+    background-color: orange;
+    padding: 6px;
+  }
