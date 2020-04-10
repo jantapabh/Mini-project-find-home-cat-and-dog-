@@ -7,8 +7,8 @@ import Header from './Header'
 import ApexChart from './ApexChart'
 import Map from './Map'
 import ChartOne from './ChartOne'
-
-
+import ChartTwo from './ChartTwo'
+import ChartThree from './ChartThree '
 
 class Main extends Component {
 
@@ -69,15 +69,15 @@ class Main extends Component {
                             <MDBCol lg="5">
                                 <Card border="primary" style={{ width: '87rem', height: '20rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
                                     <MDBCardBody>
-                                        <MDBRow>
+                                        <MDBRow  style={{  margin: 10, }} center>
                                             <MDBCol lg="3">
                                                 <ChartOne />
                                             </MDBCol>
                                             <MDBCol lg="3">
-                                                <ChartOne />
+                                                <ChartTwo />
                                             </MDBCol>
                                             <MDBCol lg="3">
-                                                <ChartOne />
+                                                <ChartThree />
                                             </MDBCol>
                                         </MDBRow>
                                     </MDBCardBody>
