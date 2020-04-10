@@ -102,11 +102,11 @@ export default function Album() {
                       Heading
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                    การขึ้นทะเบีนนสุนัขและแมวระหว่างปรับปรุงระบบขึ้นทะเบียนสุนัข -แมวให้ดำเนินการตามหนังสือ เลขที่ มท 0180.5/ว848 ลงวันที่ 26 มีนาคม 2561 
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="thairabies.net/trn/home/detailnews/1?ReturnUrl=http%3A%2F%2Fwww.thairabies.net%2Ftrn%2Fhome%2Flistallnews">
                       View
                     </Button>
                     <Button size="small" color="primary">
