@@ -29,15 +29,7 @@ const TapShow = props => {
             className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
           >
-           ตามหาแมวและสุนัขหาย
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '3' })}
-            onClick={() => { toggle('3'); }}
-          >
-            มูลนิธิและเพจช่วยเหลือ
+          มูลนิธิและเพจช่วยเหลือสัตว์
           </NavLink>
         </NavItem>
       </Nav>
@@ -54,24 +46,7 @@ const TapShow = props => {
             <TabTwo />
           </Row>
         </TabPane>
-        <TabPane tabId="3">
-          <Row>
-            <Col sm="6">
-              <Card body>
-                <CardTitle>Special Title Treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-            <Col sm="6">
-              <Card body>
-                <CardTitle>Special Title Treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-          </Row>
-        </TabPane>
+       
       </TabContent>
     </div>
   );

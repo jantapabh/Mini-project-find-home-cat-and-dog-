@@ -7,7 +7,7 @@ import {
 
 const TapTwo = (props) => {
     return (
-        <CardGroup style={{ margin: 10, padding: 10}}>
+        <CardGroup style={{ margin: 5, padding: 5, height: 400, height: 400}}>
             <Card  style={{ margin: 10, padding: 10}}>
                 <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
                 <CardBody>
