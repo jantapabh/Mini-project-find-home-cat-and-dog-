@@ -19,19 +19,20 @@ const Footer = () => {
                             <h5 className="title">CONTACT US</h5>
                             <ul>
                                 <li className="list-unstyled">
-                                    <a href="#!">Facebook</a>
+                                    <a href="https://www.facebook.com/Joajannnnnn">Facebook</a>
                                 </li>
                                 <li className="list-unstyled">
-                                    <a href="#!">Email</a>
+                                    <a href="https://mail.google.com/mail/u/1/#inbox">Email</a>
                                 </li>
                                 <li className="list-unstyled">
-                                    <a href="#!">Github</a>
+                                    <a href="https://github.com/jantapabh">Github</a>
                                 </li>
+                             
                         
                             </ul>
                         </MDBCol>
                         <MDBCol md="2">
-                        <mdb-icon fas icon="phone-alt"></mdb-icon>
+                        
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
