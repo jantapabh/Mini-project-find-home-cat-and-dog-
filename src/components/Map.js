@@ -58,7 +58,7 @@ class Map extends React.Component {
         },
         yaxis: {
           title: {
-            text: 'Points',
+            text: 'จำนวนสุนัข',
           },
           min: 0
         },
@@ -68,7 +68,7 @@ class Map extends React.Component {
           y: {
             formatter: function (y) {
               if (typeof y !== "undefined") {
-                return y.toFixed(0) + " points";
+                return y.toFixed(0) + " ตัว";
               }
               return y;
 
