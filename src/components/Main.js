@@ -111,7 +111,7 @@ class Main extends Component {
                         <MDBCol lg="7">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
-                                    <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                                    <MDBIcon icon="dog" className="pr-2" size="3x" /> Animal</h6>
                             </a>
                             <h5 className="font-weight-bold mb-3 p-0">
                                 <strong>10 อับดับพื้นที่เกิดโรคพิษสุนัขบ้าสูงสุด 30 วันย้อนหลัง (ตั้งแต่ 11 มีนาคม - 10 เมษายน 2563)</strong>

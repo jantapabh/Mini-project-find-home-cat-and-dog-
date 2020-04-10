@@ -9,38 +9,39 @@ const Footer = () => {
             <MDBFooter color="black" className="font-small pt-4 mt-4">
                 <MDBContainer fluid className="text-center text-md-left">
                     <MDBRow>
-                        <MDBCol md="1.5">
+                        <MDBCol md="1">
                           <img src="https://www.posn.or.th/wp-content/uploads/2019/01/psu-logo.png"  style={{ width: 200, height: 150}}/>
                         </MDBCol>  
                         <MDBCol md="4">
                           <img src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"  style={{ width: 250, height: 150}}/>
                         </MDBCol>
                         <MDBCol md="4">
-                            <h5 className="title">Links</h5>
+                            <h5 className="title">CONTACT US</h5>
                             <ul>
                                 <li className="list-unstyled">
-                                    <a href="#!">Link 1</a>
+                                    <a href="#!">Facebook</a>
                                 </li>
                                 <li className="list-unstyled">
-                                    <a href="#!">Link 2</a>
+                                    <a href="#!">Email</a>
                                 </li>
                                 <li className="list-unstyled">
-                                    <a href="#!">Link 3</a>
+                                    <a href="#!">Github</a>
                                 </li>
-                                <li className="list-unstyled">
-                                    <a href="#!">Link 4</a>
-                                </li>
+                        
                             </ul>
+                        </MDBCol>
+                        <MDBCol md="2">
+                        <mdb-icon fas icon="phone-alt"></mdb-icon>
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
-                <div className="footer-copyright text-center py-5 ">
-                    <MDBContainer fluid>
-                    <MDBIcon far icon="envelope" size="3x"/>
+                <div className="footer-copyright text-center py-4 ">
+                    {/* <MDBContainer fluid>
+                    <MDBIcon far icon="envelope" size="2x"></MDBIcon>
                     </MDBContainer>
                     <MDBContainer fluid>
-                    <MDBIcon icon="phone-volume" size="3x" />
-                    </MDBContainer>
+                    <MDBIcon icon="phone-volume" size="3x"/>
+                    </MDBContainer> */}
                 </div>
             </MDBFooter>
       
