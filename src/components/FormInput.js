@@ -156,13 +156,13 @@ const useStyles = makeStyles((theme) => ({
                 <AppBar position="relative">
                     <Toolbar>
                         <CameraIcon className={classes.icon} />
-                        <Typography variant="h4" color="inherit" noWrap>
-                            News
+                        <Typography variant="h6" color="inherit" noWrap>
+                           กรอกข้อมูล
           </Typography>
                     </Toolbar>
                 </AppBar>
             </React.Fragment>
-            <Nav tabs>
+            <Nav tabs style={{ margin: 15}}>
                 <NavItem>
                     <NavLink
                         className={classnames({ active: activeTab === '1' })}
@@ -187,9 +187,7 @@ const useStyles = makeStyles((theme) => ({
                             <div>
                                 <div>
                                     <div className="col-6 mt-5 mx-auto card">
-                                        <div className="card-body">
-                                            <h1 className="Topic">" ADD CAT OR DOG "</h1>
-                                        </div>
+                                    
                                         <form>
                                             <div className="form-group">
                                                 <label htmlFor="imgUrl1">Image 1 : รูปภาพ</label>
@@ -285,9 +283,7 @@ const useStyles = makeStyles((theme) => ({
                     <Row>
                         <Col sm="12" >
                             <div className="col-6 mt-5 mx-auto card">
-                                <div>
-                                    <h1 className="Topic">" ADD YOUR DATA"</h1>
-                                </div>
+                             
                                 <div className="form-group">
                                     <label htmlFor="imgUrlUser">IMAGE</label>
                                     <input type="text"

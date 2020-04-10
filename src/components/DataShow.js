@@ -15,6 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -60,13 +61,17 @@ export default function DataShow() {
                 <AppBar position="relative">
                     <Toolbar>
                         <CameraIcon className={classes.icon} />
-                        <Typography variant="h4" color="inherit" noWrap>
-                            News
+                        <Typography variant="h6" color="inherit" noWrap>
+                          รายงานผลบวกโรคพิษสุนัขบ้า 30 วันย้อนหลัง (ตั้งแต่ 11 มีนาคม 2563 - 10 เมษายน 2563)
           </Typography>
                     </Toolbar>
                 </AppBar>
                 <main>
-                    <Container className={classes.cardGrid} maxWidth="md-7">
+                      <MDBCardBody>
+                        <MDBRow >
+                            <MDBCol lg="5">
+                                <Card border="primary" style={{ width: '90rem', height: '25rem', margin: 10, }} center>
+                            <Container className={classes.cardGrid} maxWidth="md-7">
                         <Table striped>
                             <thead>
                                 <tr>
@@ -98,6 +103,10 @@ export default function DataShow() {
                             </tbody>
                         </Table>
                     </Container>
+                    </Card>
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBCardBody>
                 </main>
             </React.Fragment>
         </div>
