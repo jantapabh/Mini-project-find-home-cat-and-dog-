@@ -101,7 +101,7 @@ const FormInput = props => {
 
         let id = (animal.length === 0) ? 1 : animal[animal.length - 1].id + 1
         firestore.collection("animals").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
-
+      alert("ADD DATA FINISH")
     }
 
 
@@ -377,7 +377,7 @@ const useStyles = makeStyles((theme) => ({
                                     />
                                 </div>
                                 <div className="text-center">
-            <Button color="primary" style={{ margin:20, padding: 10}} onClick={addAnimal} >ADD DOG OR CAT AND YOUR DATA</Button>
+            <Button color="primary" style={{ margin:20, padding: 10}} onClick={addAnimal}>ADD DOG OR CAT AND YOUR DATA</Button>
             </div>
                             </div>
                         </Col>
