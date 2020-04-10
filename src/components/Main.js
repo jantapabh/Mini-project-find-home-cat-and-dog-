@@ -124,45 +124,6 @@ class Main extends Component {
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
-                <MDBCardBody>
-                    <MDBRow center>
-                        <React.Fragment>
-                            <CssBaseline />
-                            <AppBar position="relative">
-                                <Toolbar>
-                                    <CameraIcon className="icon" />
-                                    <Typography variant="h6" color="inherit" noWrap>
-                                    กราฟวงกลมแสดงจำนวนสุนัข - แมวที่ไม่มีเจ้าของ (ปี 2562 รอบที่ 1) สำรวจโดยองค์กรปกครองส่วนท้องถิ่น
-          </Typography>
-                                </Toolbar>
-                            </AppBar>
-                        </React.Fragment>
-                    </MDBRow>
-                </MDBCardBody>
-                <MDBCard>
-                    <MDBCardBody>
-                        <MDBRow>
-                            <MDBCol lg="5">
-                                <Card border="primary" style={{ width: '91rem', height: '25rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
-                                    <MDBCardBody center>
-                                        <MDBRow center>
-                                            <MDBCol lg="4" middle>
-                                                <Card>
-                                                    <ChartOne />
-                                                </Card>
-                                            </MDBCol >
-                                            <MDBCol lg="4" middle>
-                                                <Card>
-                                                    <ChartTwo />
-                                                </Card>
-                                            </MDBCol>
-                                        </MDBRow>
-                                    </MDBCardBody>
-                                </Card>
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBCardBody>
-                </MDBCard>
                 <div>
                     <Header />
                 </div>
