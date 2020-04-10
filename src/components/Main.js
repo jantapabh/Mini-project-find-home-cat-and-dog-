@@ -5,6 +5,7 @@ import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 import Header from './Header'
 import ApexChart from './ApexChart'
+import ApexChartTwo from './ApexChartTwo'
 import Map from './Map'
 import ChartOne from './ChartOne'
 import ChartTwo from './ChartTwo'
@@ -102,7 +103,7 @@ class Main extends Component {
                                 <strong style={{ margin: 5}}>กราฟวงกลมแสดงจำนวนแมว (ปี 2562 รอบที่ 1)</strong>
                             </h5>
                             <Card border="primary" style={{ width: '42rem', height: '23rem', padding: 30, margin: 10 }} center>
-                                <ApexChart />
+                                <ApexChartTwo />
                             </Card>
                         </MDBCol>
                     </MDBRow>

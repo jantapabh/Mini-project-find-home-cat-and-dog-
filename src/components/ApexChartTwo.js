@@ -9,7 +9,7 @@ class ApexChartTwo extends React.Component {
 
         this.state = {
 
-            series: [2173999, 854256 ],
+            series: [799235, 55021],
             options: {
                 chart: {
                     width: 500,
