@@ -83,7 +83,7 @@ export default function Album() {
       <main>
         {/* Hero unit */}
         <Container className={classes.cardGrid} maxWidth="md">
-         <Tab />
+         <TabShow />
         </Container>
       </main>
       {/* Footer */}
