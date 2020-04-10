@@ -63,32 +63,7 @@ class Main extends Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-                <MDBCard className="my-5 px-5 pb-5">
-                    <MDBCardBody>
-                        <MDBRow>
-                            <MDBCol lg="5">
-                                <Card border="primary" style={{ width: '87rem', height: '30rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
-                                    <MDBCardBody>
-                                        <MDBRow center>
-                                            <MDBCol lg="4">
-                                                <h3 className="font-weight-bold mb-3 p-0">
-                                                    <strong>CHAUY NONG HAA BAAN</strong>
-                                                </h3>
-                                                <ChartOne />
-                                            </MDBCol>
-                                            <MDBCol lg="4">
-                                                <h3 className="font-weight-bold mb-3 p-0">
-                                                    <strong>CHAUY NONG HAA BAAN</strong>
-                                                </h3>
-                                                <ChartTwo />
-                                            </MDBCol>
-                                        </MDBRow>
-                                    </MDBCardBody>
-                                </Card>
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBCardBody>
-                    <MDBCardBody>
+                <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
                                 <a href="#!" className="green-text">
@@ -114,6 +89,29 @@ class Main extends Component {
                                     <Map />
                                 </Card>
                                 <br />
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBCardBody>
+                <MDBCard className="my-5 px-5 pb-5">
+                    <MDBCardBody>
+                        <MDBRow>
+                            <MDBCol lg="5">
+                                <Card border="primary" style={{ width: '87rem', height: '25rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
+                                    <MDBCardBody center>
+                                        <MDBRow center>
+                                            <MDBCol lg="4" middle>
+                                                <Card>
+                                                <ChartOne />
+                                                </Card>
+                                            </MDBCol >
+                                            <MDBCol lg="4" middle>
+                                                <Card>
+                                                <ChartTwo />
+                                                </Card>
+                                            </MDBCol>
+                                        </MDBRow>
+                                    </MDBCardBody>
+                                </Card>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
