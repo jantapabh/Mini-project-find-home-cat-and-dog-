@@ -6,46 +6,46 @@ import ApexCharts from 'apexcharts'
 
 class ChartTwo extends React.Component {
     constructor(props) {
-      super(props);
+        super(props);
 
-      this.state = {
-      
-        series: [44, 55, 41, 17, 15],
-        options: {
-          chart: {
-            type: 'donut',
-          },
-          responsive: [{
-            breakpoint: 480,
+        this.state = {
+
+            series: [55, 15],
             options: {
-              chart: {
-                width: 200
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }]
-        },
-      
-      
-      };
+                chart: {
+                    type: 'donut',
+                },
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }]
+            },
+
+
+        };
     }
 
-  
+
 
     render() {
-      return (
-        
-
-  <div id="chart">
-<ReactApexChart options={this.state.options} series={this.state.series} type="donut" />
-</div>
+        return (
 
 
-      );
+            <div id="chart">
+                <ReactApexChart options={this.state.options} series={this.state.series} type="donut" />
+            </div>
+
+
+        );
     }
-  }
+}
 
 
-  export default ChartTwo
+export default ChartTwo

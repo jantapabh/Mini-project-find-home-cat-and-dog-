@@ -8,7 +8,7 @@ import ApexChart from './ApexChart'
 import Map from './Map'
 import ChartOne from './ChartOne'
 import ChartTwo from './ChartTwo'
-import ChartThree from './ChartThree '
+
 
 class Main extends Component {
 
@@ -67,18 +67,30 @@ class Main extends Component {
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
-                                <Card border="primary" style={{ width: '87rem', height: '20rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
+                                <Card border="primary" style={{ width: '87rem', height: '30rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
                                     <MDBCardBody>
-                                        <MDBRow  style={{  margin: 10, }} center>
-                                            <MDBCol lg="3">
+                                        <MDBRow style={{ margin: 10, }} center>
+                                            <MDBCol lg="4">
+                                                <a href="#!" className="green-text">
+                                                    <h6 className="font-weight-bold mb-3">
+                                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                                                </a>
+                                                <h3 className="font-weight-bold mb-3 p-0">
+                                                    <strong>CHAUY NONG HAA BAAN</strong>
+                                                </h3>
                                                 <ChartOne />
                                             </MDBCol>
-                                            <MDBCol lg="3">
+                                            <MDBCol lg="4">
+                                                <a href="#!" className="green-text">
+                                                    <h6 className="font-weight-bold mb-3">
+                                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                                                </a>
+                                                <h3 className="font-weight-bold mb-3 p-0">
+                                                    <strong>CHAUY NONG HAA BAAN</strong>
+                                                </h3>
                                                 <ChartTwo />
                                             </MDBCol>
-                                            <MDBCol lg="3">
-                                                <ChartThree />
-                                            </MDBCol>
+
                                         </MDBRow>
                                     </MDBCardBody>
                                 </Card>
