@@ -1,5 +1,6 @@
 import React from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
+import logo1 from '../static/images/logo1.png'
 
 
 const Footer = () => {
@@ -16,7 +17,7 @@ const Footer = () => {
                           <img src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"  style={{ width: 250, height: 150}}/>
                         </MDBCol>
                         <MDBCol md="4">
-                            <h5 className="title">CONTACT US</h5>
+                            <h5 className="title">FOLLOW US</h5>
                             <ul>
                                 <li className="list-unstyled">
                                     <a href="https://www.facebook.com/Joajannnnnn">Facebook</a>
@@ -31,18 +32,16 @@ const Footer = () => {
                         
                             </ul>
                         </MDBCol>
-                        <MDBCol md="2">
-                        
+                        <MDBCol md="2" center>
+                        <h5 className="title">CONTACT US</h5>
+                        <img src={logo1} style={{ width: 100, height: 80, margin: 10}}  />
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
                 <div className="footer-copyright text-center py-4 ">
-                    {/* <MDBContainer fluid>
-                    <MDBIcon far icon="envelope" size="2x"></MDBIcon>
-                    </MDBContainer>
-                    <MDBContainer fluid>
-                    <MDBIcon icon="phone-volume" size="3x"/>
-                    </MDBContainer> */}
+                <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> CHAUY NONG HAA BAAN </a>
+        </MDBContainer>
                 </div>
             </MDBFooter>
       
