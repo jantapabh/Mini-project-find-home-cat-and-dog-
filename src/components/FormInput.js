@@ -376,14 +376,17 @@ const useStyles = makeStyles((theme) => ({
                                         onChange={(e) => setZip(e.target.value)} 
                                     />
                                 </div>
+                                <div className="text-center">
+            <Button color="primary" style={{ margin:20, padding: 10}} onClick={addAnimal} >ADD DOG OR CAT AND YOUR DATA</Button>
+            </div>
                             </div>
                         </Col>
                     </Row>
+                    
                 </TabPane>
             </TabContent>
-            <div className="text-center">
-            <Button color="primary" style={{ margin: 15, padding: 10}} onClick={addAnimal} >ADD DOG OR CAT AND YOUR DATA</Button>
-            </div>
+           
+            
         </div>
 
     );

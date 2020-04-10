@@ -8,9 +8,9 @@ import {
 const News = (props) => {
     return (
         <div>
-            <CardGroup style={{ margin: 10, padding: 10}}>
+            <CardGroup style={{ margin: 5, padding: 5}}>
             <Card  style={{ margin: 10, padding: 10}}>
-                <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+                <CardImg top width="100%" src="https://cdn.pixabay.com/photo/2017/06/09/17/44/dog-2387735_1280.jpg" alt="Card image cap" />
                 <CardBody>
                     <CardTitle>Card title</CardTitle>
                     <CardSubtitle>Card subtitle</CardSubtitle>

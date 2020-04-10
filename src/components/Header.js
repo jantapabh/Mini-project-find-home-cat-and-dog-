@@ -76,7 +76,7 @@ export default function Header() {
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h4" color="inherit" noWrap>
-          News 
+          News And Informations
           </Typography>
         </Toolbar>
       </AppBar>
