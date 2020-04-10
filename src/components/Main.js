@@ -7,8 +7,6 @@ import Header from './Header'
 import ApexChart from './ApexChart'
 import ApexChartTwo from './ApexChartTwo'
 import Map from './Map'
-import ChartOne from './ChartOne'
-import ChartTwo from './ChartTwo'
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';

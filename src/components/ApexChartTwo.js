@@ -6,44 +6,46 @@ class ApexChartTwo extends React.Component {
 
     constructor(props) {
         super(props);
-
+    
         this.state = {
-
-            series: [799235, 55021],
-            options: {
-                chart: {
-                    width: 500,
-                    type: 'pie',
-                },
-                labels: ['จำนวนแมวที่มีเจ้าของ', 'จำนวนแมวที่ไม่มีเจ้าของ', ],
-                responsive: [{
-                    breakpoint: 550,
-                    options: {
-                        chart: {
-                            width: 600
-                        },
-                        legend: {
-                            position: 'center'
-                        }
-                    }
-                }]
+        
+          series: [799235, 55021],
+          options: {
+            chart: {
+              type: 'donut',
             },
-
-
+            labels: ['จำนวนแมวที่มีเจ้าของ', 'จำนวนแมวที่ไม่มีเจ้าของ', ],
+            responsive: [{
+              breakpoint: 480,
+              options: {
+                chart: {
+                  width: 200
+                },
+                legend: {
+                  position: 'bottom'
+                }
+              }
+            }]
+          },
+        
+        
         };
-    }
-
-
-    render() {
-
+      }
+    
+    
+    
+      render() {
         return (
-            <div id="chart">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={500} />
-            </div>
-
+          
+    
+    <div id="chart">
+    <ReactApexChart options={this.state.options} series={this.state.series} type="donut" width={500} />
+    </div>
+    
+    
         );
+      }
     }
-}
 
 
 export default ApexChartTwo
