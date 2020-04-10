@@ -13,6 +13,7 @@ class Map extends React.Component {
         name: 'จำนวนสุนัขเกิดโรคพิษสุนัขบ้า',
         type: 'area',
         data: [3,2,2,1,1,1,1,1,1]
+        
       }],
       options: {
     

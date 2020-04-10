@@ -66,7 +66,6 @@ class Topbar extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/FormInput" style={{ fontSize: 20 }}>COMPLETE HISTORY</Nav.Link>
                             <Nav.Link href="/ListItems" style={{ fontSize: 20 }}>OBSERVATION ROOM</Nav.Link>
-                            <Nav.Link href="/Data" style={{ fontSize: 20 }}>DATA SHOW</Nav.Link>
                         </Nav>
                         <Form inline>
                             <Avatar>

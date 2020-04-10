@@ -14,7 +14,7 @@ import { useMediaQuery } from 'react-responsive'
 import fire from './config/fire'
 import { render } from '@testing-library/react';
 import firebase from 'firebase'
-import DataShow from './components/DataShow';
+
 
 
 
@@ -77,7 +77,6 @@ class App extends Component {
           <Route exact path="/" component={Main} />
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
-          <Route path="/Data" component={DataShow} />
           <Route path="/login" component={Login} />
         </BrowserRouter>
       </div>
