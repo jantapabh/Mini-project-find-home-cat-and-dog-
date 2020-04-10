@@ -70,7 +70,7 @@ class Topbar extends Component {
                         </Nav>
                         <Form inline>
                             <Avatar>
-                                <img src="https://www.wisible.io/wp-content/uploads/2019/08/avatar-human-male-profile-user-icon-518358.png" style={{ width: 70, height: 80}}/>
+                                <img src="https://www.wisible.io/wp-content/uploads/2019/08/avatar-human-male-profile-user-icon-518358.png" style={{ width: 50, height: 50}}/>
                             </Avatar>
                              <NavDropdown title="USER" style={{ fontSize: 20, margin: 1, padding: 5 }} id="basic-nav-dropdown">
                                 <NavDropdown.Item style={{ fontSize: 15 }} onClick={this.logout}>LOGOUT</NavDropdown.Item>

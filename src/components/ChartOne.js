@@ -8,7 +8,7 @@ class ChartOne extends React.Component {
 
     this.state = {
     
-      series: [44],
+      series: [44, 53],
       options: {
         chart: {
           type: 'donut',

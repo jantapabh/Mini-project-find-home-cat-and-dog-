@@ -69,28 +69,19 @@ class Main extends Component {
                             <MDBCol lg="5">
                                 <Card border="primary" style={{ width: '87rem', height: '30rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
                                     <MDBCardBody>
-                                        <MDBRow style={{ margin: 10, }} center>
+                                        <MDBRow center>
                                             <MDBCol lg="4">
-                                                <a href="#!" className="green-text">
-                                                    <h6 className="font-weight-bold mb-3">
-                                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
-                                                </a>
                                                 <h3 className="font-weight-bold mb-3 p-0">
                                                     <strong>CHAUY NONG HAA BAAN</strong>
                                                 </h3>
                                                 <ChartOne />
                                             </MDBCol>
                                             <MDBCol lg="4">
-                                                <a href="#!" className="green-text">
-                                                    <h6 className="font-weight-bold mb-3">
-                                                        <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
-                                                </a>
                                                 <h3 className="font-weight-bold mb-3 p-0">
                                                     <strong>CHAUY NONG HAA BAAN</strong>
                                                 </h3>
                                                 <ChartTwo />
                                             </MDBCol>
-
                                         </MDBRow>
                                     </MDBCardBody>
                                 </Card>
