@@ -6,7 +6,8 @@ import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody
 import Header from './Header'
 import ApexChart from './ApexChart'
 import Map from './Map'
- 
+import ChartOne from './ChartOne'
+
 
 
 class Main extends Component {
@@ -63,20 +64,23 @@ class Main extends Component {
                     </Carousel.Item>
                 </Carousel>
                 <MDBCard className="my-5 px-5 pb-5">
-                <MDBCardBody>
+                    <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
-                            <Card border="primary" style={{ width: '87rem', height: '15rem', padding: 50, margin: 10 }} center>
-                            <MDBCardBody>
-                        <MDBRow>
-                            <MDBCol lg="5">
-                           dsdsd
-                            </MDBCol>
-                            <MDBCol lg="7">
-                               sdsda
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBCardBody>
+                                <Card border="primary" style={{ width: '87rem', height: '20rem', padding: 50, margin: 10, paddingLeft: 50 }} center>
+                                    <MDBCardBody>
+                                        <MDBRow>
+                                            <MDBCol lg="3">
+                                                <ChartOne />
+                                            </MDBCol>
+                                            <MDBCol lg="3">
+                                                <ChartOne />
+                                            </MDBCol>
+                                            <MDBCol lg="3">
+                                                <ChartOne />
+                                            </MDBCol>
+                                        </MDBRow>
+                                    </MDBCardBody>
                                 </Card>
                             </MDBCol>
                         </MDBRow>
@@ -84,7 +88,7 @@ class Main extends Component {
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
-                            <a href="#!" className="green-text">
+                                <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-3">
                                         <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
                                 </a>
@@ -92,7 +96,7 @@ class Main extends Component {
                                     <strong>CHAUY NONG HAA BAAN</strong>
                                 </h3>
                                 <Card border="primary" style={{ width: '30rem', height: '30rem', padding: 50, margin: 10 }} center>
-                                <ApexChart />
+                                    <ApexChart />
                                 </Card>
                             </MDBCol>
                             <MDBCol lg="7">
@@ -104,7 +108,7 @@ class Main extends Component {
                                     <strong>CHAUY NONG HAA BAAN</strong>
                                 </h3>
                                 <Card border="primary" style={{ width: '50rem', height: '30rem', padding: 10, margin: 10 }}>
-                                        <Map />
+                                    <Map />
                                 </Card>
                                 <br />
                             </MDBCol>
