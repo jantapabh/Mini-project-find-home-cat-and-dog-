@@ -83,7 +83,7 @@ class Main extends Component {
                         <MDBCol lg="6">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
-                                    <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                                    <MDBIcon icon="dog" className="pr-2" size="3x" /> Animal</h6>
                             </a>
                             <h5 className="font-family-normal mb-3 p-0">
                                 <strong style={{ margin: 5}}>กราฟวงกลมแสดงจำนวนสุนัข (ปี 2562 รอบที่ 1)</strong>
@@ -95,7 +95,7 @@ class Main extends Component {
                         <MDBCol lg="5">
                             <a href="#!" className="green-text">
                                 <h6 className="font-weight-bold mb-3">
-                                    <MDBIcon icon="dog" className="pr-2" size="10px" /> Animal</h6>
+                                    <MDBIcon icon="dog" className="pr-2" size="3x" /> Animal</h6>
                             </a>
                             <h5 className="font-family-normal mb-3 p-0">
                                 <strong style={{ margin: 5}}>กราฟวงกลมแสดงจำนวนแมว (ปี 2562 รอบที่ 1)</strong>

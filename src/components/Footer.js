@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 
 const Footer = () => {
@@ -9,14 +9,13 @@ const Footer = () => {
             <MDBFooter color="black" className="font-small pt-4 mt-4">
                 <MDBContainer fluid className="text-center text-md-left">
                     <MDBRow>
-                        <MDBCol md="6">
-                            <h5 className="title">Footer Content</h5>
-                            <p>
-                                Here you can use rows and columns here to organize your footer
-                                content.
-            </p>
+                        <MDBCol md="1.5">
+                          <img src="https://www.posn.or.th/wp-content/uploads/2019/01/psu-logo.png"  style={{ width: 200, height: 150}}/>
+                        </MDBCol>  
+                        <MDBCol md="4">
+                          <img src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"  style={{ width: 250, height: 150}}/>
                         </MDBCol>
-                        <MDBCol md="6">
+                        <MDBCol md="4">
                             <h5 className="title">Links</h5>
                             <ul>
                                 <li className="list-unstyled">
@@ -35,9 +34,12 @@ const Footer = () => {
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
-                <div className="footer-copyright text-center py-3">
+                <div className="footer-copyright text-center py-5 ">
                     <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+                    <MDBIcon far icon="envelope" size="3x"/>
+                    </MDBContainer>
+                    <MDBContainer fluid>
+                    <MDBIcon icon="phone-volume" size="3x" />
                     </MDBContainer>
                 </div>
             </MDBFooter>
