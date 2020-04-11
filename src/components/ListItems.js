@@ -26,7 +26,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ListItems = props => {
 
 
+  
     const [animal, setAnimal] = useState([{}])
+    const [loading,setLoading] = useState(false)
+    const [currentPage, setCurrentPage] = useState(1);
+    const [animalPrePages, setAnimalPerPage] = useState(6)
+
+
+
     const [id, setId] = useState(0)
     const [imgUrl1, setImgUrl1] = useState('')
     const [imgUrl2, setImgUrl2] = useState('')
@@ -79,7 +86,13 @@ const ListItems = props => {
         firestore.collection("animals").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
 
     }
+  
 
+    //Get Current Pages
+
+    const indexOfLastPages = currentPage * animalPrePages;
+    const indexOfFirstPages = indexOfLastPages - animalPrePages;
+    const currentPage = animal.slice(indexOfFirstPages, indexOfLastPages)
 
     const renderAnimal = () => {
 
@@ -89,8 +102,8 @@ const ListItems = props => {
             return animal.map((animal, index) => {
                 return (
 
-                    <Animal key={index} animal={animal}
-
+                    <Animal key={currentPage} animal={animal}
+                   
                     />
 
                 )

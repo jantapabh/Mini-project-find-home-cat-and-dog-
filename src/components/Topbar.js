@@ -60,7 +60,7 @@ class Topbar extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/FormInput" style={{ fontSize: 20 }}>กรอกข้อมูหาบ้าน</Nav.Link>
+                            <Nav.Link href="/FormInput" style={{ fontSize: 20 }}>กรอกข้อมูลหาบ้าน</Nav.Link>
                             <Nav.Link href="/FormInputTwo" style={{ fontSize: 20 }}>กรอกข้อมูลประกาศหา</Nav.Link>
                             <Nav.Link href="/ListItems" style={{ fontSize: 20 }}>ประกาศหาบ้าน</Nav.Link>
                             <Nav.Link href="/ListItemsTwo" style={{ fontSize: 20 }}>ประกาศหาย</Nav.Link>
