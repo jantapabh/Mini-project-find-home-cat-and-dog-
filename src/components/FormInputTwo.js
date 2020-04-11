@@ -156,7 +156,7 @@ const useStyles = makeStyles((theme) => ({
                     <Toolbar>
                         <CameraIcon className={classes.icon} />
                         <Typography variant="h6" color="inherit" noWrap>
-                           กรอกข้อมูล
+                           กรอกข้อมูลาำหรับประกาศหา
           </Typography>
                     </Toolbar>
                 </AppBar>
