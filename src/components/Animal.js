@@ -8,10 +8,10 @@ import { firestore } from '../index'
 
 export default props => {
 
-    const { animal, deleteAnimal, updateAnimal } = props
-    const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = animal
+   const { animal, deleteAnimal, updateAnimal } = props
+    const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip ,count } = animal
 
-
+    var [countChange, setCoutnChange] = useState(0)
     const [isOpen, setIsOpen] = useState(false);
 
     const showModal = () => {
@@ -22,15 +22,20 @@ export default props => {
     };
 
     const [show, setShow] = useState(false);
-    var [count, setCount] = useState(0);
+   
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
     const addCount = () => {
 
-        setCount(count++);
+        setCoutnChange(countChange++)
+       
     }
+
+    
+
+  
 
     //Reduc thunk ส่งผ่าน props
 
@@ -65,7 +70,7 @@ export default props => {
                                             <img
                                                 className="d-block w-100"
                                                 src={imgUrl3}
-                                                style={{ height: 280, width: 330 }}
+                                                style={{ height: 330, width: 330 }}
                                             />
                                         </Carousel.Item>
                                     </Carousel>
@@ -90,7 +95,7 @@ export default props => {
                                 STATUS : {status} <br />
                                 </p>
                                 <MDBBtn color="secondary" size="md" className="light" gradient="peach" style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
-                                <Button variant="primary" onClick={addCount}> LIKE {count}
+                                <Button variant="primary" onClick={addCount}> LIKE {countChange}
                                     <MDBIcon icon="thumbs-up" style={{ margin: 5, }} /> </Button>
                             </MDBCol>
                         </MDBRow>

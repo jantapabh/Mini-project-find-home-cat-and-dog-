@@ -4,14 +4,18 @@ import firebase from 'firebase'
 
 var firebaseConfig = {
 
-    apiKey: "AIzaSyD4HL7WzNIO2qyB4yRsaULj6K0Rx_sSQrA",
-    authDomain: "cat-mini-project.firebaseapp.com",
-    databaseURL: "https://cat-mini-project.firebaseio.com",
-    projectId: "cat-mini-project",
-    storageBucket: "cat-mini-project.appspot.com",
-    messagingSenderId: "855817765425",
-    appId: "1:855817765425:web:b943ea1362874b54b3cb10",
-    measurementId: "G-Z66DSKN8SP"
+
+  
+  apiKey: "AIzaSyCmxziMfFOHMVpDuoJOhdpdI6ycTr0ZTPc",
+  authDomain: "react-cat-miniproject.firebaseapp.com",
+  databaseURL: "https://react-cat-miniproject.firebaseio.com",
+  projectId: "react-cat-miniproject",
+  storageBucket: "react-cat-miniproject.appspot.com",
+  messagingSenderId: "1020166092792",
+  appId: "1:1020166092792:web:0e7b42e394baf7fbfd080d",
+  measurementId: "G-PZQ0FZNWTE"
+  
+
   };
 
   const fire = firebase.initializeApp(firebaseConfig);

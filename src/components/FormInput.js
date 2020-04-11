@@ -48,6 +48,7 @@ const FormInput = props => {
     const [city, setCity] = useState('')
     const [state, setState] = useState('')
     const [zip, setZip] = useState('')
+    const [count, setCount] = useState(0)
     const [animal, setAnimal] = useState([{}])
 
     useEffect(() => {
@@ -65,9 +66,9 @@ const FormInput = props => {
             console.log(snapshot);
 
             let myAnimal = snapshot.docs.map(d => {
-                const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
-                console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
-                return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip }
+                const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip, count } = d.data()
+                console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip, count)
+                return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip, count}
             })
 
             setAnimal(myAnimal)
@@ -100,7 +101,7 @@ const FormInput = props => {
     const addAnimal = () => {
 
         let id = (animal.length === 0) ? 1 : animal[animal.length - 1].id + 1
-        firestore.collection("animals").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
+        firestore.collection("animals").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip, count })
       alert("You Add Finish")
     }
 
@@ -237,7 +238,7 @@ const useStyles = makeStyles((theme) => ({
                                             </div>
                                             <div className="form-group">
                                                 <label htmlFor="old">Old : อายุ</label>
-                                                <input type="number"
+                                                <input type="text"
                                                     name="old"
                                                     className="form-control"
                                                     id="old"
