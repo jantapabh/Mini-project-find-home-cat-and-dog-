@@ -152,7 +152,7 @@ const ListItems = props => {
 
         <div>
            
-            {renderAnimal()}
+           <ul> {renderAnimal()} </ul>
 
         </div>
 

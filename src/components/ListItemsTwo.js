@@ -27,25 +27,6 @@ const ListItemsTwo = props => {
 
 
     const [animalLoss, setAnimalLoss] = useState([{}])
-    const [id, setId] = useState(0)
-    const [imgUrl1, setImgUrl1] = useState('')
-    const [imgUrl2, setImgUrl2] = useState('')
-    const [imgUrl3, setImgUrl3] = useState('')
-    const [strain, setStrain] = useState('')
-    const [name, setName] = useState('')
-    const [old, setOld] = useState(0)
-    const [date, setDate] = useState('')
-    const [look, setLook] = useState('')
-    const [imgUrlUser, setImgUrlUser] = useState('')
-    const [nameUser, setNameUser] = useState('')
-    const [email, setEmail] = useState('')
-    const [telephone, setTelephone] = useState('')
-    const [facebook, setFacebook] = useState('')
-    const [line, setLine] = useState('')
-    const [address, setAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState('')
 
 
     const retriveData = () => {
@@ -56,27 +37,15 @@ const ListItemsTwo = props => {
 
             let myAni = snapshot.docs.map(d => {
 
-                const {id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
+                const {id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
 
-                return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip }
+                return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip }
 
             })
 
             setAnimalLoss(myAni)
 
         })
-    }
-
-    const deleteAnimal = (id) => {
-
-        firestore.collection("animalsLoss").doc(id + '').delete()
-
-    }
-
-    const editAnimal = (id) => {
-
-        firestore.collection("animalsLoss").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
-
     }
 
 
@@ -151,7 +120,7 @@ const ListItemsTwo = props => {
 
         <div>
            
-            {renderAnimal()}
+           <ul> {renderAnimal()} </ul>
 
         </div>
 
