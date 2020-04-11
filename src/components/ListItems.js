@@ -89,7 +89,7 @@ const ListItems = props => {
     console.log(animal)
 
     if (animal && animal.length) {
-      return currentAnimal.map((animal, index) => {
+      return animal.map((animal, index) => {
         return (
      
               <Animal animal={animal} index={index} />
@@ -153,7 +153,7 @@ const ListItems = props => {
   return (
 
     <div>
-      
+
       <ul> {renderAnimal()} </ul>
      
     </div>
