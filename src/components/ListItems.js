@@ -91,9 +91,9 @@ const ListItems = props => {
     if (animal && animal.length) {
       return currentAnimal.map((animal, index) => {
         return (
-          <div>
+     
               <Animal animal={animal} index={index} />
-          </div>
+      
         )
       })
     }
@@ -153,8 +153,9 @@ const ListItems = props => {
   return (
 
     <div>
+      
       <ul> {renderAnimal()} </ul>
-      <Pagination animalPrePages={animalPrePages} totalPage={animal.length} />
+     
     </div>
 
 
