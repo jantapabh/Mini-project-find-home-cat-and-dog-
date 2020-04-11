@@ -17,6 +17,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Pagination from './Pagination'
 
 
 
@@ -26,151 +27,138 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ListItems = props => {
 
 
+
+  const [animal, setAnimal] = useState([{}])
+  const [loading, setLoading] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [animalPrePages, setAnimalPerPage] = useState(6)
+
+
+
+  const [id, setId] = useState(0)
+  const [imgUrl1, setImgUrl1] = useState('')
+  const [imgUrl2, setImgUrl2] = useState('')
+  const [imgUrl3, setImgUrl3] = useState('')
+  const [strain, setStrain] = useState('')
+  const [name, setName] = useState('')
+  const [old, setOld] = useState(0)
+  const [habits, setHabit] = useState('')
+  const [because, setBecause] = useState('')
+  const [status, setStatus] = useState('')
+  const [imgUrlUser, setImgUrlUser] = useState('')
+  const [nameUser, setNameUser] = useState('')
+  const [email, setEmail] = useState('')
+  const [telephone, setTelephone] = useState('')
+  const [facebook, setFacebook] = useState('')
+  const [line, setLine] = useState('')
+  const [address, setAddress] = useState('')
+  const [city, setCity] = useState('')
+  const [state, setState] = useState('')
+  const [zip, setZip] = useState('')
+
+
+  const retriveData = () => {
+
+    firestore.collection("animals").onSnapshot(snapshot => {
+
+      console.log(snapshot);
+
+      let myAni = snapshot.docs.map(d => {
+
+        const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
+        console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
+        return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip }
+
+      })
+
+      setAnimal(myAni)
+
+    })
+  }
+
+
+
+  //Get Current Pages
+
+  const indexOfLastPages = currentPage * animalPrePages;
+  const indexOfFirstPages = indexOfLastPages - animalPrePages;
+  const currentAnimal = animal.slice(indexOfFirstPages, indexOfLastPages)
+
+  const renderAnimal = () => {
+
+    console.log(animal)
+
+    if (animal && animal.length) {
+      return currentAnimal.map((animal, index) => {
+        return (
+          <div>
+              <Animal animal={animal} index={index} />
+          </div>
+        )
+      })
+    }
+    
+    else {
+
+      return <li>No Animal</li>
+
+    }
   
-    const [animal, setAnimal] = useState([{}])
-    const [loading,setLoading] = useState(false)
-    const [currentPage, setCurrentPage] = useState(1);
-    const [animalPrePages, setAnimalPerPage] = useState(6)
+  }
 
 
-
-    const [id, setId] = useState(0)
-    const [imgUrl1, setImgUrl1] = useState('')
-    const [imgUrl2, setImgUrl2] = useState('')
-    const [imgUrl3, setImgUrl3] = useState('')
-    const [strain, setStrain] = useState('')
-    const [name, setName] = useState('')
-    const [old, setOld] = useState(0)
-    const [habits, setHabit] = useState('')
-    const [because, setBecause] = useState('')
-    const [status, setStatus] = useState('')
-    const [imgUrlUser, setImgUrlUser] = useState('')
-    const [nameUser, setNameUser] = useState('')
-    const [email, setEmail] = useState('')
-    const [telephone, setTelephone] = useState('')
-    const [facebook, setFacebook] = useState('')
-    const [line, setLine] = useState('')
-    const [address, setAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState('')
+  useEffect(() => {
 
 
-    const retriveData = () => {
-
-        firestore.collection("animals").onSnapshot(snapshot => {
-
-            console.log(snapshot);
-
-            let myAni = snapshot.docs.map(d => {
-
-                const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
-                console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
-                return { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip }
-
-            })
-
-            setAnimal(myAni)
-
-        })
-    }
-
-    const deleteAnimal = (id) => {
-
-        firestore.collection("animals").doc(id + '').delete()
-
-    }
-
-    const editAnimal = (id) => {
-
-        firestore.collection("animals").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
-
-    }
-  
-
-    //Get Current Pages
-
-    const indexOfLastPages = currentPage * animalPrePages;
-    const indexOfFirstPages = indexOfLastPages - animalPrePages;
-    const currentPage = animal.slice(indexOfFirstPages, indexOfLastPages)
-
-    const renderAnimal = () => {
-
-        console.log(animal)
-
-        if (animal && animal.length) {
-            return animal.map((animal, index) => {
-                return (
-
-                    <Animal key={currentPage} animal={animal}
-                   
-                    />
-
-                )
-            })
-
-        }
-        else {
-
-            return <li>No Animal</li>
-
-        }
-    }
+    retriveData()
 
 
-    useEffect(() => {
+  }, [])
+
+  const useStyles = makeStyles((theme) => ({
+    icon: {
+      marginRight: theme.spacing(2),
+    },
+    heroContent: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(8, 0, 6),
+    },
+    heroButtons: {
+      marginTop: theme.spacing(4),
+    },
+    cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
+    card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    cardMedia: {
+      paddingTop: '56.25%', // 16:9
+    },
+    cardContent: {
+      flexGrow: 1,
+    },
+    footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+    },
+  }));
 
 
-        retriveData()
+  const classes = useStyles();
+
+  return (
+
+    <div>
+      <ul> {renderAnimal()} </ul>
+      <Pagination animalPrePages={animalPrePages} totalPage={animal.length} />
+    </div>
 
 
-    }, [])
-
-    const useStyles = makeStyles((theme) => ({
-        icon: {
-          marginRight: theme.spacing(2),
-        },
-        heroContent: {
-          backgroundColor: theme.palette.background.paper,
-          padding: theme.spacing(8, 0, 6),
-        },
-        heroButtons: {
-          marginTop: theme.spacing(4),
-        },
-        cardGrid: {
-          paddingTop: theme.spacing(8),
-          paddingBottom: theme.spacing(8),
-        },
-        card: {
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-        },
-        cardMedia: {
-          paddingTop: '56.25%', // 16:9
-        },
-        cardContent: {
-          flexGrow: 1,
-        },
-        footer: {
-          backgroundColor: theme.palette.background.paper,
-          padding: theme.spacing(6),
-        },
-      }));
-      
-
-    const classes = useStyles();
-
-    return (
-
-        <div>
-           
-           <ul> {renderAnimal()} </ul>
-
-        </div>
-
-
-    );
+  );
 }
 
 export default ListItems;
