@@ -13,8 +13,8 @@ import { useMediaQuery } from 'react-responsive'
 import fire from './config/fire'
 import { render } from '@testing-library/react';
 import firebase from 'firebase'
-
-
+import FormInputTwo from './components/FormInputTwo';
+import ListItemsTwo from './components/ListItemsTwo';
 
 
 axios.defaults.withCredentials = true
@@ -76,6 +76,8 @@ class App extends Component {
           <Route exact path="/" component={Main} />
           <Route path="/FormInput" component={FormInput} />
           <Route path="/ListItems" component={ListItems} />
+          <Route path="/FormInputTwo" component={FormInputTwo} />
+          <Route path="/ListItemsTwo" component={ListItemsTwo} />
           <Route path="/login" component={Login} />
         </BrowserRouter>
       </div>
