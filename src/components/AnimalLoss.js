@@ -9,7 +9,7 @@ import { firestore } from '../index'
 export default props => {
 
    const { animalLoss } = props
-    const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip} = animalLoss
+    const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip} = animalLoss
 
    
     const [isOpen, setIsOpen] = useState(false);

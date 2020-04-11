@@ -64,9 +64,9 @@ const FormInputTwo = props => {
             console.log(snapshot);
 
             let myAnimal = snapshot.docs.map(d => {
-                const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
-                console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
-                return {id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
+                const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip } = d.data()
+                console.log(id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip)
+                return {id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
             })
 
             setAnimalLoss(myAnimal)
@@ -99,7 +99,7 @@ const FormInputTwo = props => {
     const addAnimal = () => {
 
         let id = (animalLoss.length === 0) ? 1 : animalLoss[animalLoss.length - 1].id + 1
-        firestore.collection("animalsLoss").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip})
+        firestore.collection("animalsLoss").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip})
         alert("You Add Finish")
     }
 
