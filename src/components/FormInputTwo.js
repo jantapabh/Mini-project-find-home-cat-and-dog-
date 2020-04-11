@@ -69,7 +69,7 @@ const FormInputTwo = props => {
                 return {id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip}
             })
 
-            setAnimal(myAnimal)
+            setAnimalLoss(myAnimal)
           
 
         })

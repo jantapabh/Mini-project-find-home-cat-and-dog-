@@ -86,7 +86,7 @@ export default props => {
                                     <strong>
                                         STRAIN : {strain} <br />
                                 NAME : {name} <br />
-                                OLD: {old} ปี<br />
+                                OLD: {old} <br />
                                     </strong>
                                 </h3>
                                 <p>

@@ -62,7 +62,7 @@ const ListItemsTwo = props => {
 
             })
 
-            setAnimal(myAni)
+            setAnimalLoss(myAni)
 
         })
     }
@@ -75,20 +75,20 @@ const ListItemsTwo = props => {
 
     const editAnimal = (id) => {
 
-        firestore.collection("animalsLoss").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
+        firestore.collection("animalsLoss").doc(id + '').set({ id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, date, look,   imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip })
 
     }
 
 
     const renderAnimal = () => {
 
-        console.log(animalsLoss)
+        console.log(animalLoss)
 
-        if (animalsLoss && animalsLoss.length) {
-            return animalsLoss.map((animalsLoss, index) => {
+        if (animalLoss && animalLoss.length) {
+            return animalLoss.map((animalLoss, index) => {
                 return (
 
-                    <AnimalLoss key={index} animalsLoss={animalsLoss}
+                    <AnimalLoss key={index} animalLoss={animalLoss}
 
                     />
 

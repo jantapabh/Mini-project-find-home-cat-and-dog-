@@ -80,7 +80,7 @@ export default props => {
                                     <strong>
                                         STRAIN : {strain} <br />
                                         NAME : {name} <br />
-                                        OLD: {old} ปี<br />
+                                        OLD: {old} <br />
                                         วันที่หาย: {date} <br />
                                         ลักษณะเพิ่มเติม: {look} <br />
                                         
