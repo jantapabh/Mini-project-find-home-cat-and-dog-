@@ -3,7 +3,6 @@ import './App.css';
 import Topbar from './components/Topbar';
 import { BrowserRouter, Route, Link, Router, Redirect } from 'react-router-dom';
 import { Switch } from 'antd';
-import { store } from './redux/store'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import FormInput from './components/FormInput';

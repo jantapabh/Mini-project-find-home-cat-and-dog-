@@ -7,12 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon } from 'react-bootstrap';
 import { ArrowRight } from 'react-bootstrap-icons';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem } from "mdbreact";
-import { bindActionCreators } from 'redux';
 import axios from 'axios'
-import { AuthActions } from '../redux/store'
-import { useSelector, useDispatch, Provider } from 'react-redux'
 import Avatar from '@material-ui/core/Avatar';
-import { userActions } from '../redux/store'
 import fire from '../config/fire';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from 'firebase'
