@@ -57,9 +57,7 @@ const ListItemsTwo = props => {
             return animalLoss.map((animalLoss, index) => {
                 return (
 
-                    <AnimalLoss key={index} animalLoss={animalLoss}
-
-                    />
+                    <AnimalLoss key={index} animalLoss={animalLoss} />
 
                 )
             })

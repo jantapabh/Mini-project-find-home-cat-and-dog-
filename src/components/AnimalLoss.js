@@ -40,9 +40,9 @@ export default props => {
     return (
         <li>
             <div>
-                <MDBCard className="my-5 px-5 pb-5" >
-                    <MDBCardBody>
-                        <MDBRow>
+                <MDBCard className="my-5 px-5"  style={{ backgroundColor: 'white'}}>
+                    <MDBCardBody >
+                        <MDBRow >
                             <MDBCol lg="5">
                                 <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
                                     <Carousel>
@@ -74,7 +74,7 @@ export default props => {
                             <MDBCol lg="7">
                                 <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-1">
-                                        <MDBIcon icon="dog" className="pr-2" /> Animal </h6>
+                                        <MDBIcon icon="dog" className="pr-2" size="2x" /> Animal </h6>
                                 </a>
                                 <h3 className="font-weight-bold mb-1 p-0">
                                     <strong>
