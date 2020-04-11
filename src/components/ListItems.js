@@ -151,18 +151,7 @@ const ListItems = props => {
     return (
 
         <div>
-            <React.Fragment>
-                <CssBaseline />
-                <AppBar position="relative">
-                    <Toolbar>
-                        <CameraIcon className={classes.icon} />
-                        <Typography variant="h6" color="inherit" noWrap>
-                            หาบ้านให้น้อง
-          </Typography>
-                    </Toolbar>
-                </AppBar>
-            </React.Fragment>
-
+           
             <ul>{renderAnimal()}</ul>
 
         </div>
