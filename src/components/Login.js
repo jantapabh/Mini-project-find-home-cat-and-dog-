@@ -16,6 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import fire from '../config/fire';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from 'firebase'
+import { firestore } from '../index'
 
 
 
