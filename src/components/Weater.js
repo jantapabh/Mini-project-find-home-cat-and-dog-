@@ -7,11 +7,17 @@ const Weater  = () => {
 
     const GetData = async () => {
 
-        const result = await axios.get('api.openweathermap.org/data/2.5/weather?q=Phuket,TH')
-        console.log(result.data)
+        const result = await axios.get('https://data.tmd.go.th/api/WeatherToday/V1/?type=json')
+        console.log(result)
 
 
     }
+
+  useEffect(() => {
+
+    GetData()
+
+  }, [])
 
 
     return(

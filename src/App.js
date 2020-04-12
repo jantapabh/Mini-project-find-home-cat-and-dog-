@@ -15,7 +15,7 @@ import { render } from '@testing-library/react';
 import firebase from 'firebase'
 import FormInputTwo from './components/FormInputTwo';
 import ListItemsTwo from './components/ListItemsTwo';
-import Weater from './components/Weater';
+
 
 
 axios.defaults.withCredentials = true
@@ -61,7 +61,7 @@ class App extends Component {
 
         <Topbar />
         <Login />
-        <Weater />
+        
         </div>
 
       );
