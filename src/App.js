@@ -15,7 +15,7 @@ import { render } from '@testing-library/react';
 import firebase from 'firebase'
 import FormInputTwo from './components/FormInputTwo';
 import ListItemsTwo from './components/ListItemsTwo';
-import Weather from './components/Weather'
+
 
 
 
@@ -62,6 +62,7 @@ class App extends Component {
 
         <Topbar />
         <Login />
+
         
         </div>
 
@@ -74,7 +75,7 @@ class App extends Component {
       <div>
         <div className="Topbar">
           <Topbar />
-          <Weather />
+      
         </div>
         <BrowserRouter>
           <Route exact path="/" component={Main} />
