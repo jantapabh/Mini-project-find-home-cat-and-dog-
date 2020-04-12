@@ -58,12 +58,10 @@ class App extends Component {
     if(this.state.user == null)
     {
       return(
-        <div>
-
-        <Topbar />
-        <Login />
-
         
+        <div>
+        <Topbar />
+        <Login />   
         </div>
 
       );
