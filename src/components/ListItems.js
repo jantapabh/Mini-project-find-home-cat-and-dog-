@@ -17,7 +17,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Pagination from './Pagination'
+
 
 
 
