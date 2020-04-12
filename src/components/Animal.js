@@ -8,8 +8,8 @@ import { firestore } from '../index'
 
 export default props => {
 
-   const { animal, deleteAnimal, updateAnimal } = props
-    const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip ,count } = animal
+    const { animal, deleteAnimal, updateAnimal } = props
+    const { id, imgUrl1, imgUrl2, imgUrl3, strain, name, old, habits, because, status, imgUrlUser, nameUser, email, telephone, facebook, line, address, city, state, zip, count } = animal
 
     var [countChange, setCoutnChange] = useState(0)
     const [isOpen, setIsOpen] = useState(false);
@@ -22,20 +22,20 @@ export default props => {
     };
 
     const [show, setShow] = useState(false);
-   
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    
+
     const addCount = () => {
 
         setCoutnChange(countChange++)
-       
+
     }
 
-    
 
-  
+
+
 
     //Reduc thunk ส่งผ่าน props
 
@@ -50,6 +50,7 @@ export default props => {
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol lg="5">
+                                <button type="button" class="btn btn-outline-success" style={{ margin: 5, padding: 5 }}>{status}</button>
                                 <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
                                     <Carousel>
                                         <Carousel.Item>
@@ -81,22 +82,20 @@ export default props => {
                                 <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-1">
                                         <MDBIcon icon="dog" size="2x" className="pr-2" /> Animal </h6>
+
                                 </a>
                                 <h3 className="font-weight-bold mb-1 p-0">
                                     <strong>
-                                        STRAIN : {strain} <br />
-                                NAME : {name} <br />
-                                OLD: {old} <br />
+                                        สายพันธ์ : {strain} <br />
+                                        ชื่อ : {name} <br />
+                                        อายุ : {old} <br />
+                                        นิสัย: {habits} <br />
+                                       เหตุผลที่หาบ้าน : {because} <br />
                                     </strong>
                                 </h3>
-                                <p>
-                                    HABIT : {habits} <br />
-                                BECAUSE : {because} <br />
-                                STATUS : {status} <br />
-                                </p>
                                 <MDBBtn color="secondary" size="md" className="light" gradient="peach" style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
                                 <Button variant="primary" onClick={addCount}> LIKE {countChange}
-                                    <MDBIcon icon="thumbs-up"  style={{ margin: 5, }} /> </Button>
+                                    <MDBIcon icon="thumbs-up" style={{ margin: 5, }} /> </Button>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
