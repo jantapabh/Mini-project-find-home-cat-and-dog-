@@ -23,9 +23,6 @@ axios.defaults.withCredentials = true
 
 class App extends Component {
 
-  
- 
-
   constructor(props) {
 
     super(props);
