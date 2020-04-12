@@ -2,11 +2,8 @@ let express = require('express')
 let bodyParser = require('body-parser');
 const session = require('express-session')
 let cors = require('cors')
-const FB = require('./fb')
 var request = require('request');
-let authRoutes = require('./routes/auth');
-let fbRoutes = require('./routes/fb');
-let psuRoutes = require('./routes/psu');
+
 
 
 let app = express()
@@ -127,22 +124,6 @@ router.route('/animals/:animal_id')
     animals.splice(index, 1)
     res.json({ message: 'Animal Delete : ' + req.params.animal_id });
 })
-
-
-router.route('/auth')
-.get(authRoutes.index);
-
-router.route('/auth/logout')
-.get(authRoutes.logout);
-
-router.route('/auth/facebook')
-.get(fbRoutes.loginUrl);
-
-router.route('/auth/facebook/login/callback')
-.get(fbRoutes.loginCallback);
-
-router.route('/auth/psu')
-.post(psuRoutes.login);
 
 
 
