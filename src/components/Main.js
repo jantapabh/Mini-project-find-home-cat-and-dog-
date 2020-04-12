@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Card } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon, MDBBtn, MDBListGroupItem, MDBCard, MDBCardBody, MDBView, MDBMask } from "mdbreact";
 import Header from './Header'
-import ApexChart from './ApexChart'
-import ApexChartTwo from './ApexChartTwo'
-import Map from './Map'
+import ApexChart from './Chart/ApexChart'
+import ApexChartTwo from './Chart/ApexChartTwo'
+import Map from './Chart/Map'
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
