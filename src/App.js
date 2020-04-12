@@ -58,7 +58,7 @@ class App extends Component {
     if(this.state.user == null)
     {
       return(
-        
+
         <div>
         <Topbar />
         <Login />   
@@ -73,7 +73,6 @@ class App extends Component {
       <div>
         <div className="Topbar">
           <Topbar />
-      
         </div>
         <BrowserRouter>
           <Route exact path="/" component={Main} />
