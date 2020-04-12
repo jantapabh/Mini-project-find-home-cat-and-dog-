@@ -24,14 +24,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ListItems = props => {
 
 
-
   const [animal, setAnimal] = useState([{}])
-  const [loading, setLoading] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1);
-  const [animalPrePages, setAnimalPerPage] = useState(6)
-
-
-
   const [id, setId] = useState(0)
   const [imgUrl1, setImgUrl1] = useState('')
   const [imgUrl2, setImgUrl2] = useState('')
@@ -73,13 +66,6 @@ const ListItems = props => {
     })
   }
 
-
-
-  //Get Current Pages
-
-  const indexOfLastPages = currentPage * animalPrePages;
-  const indexOfFirstPages = indexOfLastPages - animalPrePages;
-  const currentAnimal = animal.slice(indexOfFirstPages, indexOfLastPages)
 
   const renderAnimal = () => {
 
@@ -150,9 +136,7 @@ const ListItems = props => {
   return (
 
     <div>
-
-      <ul> {renderAnimal()} </ul>
-     
+      <ul>{renderAnimal()}</ul>
     </div>
 
 
