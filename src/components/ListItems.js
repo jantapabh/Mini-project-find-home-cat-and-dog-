@@ -25,26 +25,6 @@ const ListItems = props => {
 
 
   const [animal, setAnimal] = useState([{}])
-  const [id, setId] = useState(0)
-  const [imgUrl1, setImgUrl1] = useState('')
-  const [imgUrl2, setImgUrl2] = useState('')
-  const [imgUrl3, setImgUrl3] = useState('')
-  const [strain, setStrain] = useState('')
-  const [name, setName] = useState('')
-  const [old, setOld] = useState(0)
-  const [habits, setHabit] = useState('')
-  const [because, setBecause] = useState('')
-  const [status, setStatus] = useState('')
-  const [imgUrlUser, setImgUrlUser] = useState('')
-  const [nameUser, setNameUser] = useState('')
-  const [email, setEmail] = useState('')
-  const [telephone, setTelephone] = useState('')
-  const [facebook, setFacebook] = useState('')
-  const [line, setLine] = useState('')
-  const [address, setAddress] = useState('')
-  const [city, setCity] = useState('')
-  const [state, setState] = useState('')
-  const [zip, setZip] = useState('')
 
 
   const retriveData = () => {
