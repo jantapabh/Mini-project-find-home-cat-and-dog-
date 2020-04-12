@@ -80,7 +80,7 @@ export default props => {
                             <MDBCol lg="7">
                                 <a href="#!" className="green-text">
                                     <h6 className="font-weight-bold mb-1">
-                                        <MDBIcon icon="dog" className="pr-2" /> Animal </h6>
+                                        <MDBIcon icon="dog" size="2x" className="pr-2" /> Animal </h6>
                                 </a>
                                 <h3 className="font-weight-bold mb-1 p-0">
                                     <strong>
@@ -96,7 +96,7 @@ export default props => {
                                 </p>
                                 <MDBBtn color="secondary" size="md" className="light" gradient="peach" style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
                                 <Button variant="primary" onClick={addCount}> LIKE {countChange}
-                                    <MDBIcon icon="thumbs-up" size="2x" style={{ margin: 5, }} /> </Button>
+                                    <MDBIcon icon="thumbs-up"  style={{ margin: 5, }} /> </Button>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
