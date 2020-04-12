@@ -19,9 +19,6 @@ import Link from '@material-ui/core/Link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
-
-
 //แสดงรายการที่เพิ่มของหมาและแมว
 
 const ListItems = props => {
