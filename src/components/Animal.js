@@ -96,7 +96,7 @@ export default props => {
                                 </p>
                                 <MDBBtn color="secondary" size="md" className="light" gradient="peach" style={{ padding: 5, margin: 5 }} onClick={handleShow} > CONTACT </MDBBtn>
                                 <Button variant="primary" onClick={addCount}> LIKE {countChange}
-                                    <MDBIcon icon="thumbs-up" style={{ margin: 5, }} /> </Button>
+                                    <MDBIcon icon="thumbs-up" size="2x" style={{ margin: 5, }} /> </Button>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
