@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import News from './Tab/News'
-import TabTwo from './TabTwo'
+import TabTwo from './Tab/TabTwo'
 
 const TapShow = props => {
 
@@ -46,7 +46,6 @@ const TapShow = props => {
             <TabTwo />
           </Row>
         </TabPane>
-       
       </TabContent>
     </div>
   );
