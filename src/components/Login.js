@@ -21,11 +21,13 @@ import { firestore } from '../index'
 
 
 //Login and Sign up with firebase email and password
-class Login extends Component {
+const Login = () => {
 
-    state = { isSignedIn: false }
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [isSignedIn, setIsSignedIn] = useState(false)
 
-    uiConfig = {
+ const uiConfig = {
 
         signInFlow: "popup",
         signInOptions: [
@@ -41,7 +43,7 @@ class Login extends Component {
         }
     }
 
-    componentDidMount = () => {
+    const componentDidMount = () => {
 
       
 
@@ -50,61 +52,29 @@ class Login extends Component {
         })
     }
 
-    constructor(props) {
+    const login = e => {
 
-
-        super(props)
-        this.login = this.login.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.signup = this.signup.bind(this)
-
-        this.state = {
-
-            email: "",
-            password: " "
-
-        }
-
-    }
-
-    login(e) {
-
-        e.preventDefault()
-
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-            console.log(u)
-            
-
-        }).catch((err) => {
-
-            console.log(err)
-
-        })
-    }
-
-    signup(e) {
-        e.preventDefault()
-        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+        e.preventDefault();
+        fire.auth().signInWithEmailAndPassword(email, password).then((u) =>{
             console.log(u)
         }).catch((err) => {
             console.log(err)
         })
     }
 
-    handleChange(e) {
 
-        this.setState({
-            [e.target.name]: e.target.value
+    const signup = e => {
+
+        e.preventDefault()
+        fire.auth().createUserWithEmailAndPassword(email, password).then((u) => {
+            console.log(u)
+        }).catch((err) => {
+            console.log(err)
         })
     }
 
-
-
-    render() {
-
-        return (
-            <div>
-                <Grid container component="main" className="root">
+    return (
+        <Grid container component="main" className="root">
                     <CssBaseline />
                     <Grid item xs={false} sm={4} md={7} className="image" />
                     <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -170,19 +140,15 @@ class Login extends Component {
             <StyledFirebaseAuth
                                     uiConfig={this.uiConfig}
                                     firebaseAuth={firebase.auth()}
-
                                 />
-
-
                             </form>
                         </div>
                     </Grid>
                 </Grid>
-            </div>
-        )
-    }
-
+    )
 }
+
+export default Login
 
 
 
