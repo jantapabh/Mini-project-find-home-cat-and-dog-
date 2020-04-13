@@ -96,8 +96,7 @@ const Login = () => {
                                     name="email"
                                     autoComplete="email"
                                     autoFocus
-                                    value={this.state.email}
-                                    onChange={this.handleChange}
+                                    onChange={(e)=> setEmail(e.target.value)}
                                 />
                                 <TextField
                                     variant="outlined"
@@ -109,8 +108,7 @@ const Login = () => {
                                     type="password"
                                     id="password"
                                     autoComplete="current-password"
-                                    value={this.state.password}
-                                    onChange={this.handleChange}
+                                    onChange={(e)=> setPassword(e.target.value)}
                                 />
                                 <FormControlLabel
                                     control={<Checkbox value="remember" color="primary" />}
@@ -122,7 +120,7 @@ const Login = () => {
                                     variant="contained"
                                     color="primary"
                                     className="submit"
-                                    onClick={this.login}
+                                    onClick={login}
                                 >
                                     Log In
             </Button>
@@ -132,13 +130,13 @@ const Login = () => {
                                     variant="contained"
                                     color="secondary"
                                     className="submit"
-                                    onClick={this.signup}
+                                    onClick={signup}
                                     style={{ margin: 5, }}
                                 >
                                     Sign Up
             </Button>
             <StyledFirebaseAuth
-                                    uiConfig={this.uiConfig}
+                                    uiConfig={uiConfig}
                                     firebaseAuth={firebase.auth()}
                                 />
                             </form>
@@ -150,6 +148,3 @@ const Login = () => {
 
 export default Login
 
-
-
-export default Login;
