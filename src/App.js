@@ -18,9 +18,6 @@ import ListItemsTwo from './components/ListItemsTwo';
 
 
 
-
-axios.defaults.withCredentials = true
-
 class App extends Component {
 
   constructor(props) {
