@@ -7,6 +7,7 @@ import {
 
 const News = (props) => {
     return (
+
         <div>
             <CardGroup style={{ margin: 5, padding: 5, width: 1500, height: 400}}>
             <Card  style={{ margin: 10, padding: 10}}>
@@ -38,6 +39,7 @@ const News = (props) => {
                 </CardBody>
             </Card>
         </CardGroup>
+    
             </div>
    
     );
