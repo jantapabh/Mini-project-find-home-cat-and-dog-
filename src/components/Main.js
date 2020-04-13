@@ -24,22 +24,8 @@ import Footer from './Footer'
 
   
 
-class Main extends Component {
+const Main = () => {
 
-    constructor(props) {
-
-        super(props)
-
-        this.state = {
-
-            email: "",
-            password: " "
-        }
-
-    }
-  
-
-    render() {
         return (
             <div>
                 <Carousel>
@@ -132,5 +118,5 @@ class Main extends Component {
             </div>
         )
     }
-}
+
 export default Main;
